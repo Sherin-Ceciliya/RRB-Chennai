@@ -1,0 +1,223 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RRB Chennai</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header Section -->
+  <header class="custom-header text-white shadow-md">
+    <div class="flex justify-between items-center h-32 w-full px-4">
+      <!-- Logo and Title -->
+      <div class="flex items-center space-x-4">
+        <img src="images/railways.png" alt="RRB Logo" class="h-28 w-auto" />
+        <div class="leading-tight">
+          <h1 class="text-3xl font-bold">Railway Recruitment Board</h1>
+          <p class="text-xl ml-1">Chennai</p>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex space-x-10 text-xl font-semibold">
+        <a href="#" class="nav-link">In Hindi</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="results.html" class="nav-link">Results</a>
+        <a href="recruitment.html" class="nav-link">Recruitments</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <br>
+  <!-- Carousel Section -->
+  <section class="relative mt-6 mx-auto w-full max-w-5xl overflow-hidden rounded-lg shadow-lg">
+    <div class="relative w-full" style="height: 500px;">
+      <div id="carousel-slides" class="flex transition-transform duration-700 ease-in-out w-full">
+        <img src="images/image1.jpeg" class="flex-shrink-0 w-full object-cover" style="height: 500px;" />
+        <img src="images/image2.png" class="flex-shrink-0 w-full object-cover" style="height: 500px;" />
+        <img src="images/image3.png" class="flex-shrink-0 w-full object-cover" style="height: 500px;" />
+        <img src="images/image4.png" class="flex-shrink-0 w-full object-cover" style="height: 500px;" />
+        <img src="images/image6.png" class="flex-shrink-0 w-full object-cover" style="height: 500px;" />
+      </div>
+
+      <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 text-white px-4 py-2 hover:bg-opacity-50 z-10">&#10094;</button>
+      <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 text-white px-4 py-2 hover:bg-opacity-50 z-10">&#10095;</button>
+    </div>
+  </section>
+
+<!-- About Us Section -->
+<section class="max-w-5xl mx-auto my-12 px-4">
+  <h2 class="text-3xl font-bold text-gray-800 mb-4">About Us</h2>
+
+  <p class="text-lg text-gray-700 mb-4 text-justify">
+    The <strong>Railway Recruitment Board (RRB)</strong> is a statutory body functioning under the <strong>Ministry of Railways, Government of India</strong>. It is entrusted with the responsibility of recruiting eligible candidates for various posts in the Indian Railways through a fair, transparent, and merit-based selection process.
+  </p>
+
+  <p class="text-lg text-gray-700 mb-4 text-justify">
+    RRBs were initially known as Railway Service Commissions when they were formed in 1942. In 1985, they were renamed as Railway Recruitment Boards. There are currently 21 RRBs across India, each catering to specific geographical zones. <strong>RRB Chennai</strong> is responsible for recruitment in the southern region, particularly Tamil Nadu and surrounding areas.
+  </p>
+
+  <p class="text-lg text-gray-700 mb-4 text-justify">
+    The RRBs conduct recruitment for a wide range of positions across different categories such as:
+  </p>
+  <ul class="list-disc list-inside mt-2 text-lg text-gray-700 text-justify">
+    <li>Group C posts including Technical and Non-Technical staff</li>
+    <li>Junior Engineers (JE), Depot Material Superintendent (DMS), and Chemical & Metallurgical Assistant (CMA)</li>
+    <li>Assistant Loco Pilots (ALP) and Technicians</li>
+    <li>Traffic Assistants, Station Masters, and Goods Guards</li>
+    <li>Paramedical and Ministerial categories</li>
+  </ul>
+  <br>
+
+  <p class="text-lg text-gray-700 mb-4 text-justify">
+    The recruitment process includes Computer-Based Tests (CBT), Skill Tests, Document Verification, and Medical Examinations, depending on the nature of the post. RRBs follow strict protocols to maintain the sanctity of the process, using advanced technology to ensure accuracy and prevent malpractices.
+  </p>
+
+  <p class="text-lg text-gray-700 mb-4 text-justify">
+    The <strong>Railway Recruitment Control Board (RRCB)</strong>, headquartered in New Delhi, supervises the activities of all RRBs and issues guidelines to bring uniformity across the country. It also monitors the resolution of complaints, legal cases, and administrative coordination.
+  </p>
+
+  <p class="text-lg text-gray-700 text-justify">
+    RRB Chennai is committed to upholding the principles of equal opportunity, integrity, and efficiency in public service by recruiting the best-suited candidates to contribute to one of the world’s largest and busiest railway networks.
+  </p>
+</section>
+
+
+
+  <!-- Carousel Script -->
+  <script>
+    const slidesContainer = document.getElementById("carousel-slides");
+    const totalSlides = slidesContainer.children.length;
+    let currentSlide = 0;
+
+    function updateSlide() {
+      slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlide();
+    });
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlide();
+    });
+
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlide();
+    }, 5000);
+  </script>
+  <!-- Important Notices Section -->
+<section class="max-w-5xl mx-auto my-12 px-4">
+  <h2 class="text-2xl font-bold text-gray-800 mb-6">Important Notices</h2>
+
+  <!-- Grid for cards -->
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <!-- Notice 1 -->
+    <div class="notice-box">
+      <h3 class="text-lg font-semibold mb-2">Important</h3>
+      <p class="text-sm">
+        For any notice/information regarding Railway Recruitment Board (RRB), candidates should visit official websites only. Any information/notices being circulated in the social media regarding RRBs may please be ignored.
+      </p>
+    </div>
+
+    <!-- Notice 2 -->
+    <div class="notice-box">
+      <h3 class="text-lg font-semibold mb-2">Beware of Touts</h3>
+      <p class="text-sm mb-3">
+        Candidates are cautioned against touts and job racketeers trying to deceive by false promises of securing jobs through illegal means. Recruitment is based purely on merit.
+      </p>
+      <br>
+      <a href="warning.pdf" target="_blank" class="bg-white text-blue-900 font-bold px-4 py-2 rounded hover:scale-105 transition duration-200">
+        Click here for details
+      </a>
+    </div>
+
+    <!-- Notice 3 -->
+    <div class="notice-box">
+      <p class="text-sm mb-3">
+        For any further clarification regarding Appointment, Candidates are advised to contact the following address, if necessary.
+      </p>
+      <div class="grid grid-cols-2 gap-6 text-sm text-left font-light">
+        <div>
+          <div class="text-white text-center font-semibold py-1 rounded">Southern Railway</div>
+          <p class="mt-2">
+            Deputy Chief Personnel Officer/R&T/HQ,<br />
+            Southern Railway, Park Town, Chennai<br />
+            Pin: 600 003<br />
+            Phone: 044-25355283<br />
+            E-mail: <a href="mailto:dycpow@sr.railnet.gov.in" class="underline text-white">dycpow@sr.railnet.gov.in</a>
+          </p>
+        </div>
+        <div>
+          <div class="text-white text-center font-semibold py-1 rounded">ICF</div>
+          <p class="mt-2">
+            Principal Chief Personnel Officer,<br />
+            (Recruitment Section),<br />
+            Integral Coach Factory, Chennai<br />
+            Pin: 600 038<br />
+            Phone: 044 – 26147708<br />
+            E-mail: <a href="mailto:pbicf38@gmail.com" class="underline text-white">pbicf38@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Custom Styles -->
+<style>
+  .notice-box {
+    background-color: #153865;
+    color: white;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+
+  .notice-box:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+
+  <!-- Footer Section -->
+<footer class="bg-gray-900 text-white py-8 mt-12">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+    <!-- Left: Info -->
+    <div>
+      <h4 class="text-xl font-semibold mb-2">Government of India</h4>
+      <p class="text-sm">Ministry of Railways</p>
+      <p class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+    </div>
+
+    <!-- Right: Quick Links (Improved Alignment) -->
+    <div class="flex flex-col items-start md:items-end">
+      <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
+      <ul class="space-y-1 text-sm text-right w-full md:w-auto">
+        <li><a href="#about" class="hover:text-gray-300 transition-colors">About Us</a></li>
+        <li><a href="#results" class="hover:text-gray-300 transition-colors">Results</a></li>
+        <li><a href="#recruitments" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
+        <li><a href="#contact" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
+    © 2022 Railway Recruitment Board Chennai. All Rights Reserved.
+  </div>
+</footer>
+
+
+</body>
+</html>

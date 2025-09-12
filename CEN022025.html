@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CEN 02/2025 - Technician Recruitment Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="home.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #0055a5;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .info-item {
+      background-color: #eef5fb;
+      padding: 12px 16px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    .info-item strong {
+      display: block;
+      font-size: 0.85rem;
+      color: #444;
+      margin-bottom: 4px;
+    }
+
+    .description {
+      margin-top: 15px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .bulletin {
+      margin-top: 10px;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .bulletin th, .bulletin td {
+      padding: 12px 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .bulletin th {
+      background-color: #0055a5;
+      color: white;
+    }
+
+    .btn-link {
+      color: #0077c0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-link:hover {
+      text-decoration: underline;
+    }
+
+     /* Remove default margin/padding from body and html */
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Custom header background to match RRB dark blue */
+    .custom-header {
+      background-color: #153865;
+    }
+
+    /* Underline hover animation */
+    .nav-link {
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background-color: white;
+      transition: width 1s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header Section -->
+  <header class="custom-header text-white shadow-md">
+    <div class="flex justify-between items-center h-32 w-full px-4">
+      <!-- Logo and Title -->
+      <div class="flex items-center space-x-4">
+        <img src="images/railways.png" alt="RRB Logo" class="h-28 w-auto" />
+        <div class="leading-tight">
+          <h1 class="text-3xl font-bold">Railway Recruitment Board</h1>
+          <p class="text-xl ml-1">Chennai</p>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex space-x-10 text-xl font-semibold">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="results.html" class="nav-link">Results</a>
+        <a href="recruitment.html" class="nav-link">Recruitments</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Recruitment Info -->
+    <div class="section">
+      <h2>CEN 02/2025 - Technician Recruitment</h2>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <strong>Opening Date</strong>
+          26-June-2025
+        </div>
+        <div class="info-item">
+          <strong>Closing Date</strong>
+          28-July-2025
+        </div>
+        <div class="info-item">
+          <strong>Last Updated</strong>
+          02-Aug-2025
+        </div>
+        <div class="info-item">
+          <strong>Status</strong>
+          <span style="color: green; font-weight: bold;">Open</span>
+        </div>
+      </div>
+
+      <div class="description">
+        <p>
+          The Centralized Employment Notification (CEN) 02/2025 is issued for the recruitment of Technicians across various departments in Indian Railways. Interested candidates are advised to read the eligibility criteria and application guidelines carefully before proceeding with the application.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bulletin Board -->
+    <div class="section">
+      <h2>Bulletin Board</h2>
+      <table class="bulletin">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Uploaded On</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Corrigendum-1</td>
+            <td>25-June-2025</td>
+            <td><a href="#" class="btn-link">Download</a></td>
+          </tr>
+          <tr>
+            <td>FAQs</td>
+            <td>30-July-2025</td>
+            <td><a href="#" class="btn-link">View</a></td>
+          </tr>
+          <tr>
+            <td>View Notifications (Hindi)</td>
+            <td>01-Aug-2025</td>
+            <td><a href="#" class="btn-link">View</a></td>
+          </tr>
+          <tr>
+            <td>Apply Online</td>
+            <td>28-June-2025</td>
+            <td><a href="#" class="btn-link">Apply</a></td>
+          </tr>
+          <tr>
+            <td>Notice on Corrected Version of CEN</td>
+            <td>28-June-2025</td>
+            <td><a href="#" class="btn-link">Download</a></td>
+          </tr>
+          <tr>
+            <td>View Notification (English)</td>
+            <td>28-June-2025</td>
+            <td><a href="#" class="btn-link">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="bg-gray-900 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Left: Info -->
+      <div>
+        <h4 class="text-xl font-semibold mb-2">Government of India</h4>
+        <p class="text-sm">Ministry of Railways</p>
+        <p class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+      </div>
+
+      <!-- Right: Quick Links (Improved Alignment) -->
+      <div class="flex flex-col items-start md:items-end">
+        <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
+        <ul class="space-y-1 text-sm text-right w-full md:w-auto">
+          <li><a href="#about" class="hover:text-gray-300 transition-colors">About Us</a></li>
+          <li><a href="#results" class="hover:text-gray-300 transition-colors">Results</a></li>
+          <li><a href="#recruitments" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
+          <li><a href="#contact" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
+      © 2022 Railway Recruitment Board Chennai. All Rights Reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
