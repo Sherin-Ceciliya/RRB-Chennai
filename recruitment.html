@@ -198,7 +198,6 @@
 
         const data = await response.json();
 
-        // Loop through each recruitment key
         Object.keys(data).forEach(key => {
           const record = data[key];
           const tr = document.createElement("tr");
@@ -209,7 +208,7 @@
             return `${y}-${(months[m.slice(0,3)] + 1).toString().padStart(2,'0')}-${d.padStart(2,'0')}`;
           }));
 
-          // Determine status based on closing date
+          // Determine status
           let statusText = "Closed";
           let statusClass = "status-closed";
           if (parsedDate >= today) {
@@ -217,14 +216,14 @@
             statusClass = "status-open";
           }
 
-          // Build table row
+          // Build table row with link to recruitment_details.html and CEN as query param
           tr.innerHTML = `
             <td>${key}</td>
             <td>${record.title}</td>
             <td>${record.opening_date}</td>
             <td>${record.closing_date}</td>
             <td class="${statusClass}">${statusText}</td>
-            <td><a class="btn" href="#">View</a></td>
+            <td><a class="btn" href="recruitment_details.html?cen=${key}">View</a></td>
           `;
 
           tbody.appendChild(tr);
@@ -236,6 +235,7 @@
       }
     });
     </script>
+
 
 </body>
 </html>

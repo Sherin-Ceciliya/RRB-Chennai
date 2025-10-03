@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - RRB Chennai</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header Section -->
+  <header class="custom-header text-white shadow-md">
+    <div class="flex justify-between items-center h-32 w-full px-4">
+      <!-- Logo and Title -->
+      <div class="flex items-center space-x-4">
+        <img src="images/railways.png" alt="RRB Logo" class="h-28 w-auto" />
+        <div class="leading-tight">
+          <h1 class="text-3xl font-bold">Railway Recruitment Board</h1>
+          <p class="text-xl ml-1">Chennai</p>
+        </div>
+      </div>
+
+      <!-- Navigation Links for Desktop -->
+      <nav class="hidden md:flex space-x-10 text-xl font-semibold">
+        <a href="#" class="nav-link">In Hindi</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="results.html" class="nav-link">Results</a>
+        <a href="recruitment.html" class="nav-link">Recruitments</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Hamburger Menu for Mobile -->
+      <div class="md:hidden flex items-center">
+        <button id="menuBtn" class="text-white focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden bg-gray-800 md:hidden px-4 pt-2 pb-4 space-y-2">
+      <a href="#" class="block text-white font-semibold">In Hindi</a>
+      <a href="about.html" class="block text-white font-semibold">About Us</a>
+      <a href="results.html" class="block text-white font-semibold">Results</a>
+      <a href="recruitment.html" class="block text-white font-semibold">Recruitments</a>
+      <a href="contact.html" class="block text-white font-semibold">Contact</a>
+    </div>
+  </header>
+
+  <br>
+
+  <!-- About Us Section -->
+  <section class="max-w-5xl mx-auto my-12 px-4">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">About Us</h2>
+
+    <p class="text-lg text-gray-700 mb-4 text-justify">
+      <strong>Railway Recruitment Board (RRB), Madras (now Chennai)</strong> functions under the <strong>Ministry of Railways, Government of India</strong>. It is primarily responsible for recruiting the working and supervisory staff (Group 'C') required for Chennai, Salem, and Tiruchirappalli Divisions, as well as the Head Quarters office of Southern Railway (SR) and Integral Coach Factory (ICF), Chennai.
+    </p>
+
+    <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Selection Procedure</h3>
+    <p class="text-lg text-gray-700 mb-4 text-justify">
+      RRB calls for eligible applicants through <strong>"Employment News"</strong> (A publication of the Government of India). The employment notification is also published on the Internet website. Applications are scrutinized for eligibility, and eligible candidates are called for a written examination, with call letters sent a month in advance.
+    </p>
+    <p class="text-lg text-gray-700 mb-4 text-justify">
+      In most categories, there is no interview after the written examination. Some categories may have a second stage written examination. For operational safety roles, candidates undergo a psychological test. After the written exam, applications of successful candidates are verified, followed by counselling and scrutiny of original documents. A panel of candidates is recommended to Southern Railway / Integral Coach Factory for vacancies. Candidates must pass a medical examination before appointment.
+    </p>
+
+    <p class="text-lg text-gray-700 mb-4 text-justify">
+      The results are made available:
+    </p>
+    <ul class="list-disc list-inside text-lg text-gray-700 mb-4 text-justify">
+      <li>On the Notice Board of RRB/Chennai</li>
+      <li>Through the Internet website</li>
+      <li>In "The Employment News"</li>
+      <li>To successful candidates via post</li>
+    </ul>
+
+    <p class="text-lg text-gray-700 mb-4 text-justify">
+      The selection process is based on merit and subject to the rules issued by the Ministry of Railways, including reservations for SC, ST, OBC, and ex-servicemen. The recruitment system functions impersonally, with no scope for corruption. Malpractices are strictly dealt with.
+    </p>
+
+    <p class="text-lg text-gray-700 mb-4 text-justify">
+      Overall policy guidelines for all Railway Recruitment Boards in India are laid down by the <strong>Railway Recruitment Control Board (RRCB), New Delhi</strong>.
+    </p>
+
+    <p class="text-lg text-gray-700 text-justify">
+      ©2013 Railway Recruitment Board Chennai. All Rights Reserved.
+    </p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-900 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <h4 class="text-xl font-semibold mb-2">Government of India</h4>
+        <p class="text-sm">Ministry of Railways</p>
+        <p class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+      </div>
+      <div class="flex flex-col items-start md:items-end">
+        <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
+        <ul class="space-y-1 text-sm text-right w-full md:w-auto">
+          <li><a href="about.html" class="hover:text-gray-300 transition-colors">About Us</a></li>
+          <li><a href="results.html" class="hover:text-gray-300 transition-colors">Results</a></li>
+          <li><a href="recruitment.html" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
+          <li><a href="contact.html" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
+      © 2025 Railway Recruitment Board Chennai. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

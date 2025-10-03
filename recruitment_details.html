@@ -54,7 +54,37 @@
         <div class="info-item"><strong>Last Updated</strong><span id="last-updated"></span></div>
         <div class="info-item"><strong>Status</strong><span id="status" style="font-weight:bold;"></span></div>
       </div>
-      <div class="description">
+
+      <style>
+        .info-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); /* 2 columns */
+          gap: 16px;
+          margin-top: 10px;
+        }
+
+        @media (max-width: 640px) {
+          .info-grid {
+            grid-template-columns: 1fr; /* stack on small screens */
+          }
+        }
+
+        .info-item {
+          background: #eef5fb;
+          padding: 12px 16px;
+          border-radius: 4px;
+          font-size: 0.95rem;
+        }
+
+        .info-item strong {
+          display: block;
+          font-size: 0.85rem;
+          color: #444;
+          margin-bottom: 4px;
+        }
+      </style>
+
+      <div class="description mt-4">
         <p id="description"></p>
       </div>
     </div>
@@ -88,46 +118,82 @@
       </div>
     </div>
     <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
-      © 2022 Railway Recruitment Board Chennai. All Rights Reserved.
+      © 2025 Railway Recruitment Board Chennai. All Rights Reserved.
     </div>
   </footer>
 
   <!-- Script to Load JSON -->
   <script>
+    // Get the CEN number from URL, e.g., ?cen=CEN_02_2025
     function getCENFromURL() {
       const params = new URLSearchParams(window.location.search);
-      return params.get("cen");  // e.g. CEN_02_2025
+      return params.get("cen");
     }
 
     async function loadRecruitment() {
       const cenNumber = getCENFromURL();
-      const response = await fetch("database.json");
-      const data = await response.json();
-      const rec = data[cenNumber];
+      if (!cenNumber) return;
 
-      if (!rec) {
-        document.getElementById("recruitment-info").innerHTML = "<p class='text-red-500'>No data found for this CEN.</p>";
-        return;
+      try {
+        const response = await fetch("database.json");
+        const data = await response.json();
+        const rec = data[cenNumber];
+
+        if (!rec) {
+          document.getElementById("recruitment-info").innerHTML = "<p class='text-red-500'>No data found for this CEN.</p>";
+          return;
+        }
+
+        // Populate main info
+        document.getElementById("rec-title").textContent = rec.title;
+        document.getElementById("opening-date").textContent = rec.opening_date;
+        document.getElementById("closing-date").textContent = rec.closing_date;
+        document.getElementById("last-updated").textContent = rec.last_updated;
+        document.getElementById("status").textContent = rec.status;
+        document.getElementById("status").style.color = rec.status === "Open" ? "green" : rec.status === "Upcoming" ? "orange" : "red";
+        document.getElementById("description").textContent = rec.description;
+
+        // Determine dynamic status based on closing date
+        const closingDateParts = rec.closing_date.split('-'); // e.g., ["30", "June", "2025"]
+        const months = { Jan:0, Feb:1, Mar:2, Apr:3, May:4, Jun:5, Jul:6, Aug:7, Sep:8, Sept:8, Oct:9, Nov:10, Dec:11 };
+        const closingDate = new Date(
+          parseInt(closingDateParts[2]), 
+          months[closingDateParts[1].slice(0,3)], 
+          parseInt(closingDateParts[0])
+        );
+
+        const today = new Date();
+        let statusText, statusColor;
+
+        if (closingDate < today) {
+          statusText = "Closed";
+          statusColor = "red";
+        } else {
+          statusText = "Open";
+          statusColor = "green";
+        }
+
+        document.getElementById("status").textContent = statusText;
+        document.getElementById("status").style.color = statusColor;
+
+
+        // Populate bulletin table
+        const tbody = document.getElementById("bulletin-body");
+        tbody.innerHTML = ""; // clear existing rows
+        rec.bulletin.forEach(item => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${item.title}</td>
+            <td>${item.uploaded_on}</td>
+            <td><a href="${item.link}" class="btn-link" target="_blank">View</a></td>
+          `;
+          tbody.appendChild(row);
+        });
+
+      } catch (err) {
+        console.error(err);
+        document.getElementById("recruitment-info").innerHTML = "<p class='text-red-500'>Failed to load recruitment data.</p>";
       }
-
-      document.getElementById("rec-title").textContent = rec.title;
-      document.getElementById("opening-date").textContent = rec.opening_date;
-      document.getElementById("closing-date").textContent = rec.closing_date;
-      document.getElementById("last-updated").textContent = rec.last_updated;
-      document.getElementById("status").textContent = rec.status;
-      document.getElementById("status").style.color = rec.status === "Open" ? "green" : rec.status === "Upcoming" ? "orange" : "red";
-      document.getElementById("description").textContent = rec.description;
-
-      const tbody = document.getElementById("bulletin-body");
-      tbody.innerHTML = "";
-      rec.bulletin.forEach(item => {
-        const row = `<tr>
-          <td>${item.title}</td>
-          <td>${item.uploaded_on}</td>
-          <td><a href="${item.link}" class="btn-link">View</a></td>
-        </tr>`;
-        tbody.innerHTML += row;
-      });
     }
 
     loadRecruitment();

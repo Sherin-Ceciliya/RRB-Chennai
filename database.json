@@ -54,7 +54,11 @@
     "last_updated": "25-Sep-2025",
     "status": "Upcoming",
     "description": "Recruitment for Group D posts including Track Maintainer and Helpers.",
-    "bulletin": []
+    "bulletin": [
+      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "#" },
+      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "#" },
+      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "#" }
+    ]
   },
   "CEN_06_2025": {
     "title": "CEN 06/2025 - Paramedical Staff Recruitment",
@@ -74,7 +78,11 @@
     "last_updated": "25-Oct-2025",
     "status": "Open",
     "description": "Recruitment for Stenographers, Translators, and other ministerial posts.",
-    "bulletin": []
+    "bulletin": [
+      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "#" },
+      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "#" },
+      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "#" }
+    ]
   },
   "CEN_08_2025": {
     "title": "CEN 08/2025 - Apprentice Recruitment",
@@ -83,7 +91,10 @@
     "last_updated": "10-Nov-2025",
     "status": "Upcoming",
     "description": "Recruitment for Apprenticeship training in Indian Railways.",
-    "bulletin": []
+    "bulletin": [
+      { "title": "Eligibility Criteria", "uploaded_on": "12-July-2025", "link": "#" },
+      { "title": "Notification", "uploaded_on": "10-July-2025", "link": "#" }
+    ]
   },
   "CEN_09_2025": {
     "title": "CEN 09/2025 - Law Assistant Recruitment",
@@ -92,7 +103,11 @@
     "last_updated": "20-Nov-2025",
     "status": "Upcoming",
     "description": "Recruitment for Law Assistants in Indian Railways.",
-    "bulletin": []
+    "bulletin": [
+      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "#" },
+      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "#" },
+      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "#" }
+    ]
   },
   "CEN_10_2025": {
     "title": "CEN 10/2025 - Accounts Clerk Recruitment",
@@ -101,7 +116,9 @@
     "last_updated": "30-Nov-2025",
     "status": "Upcoming",
     "description": "Recruitment for Accounts Clerks and related posts.",
-    "bulletin": []
+    "bulletin": [
+      { "title": "Notification", "uploaded_on": "01-Aug-2025", "link": "#" }
+    ]
   },
   "CEN_11_2025": {
     "title": "CEN 11/2025 - Sports Quota Recruitment",
@@ -110,7 +127,11 @@
     "last_updated": "10-Dec-2025",
     "status": "Upcoming",
     "description": "Recruitment of candidates under Sports Quota.",
-    "bulletin": []
+    "bulletin": [
+      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "#" },
+      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "#" },
+      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "#" }
+    ]
   },
   "CEN_12_2025": {
     "title": "CEN 12/2025 - Cultural Quota Recruitment",
@@ -119,7 +140,10 @@
     "last_updated": "20-Dec-2025",
     "status": "Upcoming",
     "description": "Recruitment of candidates under Cultural Quota.",
-    "bulletin": []
+    "bulletin": [
+      { "title": "Eligibility Criteria", "uploaded_on": "12-July-2025", "link": "#" },
+      { "title": "Notification", "uploaded_on": "10-July-2025", "link": "#" }
+    ]
   },
   "CEN_13_2025": {
     "title": "CEN 13/2025 - Station Master Recruitment",
@@ -128,7 +152,11 @@
     "last_updated": "30-Dec-2025",
     "status": "Upcoming",
     "description": "Recruitment for Station Masters in Railways.",
-    "bulletin": []
+    "bulletin": [
+      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "#" },
+      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "#" },
+      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "#" }
+    ]
   },
   "CEN_14_2025": {
     "title": "CEN 14/2025 - Commercial Apprentice Recruitment",
@@ -137,7 +165,9 @@
     "last_updated": "10-Jan-2026",
     "status": "Upcoming",
     "description": "Recruitment for Commercial Apprentices.",
-    "bulletin": []
+    "bulletin": [
+      { "title": "Notification", "uploaded_on": "01-Aug-2025", "link": "#" }
+    ]
   },
   "CEN_15_2025": {
     "title": "CEN 15/2025 - Ticket Collector Recruitment",
@@ -146,6 +176,10 @@
     "last_updated": "25-Jan-2026",
     "status": "Upcoming",
     "description": "Recruitment for Ticket Collectors in Indian Railways.",
-    "bulletin": []
+    "bulletin": [
+      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "#" },
+      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "#" },
+      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "#" }
+    ]
   }
 }

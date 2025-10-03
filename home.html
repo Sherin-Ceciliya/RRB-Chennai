@@ -21,7 +21,7 @@
         </div>
       </div>
 
-      <!-- Navigation Links -->
+      <!-- Navigation Links for Desktop -->
       <nav class="hidden md:flex space-x-10 text-xl font-semibold">
         <a href="#" class="nav-link">In Hindi</a>
         <a href="about.html" class="nav-link">About Us</a>
@@ -29,6 +29,25 @@
         <a href="recruitment.html" class="nav-link">Recruitments</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
+
+      <!-- Hamburger Menu for Mobile -->
+      <div class="md:hidden flex items-center">
+        <button id="menuBtn" class="text-white focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden bg-gray-800 md:hidden px-4 pt-2 pb-4 space-y-2">
+      <a href="#" class="block text-white font-semibold">In Hindi</a>
+      <a href="about.html" class="block text-white font-semibold">About Us</a>
+      <a href="results.html" class="block text-white font-semibold">Results</a>
+      <a href="recruitment.html" class="block text-white font-semibold">Recruitments</a>
+      <a href="contact.html" class="block text-white font-semibold">Contact</a>
     </div>
   </header>
   <br>
@@ -134,7 +153,7 @@
         Candidates are cautioned against touts and job racketeers trying to deceive by false promises of securing jobs through illegal means. Recruitment is based purely on merit.
       </p>
       <br>
-      <a href="warning.pdf" target="_blank" class="bg-white text-blue-900 font-bold px-4 py-2 rounded hover:scale-105 transition duration-200">
+      <a href="resources/warning.pdf" target="_blank" class="bg-white text-blue-900 font-bold px-4 py-2 rounded hover:scale-105 transition duration-200">
         Click here for details
       </a>
     </div>
@@ -204,9 +223,9 @@
     <div class="flex flex-col items-start md:items-end">
       <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
       <ul class="space-y-1 text-sm text-right w-full md:w-auto">
-        <li><a href="#about" class="hover:text-gray-300 transition-colors">About Us</a></li>
+        <li><a href="./about.html" class="hover:text-gray-300 transition-colors">About Us</a></li>
         <li><a href="#results" class="hover:text-gray-300 transition-colors">Results</a></li>
-        <li><a href="#recruitments" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
+        <li><a href="./recruitment.html" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
         <li><a href="#contact" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
       </ul>
     </div>
@@ -218,6 +237,14 @@
   </div>
 </footer>
 
+<!-- Mobile Menu Script -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
 
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
