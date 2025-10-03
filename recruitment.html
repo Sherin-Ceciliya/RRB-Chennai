@@ -8,29 +8,16 @@
   <link rel="stylesheet" href="home.css" />
   <style>
     body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #fdfcf8;
-        color: #333;
-        line-height: 1.6;
-    }
-
-    header h1 {
       margin: 0;
-      font-size: 2rem;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdfcf8;
+      color: #333;
+      line-height: 1.6;
     }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
+    header h1 { margin: 0; font-size: 2rem; }
+    .container { max-width: 1100px; margin: auto; padding: 20px; }
+    .section { margin-bottom: 40px; }
     .section h2 {
       color: #0055a5;
       border-bottom: 2px solid #ddd;
@@ -39,7 +26,6 @@
       font-weight: bold;
       font-size: 1.5rem;
     }
-
     .rules-box {
       background-color: #eef5fb;
       border-left: 5px solid #0077c0;
@@ -47,28 +33,10 @@
       margin-bottom: 20px;
       border-radius: 5px;
     }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: white;
-    }
-
-    th, td {
-      padding: 12px 15px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
-
-    th {
-      background-color: #0055a5;
-      color: white;
-    }
-
-    tr:hover {
-      background-color: #f1f1f1;
-    }
-
+    table { width: 100%; border-collapse: collapse; background-color: white; }
+    th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }
+    th { background-color: #0055a5; color: white; }
+    tr:hover { background-color: #f1f1f1; }
     a.btn {
       display: inline-block;
       background-color: #0077c0;
@@ -78,38 +46,12 @@
       border-radius: 4px;
       transition: background-color 0.3s ease;
     }
-
-    a.btn:hover {
-      background-color: #004c87;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      padding: 20px;
-    }
-
-    .rules-container {
-      background-color: #fff7cc;
-      border: 1px solid #dcdcdc;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .rules-container h2 {
-      color: #003366;
-      border-bottom: 1px solid #a6c8ff;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-
+    a.btn:hover { background-color: #004c87; }
     .rules-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 10px 40px;
     }
-
     .rules-grid a {
       display: block;
       color: #0083db;
@@ -118,46 +60,21 @@
       position: relative;
       padding-left: 15px;
     }
-
     .rules-grid a::before {
       content: '›';
       position: absolute;
       left: 0;
       color: #2196f3;
     }
-
-    .rules-grid a:hover {
-      text-decoration: underline;
-    }
-
-    .status-open {
-        color: green;
-        font-weight: bold;
-    }
-
-    .status-closed {
-        color: red;
-        font-weight: bold;
-    }
-
-    /* Remove default margin/padding from body and html */
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Custom header background to match RRB dark blue */
-    .custom-header {
-      background-color: #153865;
-    }
-
-    /* Underline hover animation */
+    .rules-grid a:hover { text-decoration: underline; }
+    .status-open { color: green; font-weight: bold; }
+    .status-closed { color: red; font-weight: bold; }
+    .custom-header { background-color: #153865; }
     .nav-link {
       position: relative;
       padding-bottom: 4px;
       transition: color 0.3s ease-in-out;
     }
-
     .nav-link::after {
       content: '';
       position: absolute;
@@ -168,23 +85,11 @@
       background-color: white;
       transition: width 1s ease;
     }
-
-    .nav-link:hover::after {
-      width: 100%;
-    }
-
+    .nav-link:hover::after { width: 100%; }
     @media (max-width: 768px) {
-      th, td {
-        font-size: 0.95rem;
-      }
-
-      header h1 {
-        font-size: 1.6rem;
-      }
-
-      .rules-box {
-        font-size: 0.95rem;
-      }
+      th, td { font-size: 0.95rem; }
+      header h1 { font-size: 1.6rem; }
+      .rules-box { font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -193,7 +98,6 @@
   <!-- Header Section -->
   <header class="custom-header text-white shadow-md">
     <div class="flex justify-between items-center h-32 w-full px-4">
-      <!-- Logo and Title -->
       <div class="flex items-center space-x-4">
         <img src="images/railways.png" alt="RRB Logo" class="h-28 w-auto" />
         <div class="leading-tight">
@@ -201,8 +105,6 @@
           <p class="text-xl ml-1">Chennai</p>
         </div>
       </div>
-
-      <!-- Navigation Links -->
       <nav class="hidden md:flex space-x-10 text-xl font-semibold">
         <a href="home.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About Us</a>
@@ -213,199 +115,51 @@
     </div>
   </header>
 
-
   <div class="container">
-    
-    <!-- Intro Section -->
     <section class="section">
       <h2>Welcome to the Recruitment Portal</h2>
       <p>
         This portal provides all the latest updates regarding recruitments conducted by the Railway Recruitment Board (RRB), Chennai.
-        We aim to ensure transparent and efficient recruitment procedures in accordance with the policies of the Indian Railways.
       </p>
     </section>
 
-    <!-- Recruitment Rules -->
     <section class="section">
       <h2>Recruitment Rules</h2>
       <div class="rules-box">
-        All appointments made through this board will strictly adhere to the guidelines laid down by the Ministry of Railways. Candidates are advised to carefully read the notification and ensure they meet all eligibility criteria before applying. No deviation from the eligibility conditions will be permitted.
+        All appointments made through this board will strictly adhere to the guidelines laid down by the Ministry of Railways.
       </div>
-        <div class="rules-grid">
+      <div class="rules-grid">
         <a href="general-instructions.html">General Instructions</a>
         <a href="serving-employees.html">Serving Employees</a>
-
         <a href="age-relaxation.html">Age Relaxation</a>
         <a href="miscellaneous.html">Miscellaneous</a>
-
         <a href="examination-fees.html">Examination Fees</a>
         <a href="impersonation.html">Impersonation Supression of Facts</a>
-
         <a href="community-reservation.html">Community Reservation</a>
         <a href="sc-st-facilities.html">Facilities for SC / ST Candidates</a>
-
         <a href="recruitment-process.html">Recruitment Process</a>
         <a href="warning.html">Warning</a>
-
         <a href="medical-standard.html">Medical Standard</a>
         <a href="frequently-committed-mistakes.html">Frequently Committed Mistakes</a>
-
         <a href="ex-serviceman-disabilities.html">Ex-serviceman & Persons With Disabilities</a>
-        </div>
+      </div>
     </section>
 
-    <!-- Recruitment Table -->
     <section class="section">
       <h2>Current Openings</h2>
       <table>
         <thead>
-        <tr>
+          <tr>
             <th>CEN No.</th>
             <th>Recruitment Role</th>
             <th>Opening Date</th>
             <th>Closing Date</th>
             <th>Status</th>
             <th>Details</th>
-        </tr>
+          </tr>
         </thead>
-
-        <tbody>
-          <tr>
-            <td>02/2025</td>
-            <td>Technicians</td>
-            <td>26-June-2025</td>
-            <td>02-Aug-2025</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="CEN022025.html">View</a></td>
-          </tr>
-          <tr>
-            <td>01/2024</td>
-            <td>Assisatant Loco Pilot (ALP)</td>
-            <td>20-Jan-2025</td>
-            <td>19-Feb-2025</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="012024.html">View</a></td>
-          </tr>
-          <tr>
-            <td>01/2025</td>
-            <td>Assisatant Loco Pilot (ALP)</td>
-            <td>12-Apr-2025</td>
-            <td>19-May-2025</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
-          <tr>
-            <td>02/2024</td>
-            <td>Technicians (Grade I and III)</td>
-            <td>02-Oct-2024</td>
-            <td>16-Oct-2024</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
-          <tr>
-            <td>RPF 02/2024</td>
-            <td>Constable (Executive)</td>
-            <td>02-Oct-2024</td>
-            <td>16-Oct-2024</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
-          <tr>
-            <td>RPF 04/2024</td>
-            <td>Paramedical Posts</td>
-            <td>17-Aug-2024</td>
-            <td>16-Sept-2024</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
-          <tr>
-            <td>RPF 01/2024</td>
-            <td>Sub-Inspector (Executive)</td>
-            <td>02-Oct-2024</td>
-            <td>16-Oct-2024</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
-          <tr>
-            <td>03/2024</td>
-            <td>JE, DMS, CMA</td>
-            <td>30-July-2024</td>
-            <td>29-Aug-2024</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
-          <tr>
-            <td>08/2024</td>
-            <td>Level 1 of 7th CPC Pay Matrix</td>
-            <td>23-Jan-2024</td>
-            <td>01-Mar-2024</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
-          <tr>
-            <td>07/2024</td>
-            <td>Ministral and Isolated Categories</td>
-            <td>07-Jan-2024</td>
-            <td>28-Feb-2024</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
-          <tr>
-            <td>05/2024</td>
-            <td>Non-Technical Popular Categories (NTPC) - Graduate</td>
-            <td>14-Sept-2024</td>
-            <td>20-Oct-2024</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
-          <tr>
-            <td>01/2019</td>
-            <td>Non-Technical Popular Categories (NTPC)</td>
-            <td>02-Oct-2024</td>
-            <td>16-Oct-2024</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
-          <tr>
-            <td>RRC 01/2019</td>
-            <td>Level 1 of 7th CPC Pay Matrix</td>
-            <td>02-Oct-2024</td>
-            <td>16-Oct-2024</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
-          <tr>
-            <td>03/2019</td>
-            <td>Ministral and Isolated Categories</td>
-            <td>02-Oct-2024</td>
-            <td>16-Oct-2024</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
-          <tr>
-            <td>01/2018</td>
-            <td>Assistant Loco Pilots & Technicians</td>
-            <td>02-Oct-2024</td>
-            <td>16-Oct-2024</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
-          <tr>
-            <td>02/2019</td>
-            <td>JE, JE(IT), DMS & CMA</td>
-            <td>02-Oct-2024</td>
-            <td>16-Oct-2024</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
-          <tr>
-            <td>03/2018</td>
-            <td>Level 1 of 7th CPC Pay Matrix</td>
-            <td>02-Oct-2024</td>
-            <td>16-Oct-2024</td>
-            <td class="status-cell">Loading...</td>
-            <td><a class="btn" href="#">View</a></td>
-          </tr>
+        <tbody id="recruitment-body">
+          <!-- Rows will be populated dynamically -->
         </tbody>
       </table>
     </section>
@@ -413,15 +167,11 @@
 
   <footer class="bg-gray-900 text-white py-8 mt-12">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-      
-      <!-- Left: Info -->
       <div>
         <h4 class="text-xl font-semibold mb-2">Government of India</h4>
         <p class="text-sm">Ministry of Railways</p>
         <p class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
       </div>
-
-      <!-- Right: Quick Links (Improved Alignment) -->
       <div class="flex flex-col items-start md:items-end">
         <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
         <ul class="space-y-1 text-sm text-right w-full md:w-auto">
@@ -432,46 +182,60 @@
         </ul>
       </div>
     </div>
-
-    <!-- Divider -->
     <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
       © 2022 Railway Recruitment Board Chennai. All Rights Reserved.
     </div>
   </footer>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const rows = document.querySelectorAll("table tbody tr");
-        const today = new Date();
+    document.addEventListener("DOMContentLoaded", async function () {
+      const tbody = document.getElementById("recruitment-body");
+      const today = new Date();
 
-        rows.forEach(row => {
-        const closingDateStr = row.cells[3].innerText.trim(); // 4th cell = Closing Date
-        const statusCell = row.querySelector(".status-cell");
+      try {
+        const response = await fetch("./database.json");
+        if (!response.ok) throw new Error("HTTP error " + response.status);
 
-        // Try parsing the date
-        const parsedDate = new Date(closingDateStr.replace(/(\d{1,2})-(\w+)-(\d{4})/, (match, d, m, y) => {
-            const months = {
-            Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
-            July: 6, Jul: 6, Aug: 7, Sept: 8, Sep: 8,
-            Oct: 9, Nov: 10, Dec: 11
-            };
-            return `${y}-${months[m.slice(0,3)] + 1}-${d.padStart(2, '0')}`;
-        }));
+        const data = await response.json();
 
-        if (parsedDate.toString() === "Invalid Date") {
-            statusCell.textContent = "Invalid Date";
-            statusCell.classList.add("status-closed");
-        } else if (parsedDate >= today) {
-            statusCell.textContent = "Open";
-            statusCell.classList.add("status-open");
-        } else {
-            statusCell.textContent = "Closed";
-            statusCell.classList.add("status-closed");
-        }
+        // Loop through each recruitment key
+        Object.keys(data).forEach(key => {
+          const record = data[key];
+          const tr = document.createElement("tr");
+
+          // Parse closing date
+          const parsedDate = new Date(record.closing_date.replace(/(\d{1,2})-(\w+)-(\d{4})/, (match, d, m, y) => {
+            const months = { Jan:0, Feb:1, Mar:2, Apr:3, May:4, Jun:5, Jul:6, Aug:7, Sep:8, Sept:8, Oct:9, Nov:10, Dec:11 };
+            return `${y}-${(months[m.slice(0,3)] + 1).toString().padStart(2,'0')}-${d.padStart(2,'0')}`;
+          }));
+
+          // Determine status based on closing date
+          let statusText = "Closed";
+          let statusClass = "status-closed";
+          if (parsedDate >= today) {
+            statusText = "Open";
+            statusClass = "status-open";
+          }
+
+          // Build table row
+          tr.innerHTML = `
+            <td>${key}</td>
+            <td>${record.title}</td>
+            <td>${record.opening_date}</td>
+            <td>${record.closing_date}</td>
+            <td class="${statusClass}">${statusText}</td>
+            <td><a class="btn" href="#">View</a></td>
+          `;
+
+          tbody.appendChild(tr);
         });
+
+      } catch (error) {
+        console.error("Error loading recruitment data:", error);
+        tbody.innerHTML = `<tr><td colspan="6">Failed to load recruitment data.</td></tr>`;
+      }
     });
     </script>
-
 
 </body>
 </html>
