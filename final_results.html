@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RRB Chennai - Final Results</title>
+  <title>RRB Chennai - Result Announcements</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="home.css" />
   <style>
@@ -101,6 +101,7 @@
 </style>
 
 </head>
+
 <body class="bg-gray-100">
 
   <!-- Header -->
@@ -126,9 +127,26 @@
   <!-- Main Section -->
   <div class="container">
     <div class="section">
-      <h2 class="text-2xl font-semibold mb-4">Final Results</h2>
+      <h2 class="text-2xl font-semibold mb-4">Result Announcements</h2>
       <table class="bulletin">
         <thead>
+            <tr>
+  <th>
+    <input type="text" id="searchNotice" 
+       placeholder="Give date as MM/YYYY or GDCE" 
+       class="w-full p-1 rounded border border-gray-300 bg-white text-black" />
+
+  </th>
+  <th>
+    <input type="text" id="searchCategory" placeholder="Enter single, comma or range" class="w-full p-1 rounded border border-gray-300 bg-white text-black" />
+
+  </th>
+  <th>
+    <input type="text" id="searchPost" placeholder="Search post name" class="w-full p-1 rounded border border-gray-300 bg-white text-black" />
+  </th>
+  <th></th> <!-- Link column has no search -->
+</tr>
+
           <tr>
             <th>Notice Number</th>
             <th>Category Number</th>
@@ -195,5 +213,63 @@
       <p>&copy; 2025 Railway Recruitment Board, Chennai. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+  // Select elements AFTER DOM is loaded
+  const noticeInput = document.getElementById('searchNotice');
+  const categoryInput = document.getElementById('searchCategory');
+  const postInput = document.getElementById('searchPost');
+  const table = document.querySelector('.bulletin tbody');
+  const rows = Array.from(table.getElementsByTagName('tr'));
+
+  function matchesNotice(noticeText, filterText) {
+    if (!filterText) return true;
+    filterText = filterText.toLowerCase();
+    return noticeText.toLowerCase().includes(filterText);
+  }
+
+  function matchesCategory(categoryText, filterText) {
+    if (!filterText) return true;
+    const filters = filterText.split(',').map(f => f.trim());
+
+    for (let f of filters) {
+      if (f.includes('-')) {
+        const [start, end] = f.split('-').map(Number);
+        if (categoryText.split(',').some(c => {
+          let val = Number(c.trim());
+          return val >= start && val <= end;
+        })) return true;
+      } else {
+        if (categoryText.split(',').some(c => c.trim() === f)) return true;
+      }
+    }
+    return false;
+  }
+
+  function matchesPost(postText, filterText) {
+    if (!filterText) return true;
+    return postText.toLowerCase().includes(filterText.toLowerCase());
+  }
+
+  function filterTable() {
+    const noticeFilter = noticeInput.value;
+    const categoryFilter = categoryInput.value;
+    const postFilter = postInput.value;
+
+    rows.forEach(row => {
+      const cells = row.getElementsByTagName('td');
+      const show = 
+        matchesNotice(cells[0].textContent, noticeFilter) &&
+        matchesCategory(cells[1].textContent, categoryFilter) &&
+        matchesPost(cells[2].textContent, postFilter);
+      row.style.display = show ? '' : 'none';
+    });
+  }
+
+  // Add event listeners
+  noticeInput.addEventListener('input', filterTable);
+  categoryInput.addEventListener('input', filterTable);
+  postInput.addEventListener('input', filterTable);
+</script>
+
 </body>
 </html>
