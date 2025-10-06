@@ -1,14 +1,43 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RRB Chennai</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="home.css" />
-</head>
-<body class="bg-gray-100">
+  <style>
+    /* Keep footer at bottom on large screens */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      background-color: #f3f4f6;
+    }
+    main {
+      flex: 1;
+    }
+    footer {
+      margin-top: auto;
+    }
 
+    /* Custom header style */
+    .custom-header {
+      background-color: #003366;
+    }
+    .nav-link {
+      color: #ffffff;
+      transition: color 0.3s;
+    }
+    .nav-link:hover {
+      color: #a8d0ff;
+    }
+  </style>
+</head>
+
+<body>
   <!-- Header Section -->
   <header class="custom-header text-white shadow-md">
     <div class="flex justify-between items-center h-32 w-full px-4">
@@ -31,65 +60,89 @@
       </nav>
     </div>
   </header>
-  <br>
 
-  
+  <!-- Main Section -->
+  <main class="mt-10 mb-16 flex justify-center items-start p-6">
+  <div class="max-w-4xl w-full bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-200">
+    <h2 class="text-2xl font-bold mb-3 text-gray-800 text-center">
+      Railway Recruitment Board (RRB), Chennai <br> Results <br>
+      <br>
+    </h2>
+    <p class="text-gray-600 mb-6 text-center font-semibold">
+      Explore official updates, results, and announcements
+      <br> <br>
+    </p>
 
-<main class="max-w-4xl mx-auto p-6 bg-white shadow rounded mt-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+      <!-- Card 1 -->
+      <div class="card p-4 rounded-lg shadow hover:shadow-md bg-gray-100 flex flex-col">
+        <h3 class="card-title text-lg font-semibold text-blue-700 mb-2">
+          <a href="written_results.html" class="hover:underline">Written / CBT Results</a>
+        </h3>
+        <p class="text-gray-700 text-sm flex-1">
+          View results of written examinations and Computer Based Tests for various RRB posts.
+        </p>
+        <div class="mt-4">
+          <a href="written_results.html" class="text-sm font-medium text-blue-600 hover:underline">View list →</a>
+        </div>
+      </div>
 
-  <h2 class="text-2xl font-bold mb-4">Railway Recruitment Board (RRB), Chennai announces the following Results</h2>
-  <p class="mb-4">Individual advices have also been sent to the successful candidates.</p>
+      <!-- Card 2 -->
+      <div class="card p-4 rounded-lg shadow hover:shadow-md bg-gray-100 flex flex-col">
+        <h3 class="card-title text-lg font-semibold text-blue-700 mb-2">
+          <a href="final_results.html" class="hover:underline">Result Announcements</a>
+        </h3>
+        <p class="text-gray-700 text-sm flex-1">
+          Check out shortlists, circulars and other relevant resources.
+        </p>
+        <div class="mt-4">
+          <a href="final_results.html" class="text-sm font-medium text-blue-600 hover:underline">View list →</a>
+        </div>
+      </div>
 
-  <ul class="list-disc list-inside space-y-2 text-lg text-blue-600">
-    <li><a href="written_results.html" class="hover:underline">WRITTEN EXAMINATION / CBT RESULTS</a></li>
-    <li><a href="final_results.html" class="hover:underline">FINAL RESULTS</a></li>
-    <li><a href="additional_results.html" class="hover:underline">ADDITIONAL/REPLACEMENT RESULTS</a></li>
-  </ul>
-
+      <!-- Card 3 -->
+      <div class="card p-4 rounded-lg shadow hover:shadow-md bg-gray-100 flex flex-col">
+        <h3 class="card-title text-lg font-semibold text-blue-700 mb-2">
+          <a href="additional_results.html" class="hover:underline">Results for Additional / Replacement Roles</a>
+        </h3>
+        <p class="text-gray-700 text-sm flex-1">
+          Find candidates selecetd for additional or replacement roles for specific recruitment cycles.
+        </p>
+        <div class="mt-4">
+          <a href="additional_results.html" class="text-sm font-medium text-blue-600 hover:underline">View list →</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
   <!-- Footer Section -->
-<footer class="bg-gray-900 text-white py-8 mt-12">
-  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-    
-    <!-- Left: Info -->
-    <div>
-      <h4 class="text-xl font-semibold mb-2">Government of India</h4>
-      <p class="text-sm">Ministry of Railways</p>
-      <p class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Left: Info -->
+      <div>
+        <h4 class="text-xl font-semibold mb-2">Government of India</h4>
+        <p class="text-sm">Ministry of Railways</p>
+        <p class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+      </div>
+
+      <!-- Right: Quick Links -->
+      <div class="flex flex-col items-start md:items-end">
+        <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
+        <ul class="space-y-1 text-sm text-right w-full md:w-auto">
+          <li><a href="about.html" class="hover:text-gray-300 transition-colors">About Us</a></li>
+          <li><a href="results.html" class="hover:text-gray-300 transition-colors">Results</a></li>
+          <li><a href="recruitment.html" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
+          <li><a href="contact.html" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
     </div>
 
-    <!-- Right: Quick Links (Improved Alignment) -->
-    <div class="flex flex-col items-start md:items-end">
-      <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
-      <ul class="space-y-1 text-sm text-right w-full md:w-auto">
-        <li><a href="#about" class="hover:text-gray-300 transition-colors">About Us</a></li>
-        <li><a href="#results" class="hover:text-gray-300 transition-colors">Results</a></li>
-        <li><a href="#recruitments" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
-        <li><a href="#contact" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
-      </ul>
+    <!-- Divider -->
+    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
+      © 2022 Railway Recruitment Board Chennai. All Rights Reserved.
     </div>
-  </div>
-
-  <!-- Divider -->
-  <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
-    © 2022 Railway Recruitment Board Chennai. All Rights Reserved.
-  </div>
-</footer>
-
-
+  </footer>
 </body>
 </html>

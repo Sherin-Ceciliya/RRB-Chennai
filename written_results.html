@@ -1,29 +1,137 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RRB Chennai</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="home.css" />
-</head>
-<body class="bg-gray-100">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Written Results — RRB Chennai</title>
 
-  <!-- Header Section -->
+  <!-- Tailwind v2 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --light-border: #e6eef6;
+      --muted: #6b7280;
+      --accent: #0b63a7;
+      --body-font-size: 15px;
+    }
+    html, body { height: 100%; }
+    body {
+      min-height: 100%;
+      background-color: #f3f4f6;
+      display: flex;
+      flex-direction: column;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      font-size: var(--body-font-size);
+      line-height: 1.45;
+      color: #1f2937;
+    }
+
+    /* Header */
+    .custom-header { background-color: #003366; }
+    .nav-link { color: #fff; }
+    .nav-link:hover { color: #a8d0ff; }
+
+    /* Table container */
+    .table-container {
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+      overflow-x: auto;
+      border: 1px solid var(--light-border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 720px;
+    }
+
+    .table-head { background-color: var(--accent); color: white; }
+    .table-head th { font-weight: 700; padding: 12px 14px; text-align: left; font-size: 0.95rem; }
+
+    th, td {
+      border-bottom: 1px solid var(--light-border);
+      padding: 12px 14px;
+      vertical-align: top;
+      font-size: 0.95rem;
+    }
+    th:not(:last-child), td:not(:last-child) { border-right: 1px solid #f3f7fb; }
+
+    td:first-child { color: #0f172a; font-weight: 600; width: 160px; }
+
+    .post-title { font-weight: 600; color: #0f172a; margin-bottom: 6px; font-size: 0.98rem; }
+    .post-desc {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Links column as bullets */
+    .links-wrapper {
+      display: block;
+      padding-left: 18px;
+    }
+    .links-wrapper li {
+      list-style-type: disc;
+      margin-bottom: 4px;
+    }
+    .link-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 2px 0;
+    }
+    .link-inline:hover {
+      background: rgba(11,99,167,0.06);
+      transform: translateY(-1px);
+    }
+    .link-icon {
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    tbody tr:hover { background: rgba(13,66,110,0.02); }
+
+    #page-description { font-size: 0.95rem; }
+
+    @media (max-width: 768px) {
+      :root { --body-font-size: 14px; }
+      .table-head th, th, td { font-size: 0.85rem; padding: 10px 12px; }
+      table { min-width: 600px; }
+      td:first-child { width: 120px; }
+      .post-desc { -webkit-line-clamp: 2; }
+    }
+
+    footer { margin-top: auto; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
   <header class="custom-header text-white shadow-md">
-    <div class="flex justify-between items-center h-32 w-full px-4">
-      <!-- Logo and Title -->
+    <div class="flex justify-between items-center h-28 w-full px-6">
       <div class="flex items-center space-x-4">
-        <img src="images/railways.png" alt="RRB Logo" class="h-28 w-auto" />
-        <div class="leading-tight">
-          <h1 class="text-3xl font-bold">Railway Recruitment Board</h1>
-          <p class="text-xl ml-1">Chennai</p>
+        <img src="images/railways.png" alt="RRB Logo" class="h-20 w-auto" />
+        <div>
+          <h1 class="text-2xl font-bold">Railway Recruitment Board</h1>
+          <p class="text-lg">Chennai</p>
         </div>
       </div>
 
-      <!-- Navigation Links -->
-      <nav class="hidden md:flex space-x-10 text-xl font-semibold">
-        <a href="#" class="nav-link">In Hindi</a>
+      <nav class="hidden md:flex space-x-8 text-lg font-semibold">
+        <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About Us</a>
         <a href="results.html" class="nav-link">Results</a>
         <a href="recruitment.html" class="nav-link">Recruitments</a>
@@ -31,356 +139,314 @@
       </nav>
     </div>
   </header>
-  <br>
 
+  <main class="flex-1 w-full">
+    <div class="max-w-7xl mx-auto px-6 py-8">
 
+      <div class="mb-4">
+        <h2 class="text-3xl font-extrabold text-blue-800">Written Examination Notices & Results</h2>
+        <div class="mt-2 h-0.5 w-full bg-gray-200"></div>
+      </div>
 
+      <!-- Description box -->
+      <div id="page-description" class="mb-6 bg-white border border-gray-200 rounded-lg shadow-sm p-5 text-gray-700">
+        <p class="italic text-sm text-gray-600">
+          This page provides the results for various examinations conducted by the board, including both the written examinations and the Computer Based Tests (CBT). Here, candidates can view their scores, check their performance, and analyze their results in a structured and easy-to-read format.
+        </p>
+      </div>
 
+      <!-- Filters -->
+      <section class="mb-4 bg-white border border-gray-200 rounded-lg shadow-sm p-4">
+        <div class="flex flex-col md:flex-row md:items-end md:space-x-4 space-y-4 md:space-y-0">
+          <div class="flex-1">
+            <label class="block text-sm font-medium text-gray-700 mb-1">Filter by CEN No.</label>
+            <input id="filter-cen" type="text" placeholder="e.g. 01/2018 or CEN_01_2025" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" />
+          </div>
 
-<main class="max-w-6xl mx-auto p-6 bg-white shadow rounded mt-6">
+          <div class="flex-1">
+            <label class="block text-sm font-medium text-gray-700 mb-1">Filter by Category</label>
+            <input id="filter-category" type="text" placeholder='e.g. "1-156" or "01" or "1,2,3"' class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" />
+          </div>
 
-  <h2 class="text-2xl font-bold mb-4">WRITTEN EXAMINATION / CBT RESULTS</h2>
+          <div class="flex-1">
+            <label class="block text-sm font-medium text-gray-700 mb-1">Filter by Post</label>
+            <input id="filter-post" type="text" placeholder="e.g. 'NTPC' or 'Staff Nurse'" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" />
+          </div>
 
-  <table class="table-auto w-full border border-gray-300 text-left">
-    <thead class="bg-gray-200">
-      <tr>
-        <th class="border px-4 py-2">Notice No.</th>
-        <th class="border px-4 py-2">Category No.</th>
-        <th class="border px-4 py-2">Name of the Post / Description</th>
-        <th class="border px-4 py-2">Link</th>
-      </tr>
-    </thead>
-    <tbody class="divide-y">
-      <tr>
-        <td class="border px-4 py-2">CEN NO. 01/2018</td>
-        <td class="border px-4 py-2">Cat Nos. 1-156</td>
-        <td class="border px-4 py-2">Interim Notice 1 dt 31.05.2018</td>
-        <td class="border px-4 py-2">
-          <a href="https://www.rrbchennai.gov.in/downloads/1-Interim-notice-dt-31052018.PDF" class="text-blue-600 hover:underline">Click here</a>
-        </td>
-      </tr>
+          <div class="w-full md:w-auto">
+            <button id="clear-filters" class="px-4 py-2 bg-gray-100 border rounded-md hover:bg-gray-200">Clear</button>
+          </div>
+        </div>
+      </section>
 
-    <tr>
-        <td class="border px-4 py-2">CEN NO. 01/2018</td>
-        <td class="border px-4 py-2">Cat Nos. 1-82</td>
-        <td class="border px-4 py-2">ALP & Technician Gr-III</td>
+      <!-- Table container -->
+      <div class="table-container">
+        <table id="results-table" class="min-w-full">
+          <thead class="table-head">
+            <tr>
+              <th data-column="cenNo" style="width:160px; cursor:pointer">
+                <div class="flex items-center justify-start">
+                  <span>CEN No.</span>
+                  <span class="ml-2 caret" id="caret-cen"></span>
+                </div>
+              </th>
 
-        <td class="border px-4 py-2">
-          <a href="https://www.rrbchennai.gov.in/downloads/rrb_chennai_v11_rg.pdf" class="text-blue-600 hover:underline">(Revised List of candidates qualified for 2nd stage CBT)</a>
-        <br><br>
-          <a href="alp.html" class="text-blue-600 hover:underline">(Login to view your 2nd Stage e-Call Letter, Exam date and city intimation details, Travel pass, 1st Stage Score and 1st Stage Question paper)
-</a>
-        </td>
-      </tr>
+              <th data-column="category" style="width:180px; cursor:pointer">
+                <div class="flex items-center">
+                  <span>Category</span>
+                  <span class="ml-2 caret" id="caret-category"></span>
+                </div>
+              </th>
 
-      <tr>
-        <td class="border px-4 py-2">CEN NO. 01/2018</td>
-        <td class="border px-4 py-2">Cat Nos. 1-156</td>
-        <td class="border px-4 py-2">Interim Notice II dt 30.06.2018</td>
-        <td class="border px-4 py-2">
-          <a href="https://www.rrbchennai.gov.in/downloads/2-interim-noticeII-dt-30062018.pdf" class="text-blue-600 hover:underline">Click here</a>
-        </td>
-      </tr>
+              <th data-column="post" style="min-width:420px; cursor:pointer">
+                <div class="flex items-center">
+                  <span>Recruitment Role / Description</span>
+                  <span class="ml-2 caret" id="caret-post"></span>
+                </div>
+              </th>
 
-      <tr>
-        <td class="border px-4 py-2">CEN NO. 01/2018</td>
-        <td class="border px-4 py-2">Cat Nos. 1-156</td>
-        <td class="border px-4 py-2">Application status link 11.07.2018 to 20.07.2018</td>
-        <td class="border px-4 py-2">
-        </td>
-      </tr>
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 04/2014</td>
-  <td class="border px-4 py-2">Cat No. 01</td>
-  <td class="border px-4 py-2">Staff Nurse</td>
-  <td class="border px-4 py-2">
-    <a href="staff_nurse.html" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
+              <th style="width:220px; text-align:left">Details</th>
+            </tr>
+          </thead>
 
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 04/2014</td>
-  <td class="border px-4 py-2">Cat No. 02</td>
-  <td class="border px-4 py-2">Health & Malaria Inspector Gr-III</td>
-  <td class="border px-4 py-2">
-    <a href="health.html" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
+          <tbody id="table-body" class="bg-white">
+            <tr>
+              <td colspan="4" class="px-6 py-8 text-center text-gray-400">Loading data…</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 04/2014</td>
-  <td class="border px-4 py-2">Cat No. 03</td>
-  <td class="border px-4 py-2">Pharmacist Gr-III</td>
-  <td class="border px-4 py-2">
-    <a href="Pharmacist.html" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
+    </div>
+  </main>
 
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 04/2014</td>
-  <td class="border px-4 py-2">Cat No. 05</td>
-  <td class="border px-4 py-2">Radiographer</td>
-  <td class="border px-4 py-2">
-    <a href="radiographer.html" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <h4 class="text-xl font-semibold mb-2">Government of India</h4>
+        <p class="text-sm">Ministry of Railways</p>
+        <p class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+      </div>
 
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 04/2014</td>
-  <td class="border px-4 py-2">Cat No. 06 & 07</td>
-  <td class="border px-4 py-2">Lab Assistant Gr-II & Lab Superintendent Gr-III</td>
-  <td class="border px-4 py-2">
-    <a href="labass.html" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN.No.03/2014</td>
-  <td class="border px-4 py-2">CAT No. 05</td>
-  <td class="border px-4 py-2">STAFF & WELFARE INSPECTOR</td>
-  <td class="border px-4 py-2">
-    <a href="staff_welfare_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN.No.03/2014</td>
-  <td class="border px-4 py-2">CAT No. 08</td>
-  <td class="border px-4 py-2">CATERING INSPECTOR Gr. II</td>
-  <td class="border px-4 py-2">
-    <a href="Pharmacist.html" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN.No.03/2014</td>
-  <td class="border px-4 py-2">CAT No. 09</td>
-  <td class="border px-4 py-2">CATERING SUPERVISOR Gr. III</td>
-  <td class="border px-4 py-2">
-    <a href="Pharmacist.html" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN No. 03/2015</td>
-  <td class="border px-4 py-2">Cat Nos. 1, 2, 4, 5, 6 & 7</td>
-  <td class="border px-4 py-2">NTPC (Graduate)</td>
-  <td class="border px-4 py-2">
-    <a href="https://www.rrbchennai.gov.in/downloads/cen-03-2015-chennai-roll-number.pdf" class="text-blue-600 hover:underline">Click here for Shortlisted Roll Number</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN No. 03/2015</td>
-  <td class="border px-4 py-2">Cat Nos. 1, 2, 4, 5, 6 & 7</td>
-  <td class="border px-4 py-2">NTPC (Graduate) - First Stage</td>
-  <td class="border px-4 py-2">
-    <a href="http://rrbchennai.gov.in/downloads/rrbchennai-revised-shortlisted-18candidates-2nd-stage-examination-without-post-final-v3-4Dec16.pdf" class="text-blue-600 hover:underline">Click here for results</a><br>
-    <a href="https://www.rrbchennai.gov.in/downloads/cut-off-list-for-chennai.pdf" class="text-blue-600 hover:underline">Click here - cut off marks</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN No. 01/2015</td>
-  <td class="border px-4 py-2">Cat Nos. 27-50</td>
-  <td class="border px-4 py-2">Junior Engineer & DMS</td>
-  <td class="border px-4 py-2">
-    <a href="staff_nurse.html" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN No. 01/2015</td>
-  <td class="border px-4 py-2">Cat Nos. 04-23</td>
-  <td class="border px-4 py-2">Senior Section Engineer</td>
-  <td class="border px-4 py-2">
-    <a href="staff_nurse.html" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN.No.03/2014</td>
-  <td class="border px-4 py-2">CAT No. 02</td>
-  <td class="border px-4 py-2">JUNIOR STENOGRAPHER - ENGLISH</td>
-  <td class="border px-4 py-2">
-    <a href="radiographer.html" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN.No.05/2012</td>
-  <td class="border px-4 py-2">CAT No. 05</td>
-  <td class="border px-4 py-2">ECG TECHNICIAN</td>
-  <td class="border px-4 py-2">
-    <a href="ecg_technician_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN No. 02/2014</td>
-  <td class="border px-4 py-2">Cat Nos. 36-76</td>
-  <td class="border px-4 py-2">Junior Engineer & DMS</td>
-  <td class="border px-4 py-2">
-    <a href="junior_engineer_dms_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 03/2014</td>
-  <td class="border px-4 py-2">CAT No. 03</td>
-  <td class="border px-4 py-2">CHIEF LAW ASSISTANT</td>
-  <td class="border px-4 py-2">
-    <a href="chief_law_assistant_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 03/2014</td>
-  <td class="border px-4 py-2">CAT No. 13</td>
-  <td class="border px-4 py-2">PUBLICITY INSPECTOR</td>
-  <td class="border px-4 py-2">
-    <a href="publicity_inspector_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 03/2014</td>
-  <td class="border px-4 py-2">CAT No. 14</td>
-  <td class="border px-4 py-2">SENIOR PUBLICITY INSPECTOR</td>
-  <td class="border px-4 py-2">
-    <a href="senior_publicity_inspector_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 03/2014</td>
-  <td class="border px-4 py-2">CAT No. 28</td>
-  <td class="border px-4 py-2">TEACHER Gr. I (BIOLOGY)</td>
-  <td class="border px-4 py-2">
-    <a href="teacher_biology_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 03/2014</td>
-  <td class="border px-4 py-2">CAT No. 31</td>
-  <td class="border px-4 py-2">TEACHER Gr. II (PHYSICAL TRAINING INSTRUCTOR)</td>
-  <td class="border px-4 py-2">
-    <a href="teacher_pt_instructor_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 03/2014</td>
-  <td class="border px-4 py-2">CAT No. 37</td>
-  <td class="border px-4 py-2">TEACHER Gr. IV (COMMERCE)</td>
-  <td class="border px-4 py-2">
-    <a href="teacher_commerce_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 03/2014</td>
-  <td class="border px-4 py-2">CAT No. 36</td>
-  <td class="border px-4 py-2">TEACHER Gr. IV (ECONOMICS)</td>
-  <td class="border px-4 py-2">
-    <a href="teacher_economics_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 03/2014</td>
-  <td class="border px-4 py-2">CAT No. 32</td>
-  <td class="border px-4 py-2">TEACHER Gr. IV (ENGLISH)</td>
-  <td class="border px-4 py-2">
-    <a href="teacher_english_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 03/2014</td>
-  <td class="border px-4 py-2">CAT No. 35</td>
-  <td class="border px-4 py-2">TEACHER Gr. IV (HISTORY)</td>
-  <td class="border px-4 py-2">
-    <a href="teacher_history_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 03/2014</td>
-  <td class="border px-4 py-2">CAT No. 34</td>
-  <td class="border px-4 py-2">TEACHER Gr. IV (MATHEMATICS)</td>
-  <td class="border px-4 py-2">
-    <a href="teacher_mathematics_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 03/2014</td>
-  <td class="border px-4 py-2">CAT No. 33</td>
-  <td class="border px-4 py-2">TEACHER Gr. IV (SCIENCE)</td>
-  <td class="border px-4 py-2">
-    <a href="teacher_science_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 03/2014</td>
-  <td class="border px-4 py-2">CAT No. 38</td>
-  <td class="border px-4 py-2">TEACHER Gr. IV (TAMIL)</td>
-  <td class="border px-4 py-2">
-    <a href="teacher_tamil_results.pdf" class="text-blue-600 hover:underline">Click here for results</a>
-  </td>
-</tr>
-
-<tr class="hover:bg-gray-100">
-  <td class="border px-4 py-2">CEN 03/2014</td>
-  <td class="border px-4 py-2">—</td>
-  <td class="border px-4 py-2">ISOLATED CATEGORIES</td>
-  <td class="border px-4 py-2">
-    <a href="isolated_categories_interview.pdf" class="text-blue-600 hover:underline">Click here Date of Interview</a>
-  </td>
-</tr>
-
-      <!-- Add additional rows similarly -->
-    </tbody>
-  </table>
-
-</main>
-
-
-
-
-
-
-  <!-- Footer Section -->
-<footer class="bg-gray-900 text-white py-8 mt-12">
-  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-    
-    <!-- Left: Info -->
-    <div>
-      <h4 class="text-xl font-semibold mb-2">Government of India</h4>
-      <p class="text-sm">Ministry of Railways</p>
-      <p class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+      <div class="flex flex-col items-start md:items-end">
+        <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
+        <ul class="space-y-1 text-sm">
+          <li><a href="about.html" class="hover:text-gray-300 transition-colors">About Us</a></li>
+          <li><a href="results.html" class="hover:text-gray-300 transition-colors">Results</a></li>
+          <li><a href="recruitment.html" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
+          <li><a href="contact.html" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
     </div>
 
-    <!-- Right: Quick Links (Improved Alignment) -->
-    <div class="flex flex-col items-start md:items-end">
-      <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
-      <ul class="space-y-1 text-sm text-right w-full md:w-auto">
-        <li><a href="#about" class="hover:text-gray-300 transition-colors">About Us</a></li>
-        <li><a href="#results" class="hover:text-gray-300 transition-colors">Results</a></li>
-        <li><a href="#recruitments" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
-        <li><a href="#contact" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
-      </ul>
+    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
+      © 2025 Railway Recruitment Board Chennai. All Rights Reserved.
     </div>
-  </div>
+  </footer>
 
-  <!-- Divider -->
-  <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
-    © 2022 Railway Recruitment Board Chennai. All Rights Reserved.
-  </div>
-</footer>
+<script>
+(function () {
+  const tbody = document.getElementById('table-body');
+  const filterCen = document.getElementById('filter-cen');
+  const filterCategory = document.getElementById('filter-category');
+  const filterPost = document.getElementById('filter-post');
+  const clearFiltersBtn = document.getElementById('clear-filters');
+  let currentSort = { column: 'cenNo', dir: 'asc' };
+  let allEntries = [];
 
+  async function fetchJson() {
+    const candidates = ['writtenExam.json', 'written_results.json'];
+    for (let url of candidates) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('Not found');
+        return await res.json();
+      } catch (e) {}
+    }
+    throw new Error('Could not find JSON file.');
+  }
+
+  function normalizeCell(value) {
+    if (Array.isArray(value)) return value.join(', ');
+    if (!value) return '';
+    return String(value);
+  }
+
+  function cmpStr(a, b) {
+    a = a ? a.toLowerCase() : '';
+    b = b ? b.toLowerCase() : '';
+    return a < b ? -1 : a > b ? 1 : 0;
+  }
+
+  function sortEntries(entries, column, dir) {
+    const d = dir === 'asc' ? 1 : -1;
+    return entries.sort((x, y) => {
+      if (column === 'cenNo') {
+        const r = cmpStr(normalizeCell(x.cenNo), normalizeCell(y.cenNo));
+        return r !== 0 ? r * d : cmpStr(normalizeCell(x.category), normalizeCell(y.category)) * d;
+      }
+      if (column === 'category') {
+        const r = cmpStr(normalizeCell(x.category), normalizeCell(y.category));
+        return r !== 0 ? r * d : cmpStr(normalizeCell(x.cenNo), normalizeCell(y.cenNo)) * d;
+      }
+      return cmpStr(normalizeCell(x.post), normalizeCell(y.post)) * d;
+    });
+  }
+
+  function externalIcon() {
+    const ns = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('class', 'link-icon');
+    svg.setAttribute('aria-hidden', 'true');
+    svg.innerHTML = '<path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h5V3H3v7h2V5zm0 14v-5H3v7a1 1 0 0 0 1 1h7v-2H5z"/>';
+    return svg;
+  }
+
+  function makeRow(item) {
+    const tr = document.createElement('tr');
+
+    const tdCen = document.createElement('td');
+    tdCen.className = 'px-6 py-4 text-gray-800';
+    tdCen.textContent = normalizeCell(item.cenNo);
+    tr.appendChild(tdCen);
+
+    const tdCat = document.createElement('td');
+    tdCat.className = 'px-6 py-4 text-gray-700';
+    tdCat.textContent = normalizeCell(item.category);
+    tr.appendChild(tdCat);
+
+    const tdPost = document.createElement('td');
+    tdPost.className = 'px-6 py-4 text-gray-700';
+    tdPost.textContent = item.postTitle || item.post || '';
+    tr.appendChild(tdPost);
+
+    const tdLinks = document.createElement('td');
+    tdLinks.className = 'px-6 py-4 text-left';
+    if (Array.isArray(item.links) && item.links.length > 0) {
+      if (item.links.length > 1) {
+        // Multiple links → bullets
+        const ul = document.createElement('ul');
+        ul.className = 'links-wrapper';
+        item.links.forEach(linkObj => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = linkObj.url || '#';
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          a.className = 'link-inline';
+          a.textContent = linkObj.name || 'View';
+          a.appendChild(externalIcon());
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        tdLinks.appendChild(ul);
+      } else {
+        // Single link → inline
+        const a = document.createElement('a');
+        const linkObj = item.links[0];
+        a.href = linkObj.url || '#';
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.className = 'link-inline';
+        a.textContent = linkObj.name || 'View';
+        a.appendChild(externalIcon());
+        tdLinks.appendChild(a);
+      }
+    } else {
+      tdLinks.innerHTML = '<span class="text-sm text-gray-400">—</span>';
+    }
+    tr.appendChild(tdLinks);
+
+
+    return tr;
+  }
+
+  function renderTable() {
+    const cenFilter = filterCen.value.trim().toLowerCase();
+    const catFilter = filterCategory.value.trim().toLowerCase();
+    const postFilter = filterPost.value.trim().toLowerCase();
+
+    let filtered = allEntries.filter(item => {
+      const cen = normalizeCell(item.cenNo).toLowerCase();
+      const cat = normalizeCell(item.category).toLowerCase();
+      const post = normalizeCell(item.post || item.postTitle).toLowerCase();
+
+      if (cenFilter && !cen.includes(cenFilter)) return false;
+      if (catFilter && !cat.includes(catFilter)) return false;
+      if (postFilter && !post.includes(postFilter)) return false;
+      return true;
+    });
+
+    filtered = sortEntries(filtered, currentSort.column, currentSort.dir);
+    tbody.innerHTML = '';
+    if (!filtered.length) {
+      tbody.innerHTML = '<tr><td colspan="4" class="px-6 py-6 text-center text-gray-500">No records match your filters.</td></tr>';
+      return;
+    }
+    filtered.forEach(item => tbody.appendChild(makeRow(item)));
+  }
+
+  function updateCarets() {
+    const map = { cenNo: 'caret-cen', category: 'caret-category', post: 'caret-post' };
+    for (const col of ['cenNo', 'category', 'post']) {
+      const el = document.getElementById(map[col]);
+      if (!el) continue;
+      el.textContent = (currentSort.column === col) ? (currentSort.dir === 'asc' ? '▲' : '▼') : '';
+    }
+  }
+
+  function initSorting() {
+    const ths = document.querySelectorAll('thead th[data-column]');
+    ths.forEach(th => {
+      th.addEventListener('click', () => {
+        const col = th.getAttribute('data-column');
+        if (currentSort.column === col) {
+          currentSort.dir = currentSort.dir === 'asc' ? 'desc' : 'asc';
+        } else {
+          currentSort.column = col;
+          currentSort.dir = 'asc';
+        }
+        updateCarets();
+        renderTable();
+      });
+    });
+  }
+
+  function initFilters() {
+    [filterCen, filterCategory, filterPost].forEach(inp => inp.addEventListener('input', renderTable));
+    clearFiltersBtn.addEventListener('click', () => {
+      filterCen.value = '';
+      filterCategory.value = '';
+      filterPost.value = '';
+      renderTable();
+    });
+  }
+
+  async function bootstrap() {
+    try {
+      const json = await fetchJson();
+      allEntries = Array.isArray(json) ? json : (json.entries || []);
+      allEntries = allEntries.map(e => ({
+        cenNo: e.cenNo || '',
+        category: e.category || '',
+        post: e.post || e.postTitle || '',
+        postTitle: e.postTitle || '',
+        links: e.links || []
+      }));
+      currentSort = { column: 'cenNo', dir: 'asc' };
+      updateCarets();
+      initSorting();
+      initFilters();
+      renderTable();
+    } catch (err) {
+      tbody.innerHTML = `<tr><td colspan="4" class="px-6 py-8 text-center text-gray-400">Failed to load data: ${err.message}</td></tr>`;
+    }
+  }
+
+  bootstrap();
+})();
+</script>
 
 </body>
 </html>
