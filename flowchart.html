@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRB Chennai Result Check Flowchart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .flowchart-table {
+            width: 100%;
+            border: 3px solid #333;
+            border-collapse: collapse;
+            overflow: visible;
+        }
+
+        .header-row {
+            background-color: #e0e0e0;
+            border-bottom: 3px solid #333;
+        }
+
+        .header-cell {
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            border-right: 2px solid #333;
+            font-size: 14px;
+        }
+
+        .header-cell:last-child {
+            border-right: none;
+        }
+
+        .flow-row {
+            border-bottom: 2px solid #333;
+            min-height: 200px;
+        }
+
+        .flow-row:last-child {
+            border-bottom: none;
+        }
+
+        .cell {
+            padding: 20px;
+            vertical-align: middle;
+            border-right: 2px solid #333;
+            overflow: visible;
+        }
+
+        .cell:last-child {
+            border-right: none;
+        }
+
+        .user-decision {
+            text-align: center;
+            font-weight: bold;
+            width: 20%;
+        }
+
+        .data-item {
+            text-align: center;
+            font-size: 13px;
+            width: 15%;
+        }
+
+        .logical-screen {
+            text-align: center;
+            width: 40%;
+            position: relative;
+            overflow: visible;
+        }
+
+        .processing {
+            text-align: left;
+            font-size: 13px;
+            width: 25%;
+        }
+
+        .start-stop {
+            display: inline-block;
+            padding: 10px 30px;
+            border: 2px solid #333;
+            border-radius: 25px;
+            background-color: white;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .process-box {
+            display: inline-block;
+            padding: 15px 20px;
+            border: 2px solid #333;
+            background-color: white;
+            text-align: center;
+            margin: 10px 0;
+            min-width: 200px;
+        }
+
+        .decision-triangle {
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-top: 50px solid #333;
+            margin: 15px auto;
+            position: relative;
+        }
+
+        .decision-label {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .arrow {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+
+        .decision-options {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            margin: 10px 0;
+            font-size: 12px;
+        }
+
+        .note {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #666;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .note p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RRB CHENNAI - RESULT CHECK PROCESS</h1>
+        
+        <table class="flowchart-table">
+            <tr class="header-row">
+                <td class="header-cell">User Decision</td>
+                <td class="header-cell">Data Item</td>
+                <td class="header-cell">Logical Screen</td>
+                <td class="header-cell">Processing Commands</td>
+            </tr>
+
+            <tr class="flow-row">
+                <td class="cell user-decision">A. Visit Website</td>
+                <td class="cell data-item">Website URL</td>
+                <td class="cell logical-screen">
+                    <div class="start-stop">Start</div>
+                    <div class="arrow">&#8595;</div>
+                    <div class="process-box">Load RRB Chennai<br>Homepage</div>
+                    <div class="arrow">&#8595;</div>
+                </td>
+                <td class="cell processing">A. Verify website authenticity</td>
+            </tr>
+
+            <tr class="flow-row">
+                <td class="cell user-decision">B. Go to Results Page</td>
+                <td class="cell data-item">Menu Navigation</td>
+                <td class="cell logical-screen">
+                    <div class="process-box">Click "Results" Menu</div>
+                    <div class="arrow">&#8595;</div>
+                    <div class="decision-triangle">
+                        <span class="decision-label">A</span>
+                    </div>
+                    <div class="decision-options">
+                        <span>No</span>
+                        <span>Yes</span>
+                    </div>
+                    <div class="arrow">&#8595;</div>
+                </td>
+                <td class="cell processing">B. Show error if page not found</td>
+            </tr>
+
+            <tr class="flow-row">
+                <td class="cell user-decision">C. Select Exam Type</td>
+                <td class="cell data-item">Exam Type Selection</td>
+                <td class="cell logical-screen">
+                    <div class="process-box">Choose Written Exam/<br>CBT Results</div>
+                    <div class="arrow">&#8595;</div>
+                    <div class="decision-triangle">
+                        <span class="decision-label">B</span>
+                    </div>
+                    <div class="decision-options">
+                        <span>No</span>
+                        <span>Yes</span>
+                    </div>
+                    <div class="arrow">&#8595;</div>
+                </td>
+                <td class="cell processing">C. Display available exam categories</td>
+            </tr>
+
+            <tr class="flow-row">
+                <td class="cell user-decision">D. Filter Post</td>
+                <td class="cell data-item">CEN Number</td>
+                <td class="cell logical-screen">
+                    <div class="process-box">Enter/Select<br>CEN No.</div>
+                    <div class="arrow">&#8595;</div>
+                    <div class="decision-triangle">
+                        <span class="decision-label">C</span>
+                    </div>
+                    <div class="decision-options">
+                        <span>Invalid</span>
+                        <span>Valid</span>
+                    </div>
+                    <div class="arrow">&#8595;</div>
+                </td>
+                <td class="cell processing">D. Validate CEN format and show matching results</td>
+            </tr>
+
+            <tr class="flow-row">
+                <td class="cell user-decision">E. View Results</td>
+                <td class="cell data-item">PDF Link</td>
+                <td class="cell logical-screen">
+                    <div class="process-box">Click PDF Link<br>to Open Results</div>
+                    <div class="arrow">&#8595;</div>
+                    <div class="decision-triangle">
+                        <span class="decision-label">D</span>
+                    </div>
+                    <div class="decision-options">
+                        <span>Error</span>
+                        <span>Success</span>
+                    </div>
+                    <div class="arrow">&#8595;</div>
+                    <div class="start-stop">Stop</div>
+                </td>
+                <td class="cell processing">E. Display PDF with roll numbers and results</td>
+            </tr>
+        </table>
+
+        <div class="note">
+            <p><strong>Decision Points (A, B, C, D):</strong> User choices or validation checks</p>
+            <p>Process flow continues on "Yes" path, loops back or shows error on "No" path</p>
+        </div>
+    </div>
+</body>
+</html>

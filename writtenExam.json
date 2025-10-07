@@ -7,7 +7,7 @@
     "links": [
       {
         "name": "View Notice",
-        "url": "Click here"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -20,7 +20,7 @@
     "links": [
       {
         "name": "View List",
-        "url": "Login to view your 2nd Stage e-Call Letter, Exam date and city intimation details, Travel pass, 1st Stage Score and 1st Stage Question paper"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -32,7 +32,7 @@
     "links": [
       {
         "name": "View Notice",
-        "url": "Click here"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -45,23 +45,23 @@
     "links": [
       {
         "name": "Staff Nurse",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       },
       {
         "name": "Health and Malaria Inspector Gr-III",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       },
       {
         "name": "Pharmacist Gr-III",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       },
       {
         "name": "Radiographer",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       },
       {
         "name": "Lab Assistant Gr-II and Lab Superintendent Gr-III",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -74,15 +74,15 @@
     "links": [
       {
         "name": "Shortlisted Roll Numbers",
-        "url": "Click here for Shortlisted Roll Number"
+        "url": "./resources/results.pdf"
       },
       {
         "name": "1st Stage Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       },
       {
         "name": "Cut-off Marks",
-        "url": "Click here - cut off marks"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -94,7 +94,7 @@
     "links": [
       {
         "name": "View Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -106,7 +106,7 @@
     "links": [
       {
         "name": "View Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -118,7 +118,7 @@
     "links": [
       {
         "name": "Interview Details",
-        "url": "Click here Date of Interview"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -130,7 +130,7 @@
     "links": [
       {
         "name": "View Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -142,7 +142,7 @@
     "links": [
       {
         "name": "View Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -154,7 +154,7 @@
     "links": [
       {
         "name": "View Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -166,7 +166,7 @@
     "links": [
       {
         "name": "View Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdfs"
       }
     ]
   },
@@ -178,7 +178,7 @@
     "links": [
       {
         "name": "View Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -190,7 +190,7 @@
     "links": [
       {
         "name": "View Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -202,7 +202,7 @@
     "links": [
       {
         "name": "View Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -214,7 +214,7 @@
     "links": [
       {
         "name": "View Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -226,7 +226,7 @@
     "links": [
       {
         "name": "View Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -238,7 +238,7 @@
     "links": [
       {
         "name": "View Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -250,7 +250,7 @@
     "links": [
       {
         "name": "View Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -262,7 +262,7 @@
     "links": [
       {
         "name": "View Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -275,11 +275,11 @@
     "links": [
       {
         "name": "Stage 2 Results",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       },
       {
         "name": "Download Hall Ticket",
-        "url": "Click here to download"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -291,7 +291,7 @@
     "links": [
       {
         "name": "View List",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   },
@@ -303,7 +303,7 @@
     "links": [
       {
         "name": "View Result",
-        "url": "Click here for results"
+        "url": "./resources/results.pdf"
       }
     ]
   }

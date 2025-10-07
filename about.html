@@ -23,7 +23,8 @@
 
       <!-- Navigation Links for Desktop -->
       <nav class="hidden md:flex space-x-10 text-xl font-semibold">
-        <a href="#" class="nav-link">In Hindi</a>
+        <a id="toggleLangBtnMobile" href="#" class="nav-link">In Tamil</a>
+        <a href="home.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About Us</a>
         <a href="results.html" class="nav-link">Results</a>
         <a href="recruitment.html" class="nav-link">Recruitments</a>
@@ -43,7 +44,7 @@
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden bg-gray-800 md:hidden px-4 pt-2 pb-4 space-y-2">
-      <a href="#" class="block text-white font-semibold">In Hindi</a>
+      <button id="toggleLangBtnMobile" class="block text-white font-semibold">In Tamil</button>
       <a href="about.html" class="block text-white font-semibold">About Us</a>
       <a href="results.html" class="block text-white font-semibold">Results</a>
       <a href="recruitment.html" class="block text-white font-semibold">Recruitments</a>
@@ -54,42 +55,8 @@
   <br>
 
   <!-- About Us Section -->
-  <section class="max-w-5xl mx-auto my-12 px-4">
-    <h2 class="text-3xl font-bold text-gray-800 mb-6">About Us</h2>
-
-    <p class="text-lg text-gray-700 mb-4 text-justify">
-      <strong>Railway Recruitment Board (RRB), Madras (now Chennai)</strong> functions under the <strong>Ministry of Railways, Government of India</strong>. It is primarily responsible for recruiting the working and supervisory staff (Group 'C') required for Chennai, Salem, and Tiruchirappalli Divisions, as well as the Head Quarters office of Southern Railway (SR) and Integral Coach Factory (ICF), Chennai.
-    </p>
-
-    <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Selection Procedure</h3>
-    <p class="text-lg text-gray-700 mb-4 text-justify">
-      RRB calls for eligible applicants through <strong>"Employment News"</strong> (A publication of the Government of India). The employment notification is also published on the Internet website. Applications are scrutinized for eligibility, and eligible candidates are called for a written examination, with call letters sent a month in advance.
-    </p>
-    <p class="text-lg text-gray-700 mb-4 text-justify">
-      In most categories, there is no interview after the written examination. Some categories may have a second stage written examination. For operational safety roles, candidates undergo a psychological test. After the written exam, applications of successful candidates are verified, followed by counselling and scrutiny of original documents. A panel of candidates is recommended to Southern Railway / Integral Coach Factory for vacancies. Candidates must pass a medical examination before appointment.
-    </p>
-
-    <p class="text-lg text-gray-700 mb-4 text-justify">
-      The results are made available:
-    </p>
-    <ul class="list-disc list-inside text-lg text-gray-700 mb-4 text-justify">
-      <li>On the Notice Board of RRB/Chennai</li>
-      <li>Through the Internet website</li>
-      <li>In "The Employment News"</li>
-      <li>To successful candidates via post</li>
-    </ul>
-
-    <p class="text-lg text-gray-700 mb-4 text-justify">
-      The selection process is based on merit and subject to the rules issued by the Ministry of Railways, including reservations for SC, ST, OBC, and ex-servicemen. The recruitment system functions impersonally, with no scope for corruption. Malpractices are strictly dealt with.
-    </p>
-
-    <p class="text-lg text-gray-700 mb-4 text-justify">
-      Overall policy guidelines for all Railway Recruitment Boards in India are laid down by the <strong>Railway Recruitment Control Board (RRCB), New Delhi</strong>.
-    </p>
-
-    <p class="text-lg text-gray-700 text-justify">
-      ©2013 Railway Recruitment Board Chennai. All Rights Reserved.
-    </p>
+  <section id="contentSection" class="max-w-5xl mx-auto my-12 px-4 text-justify text-lg text-gray-700">
+    <!-- Content will be filled dynamically -->
   </section>
 
   <!-- Footer Section -->
@@ -115,15 +82,79 @@
     </div>
   </footer>
 
-  <!-- Mobile Menu Script -->
   <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
+  // Check session storage for selected language
+  let isTamil = sessionStorage.getItem("lang") === "ta" ? true : false;
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
+  const englishContent = `
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">About Us</h2>
+    <p><strong>Railway Recruitment Board (RRB), Madras (now Chennai)</strong> functions under the <strong>Ministry of Railways, Government of India</strong>. It is responsible for recruiting the working and supervisory staff (Group 'C') required for Chennai, Salem, and Tiruchirappalli Divisions, as well as the Head Quarters of Southern Railway (SR) and Integral Coach Factory (ICF), Chennai.</p>
+
+    <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Selection Procedure</h3>
+    <p>RRB calls for eligible applicants through <strong>"Employment News"</strong>. Applications are screened, and eligible candidates are called for written exams. Some categories have second-stage tests or psychological evaluations. Selected candidates undergo document verification and medical examination before appointment.</p>
+
+    <p>The results are made available:</p>
+    <ul class="list-disc list-inside mb-4">
+      <li>On the Notice Board of RRB/Chennai</li>
+      <li>Through the Internet website</li>
+      <li>In "The Employment News"</li>
+      <li>To successful candidates via post</li>
+    </ul>
+
+    <p>The process is based on merit and follows reservation rules. Malpractices are strictly dealt with. Overall policy guidelines are set by the <strong>Railway Recruitment Control Board (RRCB), New Delhi</strong>.</p>
+
+    <p class="mt-6">©2013 Railway Recruitment Board Chennai. All Rights Reserved.</p>
+  `;
+
+  const tamilContent = `
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">எங்களை பற்றி</h2>
+    <p><strong>ரெயில்வே ஆட்சேர்ப்பு வாரியம் (RRB), மதராஸ் (தற்போது சென்னை)</strong> இந்திய அரசின் <strong>ரெயில்வே அமைச்சகத்தின்</strong> கீழ் செயல்படுகிறது. இது சென்னை, சேலம், திருச்சி பிரிவுகள் மற்றும் தெற்கு ரெயில்வே தலைமையகம் (SR), இன்டிக்ரல் கோச் தொழிற்சாலை (ICF), சென்னை ஆகியவற்றிற்கு தேவைப்படும் குழு 'C' பணியாளர்களை ஆட்சேர்ப்பு செய்வதற்குப் பொறுப்பாக உள்ளது.</p>
+
+    <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">தேர்வு செயல்முறை</h3>
+    <p>RRB தகுதியான விண்ணப்பதாரர்களை <strong>"எம்ப்ளாய்மெண்ட் நியூஸ்"</strong> வழியாக அழைக்கிறது. தகுதி சரிபார்க்கப்பட்ட பின், எழுத்துத் தேர்வுக்கான அழைப்பிதழ்கள் அனுப்பப்படும். சில பிரிவுகளில் இரண்டாம் நிலை தேர்வுகள் அல்லது மனப்பரிசோதனைகள் நடைபெறும். தேர்ச்சி பெற்றவர்கள் ஆவணச் சரிபார்ப்பு மற்றும் மருத்துவ பரிசோதனையிற்குப் பின் நியமிக்கப்படுவர்.</p>
+
+    <p>விளைவுகள் கீழ்க்கண்ட வழிகளில் அறிவிக்கப்படுகின்றன:</p>
+    <ul class="list-disc list-inside mb-4">
+      <li>RRB/சென்னை அறிவிப்புப் பலகையில்</li>
+      <li>இணையதளத்தின் மூலம்</li>
+      <li>"எம்ப்ளாய்மெண்ட் நியூஸ்" இதழில்</li>
+      <li>தேர்ச்சி பெற்றவர்களுக்கு அஞ்சல் மூலம்</li>
+    </ul>
+
+    <p>தேர்வு செயல்முறை திறமையின் அடிப்படையில் நடைபெறுகிறது மற்றும் ஒதுக்கீட்டு விதிமுறைகளைப் பின்பற்றுகிறது. தவறுகள் கடுமையாகக் கண்டிக்கப்படுகின்றன. மொத்த வழிகாட்டுதல்கள் <strong>ரெயில்வே ஆட்சேர்ப்பு கட்டுப்பாட்டு வாரியம் (RRCB), நியூ டெல்லி</strong> மூலம் வழங்கப்படுகின்றன.</p>
+
+    <p class="mt-6">©2013 ரெயில்வே ஆட்சேர்ப்பு வாரியம் சென்னை. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+  `;
+
+  const contentSection = document.getElementById("contentSection");
+  const toggleLangBtn = document.getElementById("toggleLangBtn");
+  const toggleLangBtnMobile = document.getElementById("toggleLangBtnMobile");
+
+  // Load content based on session storage
+  contentSection.innerHTML = isTamil ? tamilContent : englishContent;
+  toggleLangBtn.textContent = isTamil ? "In English" : "In Tamil";
+  toggleLangBtnMobile.textContent = isTamil ? "In English" : "In Tamil";
+
+  function toggleLanguage() {
+    isTamil = !isTamil;
+    contentSection.innerHTML = isTamil ? tamilContent : englishContent;
+    toggleLangBtn.textContent = isTamil ? "In English" : "In Tamil";
+    toggleLangBtnMobile.textContent = isTamil ? "In English" : "In Tamil";
+
+    // Save selection to session storage
+    sessionStorage.setItem("lang", isTamil ? "ta" : "en");
+  }
+
+  toggleLangBtn.addEventListener("click", toggleLanguage);
+  toggleLangBtnMobile.addEventListener("click", toggleLanguage);
+
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
 
 </body>
 </html>

@@ -7,8 +7,8 @@
     "status": "Closed",
     "description": "Recruitment for Assistant Loco Pilot posts in Indian Railways.",
     "bulletin": [
-      { "title": "Notification", "uploaded_on": "01-June-2025", "link": "#" },
-      { "title": "Syllabus", "uploaded_on": "03-June-2025", "link": "#" }
+      { "title": "Notification", "uploaded_on": "01-June-2025", "link": "./resources/results.pdf" },
+      { "title": "Syllabus", "uploaded_on": "03-June-2025", "link": "./resources/results.pdf" }
     ]
   },
   "CEN_02_2025": {
@@ -19,9 +19,9 @@
     "status": "Open",
     "description": "Recruitment of Technicians across various departments in Indian Railways.",
     "bulletin": [
-      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "#" },
-      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "#" },
-      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "#" }
+      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "./resources/results.pdf" },
+      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "./resources/results.pdf" },
+      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "./resources/results.pdf" }
     ]
   },
   "CEN_03_2025": {
@@ -32,8 +32,8 @@
     "status": "Open",
     "description": "Recruitment for Junior Engineers in multiple disciplines.",
     "bulletin": [
-      { "title": "Eligibility Criteria", "uploaded_on": "12-July-2025", "link": "#" },
-      { "title": "Notification", "uploaded_on": "10-July-2025", "link": "#" }
+      { "title": "Eligibility Criteria", "uploaded_on": "12-July-2025", "link": "./resources/results.pdf" },
+      { "title": "Notification", "uploaded_on": "10-July-2025", "link": "./resources/results.pdf" }
     ]
   },
   "CEN_04_2025": {
@@ -44,7 +44,7 @@
     "status": "Open",
     "description": "Recruitment for NTPC posts such as Clerk, Typist, and Goods Guard.",
     "bulletin": [
-      { "title": "Notification", "uploaded_on": "01-Aug-2025", "link": "#" }
+      { "title": "Notification", "uploaded_on": "01-Aug-2025", "link": "./resources/results.pdf" }
     ]
   },
   "CEN_05_2025": {
@@ -55,9 +55,9 @@
     "status": "Upcoming",
     "description": "Recruitment for Group D posts including Track Maintainer and Helpers.",
     "bulletin": [
-      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "#" },
-      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "#" },
-      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "#" }
+      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "./resources/results.pdf" },
+      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "./resources/results.pdf" },
+      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "./resources/results.pdf" }
     ]
   },
   "CEN_06_2025": {
@@ -68,7 +68,7 @@
     "status": "Open",
     "description": "Recruitment for Paramedical Staff such as Nurses and Pharmacists.",
     "bulletin": [
-      { "title": "Notification", "uploaded_on": "05-Sep-2025", "link": "#" }
+      { "title": "Notification", "uploaded_on": "05-Sep-2025", "link": "./resources/results.pdf" }
     ]
   },
   "CEN_07_2025": {
@@ -79,9 +79,9 @@
     "status": "Open",
     "description": "Recruitment for Stenographers, Translators, and other ministerial posts.",
     "bulletin": [
-      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "#" },
-      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "#" },
-      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "#" }
+      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "./resources/results.pdf" },
+      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "./resources/results.pdf" },
+      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "./resources/results.pdf" }
     ]
   },
   "CEN_08_2025": {
@@ -92,8 +92,8 @@
     "status": "Upcoming",
     "description": "Recruitment for Apprenticeship training in Indian Railways.",
     "bulletin": [
-      { "title": "Eligibility Criteria", "uploaded_on": "12-July-2025", "link": "#" },
-      { "title": "Notification", "uploaded_on": "10-July-2025", "link": "#" }
+      { "title": "Eligibility Criteria", "uploaded_on": "12-July-2025", "link": "./resources/results.pdf" },
+      { "title": "Notification", "uploaded_on": "10-July-2025", "link": "./resources/results.pdf" }
     ]
   },
   "CEN_09_2025": {
@@ -104,9 +104,9 @@
     "status": "Upcoming",
     "description": "Recruitment for Law Assistants in Indian Railways.",
     "bulletin": [
-      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "#" },
-      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "#" },
-      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "#" }
+      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "./resources/results.pdf" },
+      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "./resources/results.pdf" },
+      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "./resources/results.pdf" }
     ]
   },
   "CEN_10_2025": {
@@ -117,7 +117,7 @@
     "status": "Upcoming",
     "description": "Recruitment for Accounts Clerks and related posts.",
     "bulletin": [
-      { "title": "Notification", "uploaded_on": "01-Aug-2025", "link": "#" }
+      { "title": "Notification", "uploaded_on": "01-Aug-2025", "link": "./resources/results.pdf" }
     ]
   },
   "CEN_11_2025": {
@@ -128,9 +128,9 @@
     "status": "Upcoming",
     "description": "Recruitment of candidates under Sports Quota.",
     "bulletin": [
-      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "#" },
-      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "#" },
-      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "#" }
+      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "./resources/results.pdf" },
+      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "./resources/results.pdf" },
+      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "./resources/results.pdf" }
     ]
   },
   "CEN_12_2025": {
@@ -141,8 +141,8 @@
     "status": "Upcoming",
     "description": "Recruitment of candidates under Cultural Quota.",
     "bulletin": [
-      { "title": "Eligibility Criteria", "uploaded_on": "12-July-2025", "link": "#" },
-      { "title": "Notification", "uploaded_on": "10-July-2025", "link": "#" }
+      { "title": "Eligibility Criteria", "uploaded_on": "12-July-2025", "link": "./resources/results.pdf" },
+      { "title": "Notification", "uploaded_on": "10-July-2025", "link": "./resources/results.pdf" }
     ]
   },
   "CEN_13_2025": {
@@ -153,9 +153,9 @@
     "status": "Upcoming",
     "description": "Recruitment for Station Masters in Railways.",
     "bulletin": [
-      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "#" },
-      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "#" },
-      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "#" }
+      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "./resources/results.pdf" },
+      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "./resources/results.pdf" },
+      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "./resources/results.pdf" }
     ]
   },
   "CEN_14_2025": {
@@ -166,7 +166,7 @@
     "status": "Upcoming",
     "description": "Recruitment for Commercial Apprentices.",
     "bulletin": [
-      { "title": "Notification", "uploaded_on": "01-Aug-2025", "link": "#" }
+      { "title": "Notification", "uploaded_on": "01-Aug-2025", "link": "./resources/results.pdf" }
     ]
   },
   "CEN_15_2025": {
@@ -177,9 +177,9 @@
     "status": "Upcoming",
     "description": "Recruitment for Ticket Collectors in Indian Railways.",
     "bulletin": [
-      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "#" },
-      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "#" },
-      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "#" }
+      { "title": "Corrigendum-1", "uploaded_on": "25-June-2025", "link": "./resources/results.pdf" },
+      { "title": "FAQs", "uploaded_on": "30-July-2025", "link": "./resources/results.pdf" },
+      { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "./resources/results.pdf" }
     ]
   }
 }

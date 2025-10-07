@@ -12,25 +12,22 @@
   <!-- Header Section -->
   <header class="custom-header text-white shadow-md">
     <div class="flex justify-between items-center h-32 w-full px-4">
-      <!-- Logo and Title -->
       <div class="flex items-center space-x-4">
         <img src="images/railways.png" alt="RRB Logo" class="h-28 w-auto" />
         <div class="leading-tight">
-          <h1 class="text-3xl font-bold">Railway Recruitment Board</h1>
-          <p class="text-xl ml-1">Chennai</p>
+          <h1 id="title" class="text-3xl font-bold">Railway Recruitment Board</h1>
+          <p id="subtitle" class="text-xl ml-1">Chennai</p>
         </div>
       </div>
 
-      <!-- Navigation Links for Desktop -->
       <nav class="hidden md:flex space-x-10 text-xl font-semibold">
-        <a href="#" class="nav-link">In Hindi</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="results.html" class="nav-link">Results</a>
-        <a href="recruitment.html" class="nav-link">Recruitments</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#" id="tamilBtn" class="nav-link">In Tamil</a>
+        <a href="about.html" id="navAbout" class="nav-link">About Us</a>
+        <a href="results.html" id="navResults" class="nav-link">Results</a>
+        <a href="recruitment.html" id="navRecruit" class="nav-link">Recruitments</a>
+        <a href="contact.html" id="navContact" class="nav-link">Contact</a>
       </nav>
 
-      <!-- Hamburger Menu for Mobile -->
       <div class="md:hidden flex items-center">
         <button id="menuBtn" class="text-white focus:outline-none">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,15 +38,14 @@
       </div>
     </div>
 
-    <!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden bg-gray-800 md:hidden px-4 pt-2 pb-4 space-y-2">
-      <a href="#" class="block text-white font-semibold">In Hindi</a>
-      <a href="about.html" class="block text-white font-semibold">About Us</a>
-      <a href="results.html" class="block text-white font-semibold">Results</a>
-      <a href="recruitment.html" class="block text-white font-semibold">Recruitments</a>
-      <a href="contact.html" class="block text-white font-semibold">Contact</a>
+      <a href="about.html" id="mobAbout" class="block text-white font-semibold">About Us</a>
+      <a href="results.html" id="mobResults" class="block text-white font-semibold">Results</a>
+      <a href="recruitment.html" id="mobRecruit" class="block text-white font-semibold">Recruitments</a>
+      <a href="contact.html" id="mobContact" class="block text-white font-semibold">Contact</a>
     </div>
   </header>
+
   <br>
   <!-- Carousel Section -->
   <section class="relative mt-6 mx-auto w-full max-w-5xl overflow-hidden rounded-lg shadow-lg">
@@ -67,184 +63,218 @@
     </div>
   </section>
 
-<!-- About Us Section -->
-<section class="max-w-5xl mx-auto my-12 px-4">
-  <h2 class="text-3xl font-bold text-gray-800 mb-4">About Us</h2>
+  <!-- About Us Section -->
+  <section class="max-w-5xl mx-auto my-12 px-4">
+    <h2 id="aboutTitle" class="text-3xl font-bold text-gray-800 mb-4">About Us</h2>
 
-  <p class="text-lg text-gray-700 mb-4 text-justify">
-    The <strong>Railway Recruitment Board (RRB)</strong> is a statutory body functioning under the <strong>Ministry of Railways, Government of India</strong>. It is entrusted with the responsibility of recruiting eligible candidates for various posts in the Indian Railways through a fair, transparent, and merit-based selection process.
-  </p>
+    <p id="aboutPara1" class="text-lg text-gray-700 mb-4 text-justify">
+      The <strong>Railway Recruitment Board (RRB)</strong> is a statutory body functioning under the <strong>Ministry of Railways, Government of India</strong>. It is entrusted with the responsibility of recruiting eligible candidates for various posts in the Indian Railways through a fair, transparent, and merit-based selection process.
+    </p>
 
-  <p class="text-lg text-gray-700 mb-4 text-justify">
-    RRBs were initially known as Railway Service Commissions when they were formed in 1942. In 1985, they were renamed as Railway Recruitment Boards. There are currently 21 RRBs across India, each catering to specific geographical zones. <strong>RRB Chennai</strong> is responsible for recruitment in the southern region, particularly Tamil Nadu and surrounding areas.
-  </p>
+    <p id="aboutPara2" class="text-lg text-gray-700 mb-4 text-justify">
+      RRBs were initially known as Railway Service Commissions when they were formed in 1942. In 1985, they were renamed as Railway Recruitment Boards. There are currently 21 RRBs across India, each catering to specific geographical zones. <strong>RRB Chennai</strong> is responsible for recruitment in the southern region, particularly Tamil Nadu and surrounding areas.
+    </p>
 
-  <p class="text-lg text-gray-700 mb-4 text-justify">
-    The RRBs conduct recruitment for a wide range of positions across different categories such as:
-  </p>
-  <ul class="list-disc list-inside mt-2 text-lg text-gray-700 text-justify">
-    <li>Group C posts including Technical and Non-Technical staff</li>
-    <li>Junior Engineers (JE), Depot Material Superintendent (DMS), and Chemical & Metallurgical Assistant (CMA)</li>
-    <li>Assistant Loco Pilots (ALP) and Technicians</li>
-    <li>Traffic Assistants, Station Masters, and Goods Guards</li>
-    <li>Paramedical and Ministerial categories</li>
-  </ul>
-  <br>
+    <p id="aboutPara3" class="text-lg text-gray-700 mb-4 text-justify">
+      The RRBs conduct recruitment for a wide range of positions across different categories such as:
+    </p>
 
-  <p class="text-lg text-gray-700 mb-4 text-justify">
-    The recruitment process includes Computer-Based Tests (CBT), Skill Tests, Document Verification, and Medical Examinations, depending on the nature of the post. RRBs follow strict protocols to maintain the sanctity of the process, using advanced technology to ensure accuracy and prevent malpractices.
-  </p>
+    <ul id="aboutList" class="list-disc list-inside mt-2 text-lg text-gray-700 text-justify">
+      <li>Group C posts including Technical and Non-Technical staff</li>
+      <li>Junior Engineers (JE), Depot Material Superintendent (DMS), and Chemical & Metallurgical Assistant (CMA)</li>
+      <li>Assistant Loco Pilots (ALP) and Technicians</li>
+      <li>Traffic Assistants, Station Masters, and Goods Guards</li>
+      <li>Paramedical and Ministerial categories</li>
+    </ul>
 
-  <p class="text-lg text-gray-700 mb-4 text-justify">
-    The <strong>Railway Recruitment Control Board (RRCB)</strong>, headquartered in New Delhi, supervises the activities of all RRBs and issues guidelines to bring uniformity across the country. It also monitors the resolution of complaints, legal cases, and administrative coordination.
-  </p>
+    <br>
 
-  <p class="text-lg text-gray-700 text-justify">
-    RRB Chennai is committed to upholding the principles of equal opportunity, integrity, and efficiency in public service by recruiting the best-suited candidates to contribute to one of the world’s largest and busiest railway networks.
-  </p>
-</section>
+    <p id="aboutPara4" class="text-lg text-gray-700 mb-4 text-justify">
+      The recruitment process includes Computer-Based Tests (CBT), Skill Tests, Document Verification, and Medical Examinations, depending on the nature of the post. RRBs follow strict protocols to maintain the sanctity of the process, using advanced technology to ensure accuracy and prevent malpractices.
+    </p>
 
+    <p id="aboutPara5" class="text-lg text-gray-700 mb-4 text-justify">
+      The <strong>Railway Recruitment Control Board (RRCB)</strong>, headquartered in New Delhi, supervises the activities of all RRBs and issues guidelines to bring uniformity across the country. It also monitors the resolution of complaints, legal cases, and administrative coordination.
+    </p>
 
+    <p id="aboutPara6" class="text-lg text-gray-700 text-justify">
+      RRB Chennai is committed to upholding the principles of equal opportunity, integrity, and efficiency in public service by recruiting the best-suited candidates to contribute to one of the world’s largest and busiest railway networks.
+    </p>
+  </section>
 
-  <!-- Carousel Script -->
-  <script>
-    const slidesContainer = document.getElementById("carousel-slides");
-    const totalSlides = slidesContainer.children.length;
-    let currentSlide = 0;
-
-    function updateSlide() {
-      slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
-
-    document.getElementById("nextBtn").addEventListener("click", () => {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateSlide();
-    });
-
-    document.getElementById("prevBtn").addEventListener("click", () => {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      updateSlide();
-    });
-
-    setInterval(() => {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateSlide();
-    }, 5000);
-  </script>
   <!-- Important Notices Section -->
-<section class="max-w-5xl mx-auto my-12 px-4">
-  <h2 class="text-2xl font-bold text-gray-800 mb-6">Important Notices</h2>
+  <section class="max-w-5xl mx-auto my-12 px-4">
+    <h2 id="noticeTitle" class="text-2xl font-bold text-gray-800 mb-6">Important Notices</h2>
 
-  <!-- Grid for cards -->
-  <div class="grid md:grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="notice-box">
+        <h3 id="notice1Title" class="text-lg font-semibold mb-2">Important</h3>
+        <p id="notice1Text" class="text-sm">
+          For any notice/information regarding Railway Recruitment Board (RRB), candidates should visit official websites only. Any information/notices being circulated in the social media regarding RRBs may please be ignored.
+        </p>
+      </div>
 
-    <!-- Notice 1 -->
-    <div class="notice-box">
-      <h3 class="text-lg font-semibold mb-2">Important</h3>
-      <p class="text-sm">
-        For any notice/information regarding Railway Recruitment Board (RRB), candidates should visit official websites only. Any information/notices being circulated in the social media regarding RRBs may please be ignored.
-      </p>
+      <div class="notice-box">
+        <h3 id="notice2Title" class="text-lg font-semibold mb-2">Beware of Touts</h3>
+        <p id="notice2Text" class="text-sm mb-3">
+          Candidates are cautioned against touts and job racketeers trying to deceive by false promises of securing jobs through illegal means. Recruitment is based purely on merit.
+        </p>
+        <a href="resources/warning.pdf" target="_blank" id="notice2Link" class="bg-white text-blue-900 font-bold px-4 py-2 rounded hover:scale-105 transition duration-200">
+          Click here for details
+        </a>
+      </div>
+
+      <div class="notice-box">
+        <p id="notice3Text" class="text-sm mb-3">
+          For any further clarification regarding Appointment, Candidates are advised to contact the following address, if necessary.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <!-- Notice 2 -->
-    <div class="notice-box">
-      <h3 class="text-lg font-semibold mb-2">Beware of Touts</h3>
-      <p class="text-sm mb-3">
-        Candidates are cautioned against touts and job racketeers trying to deceive by false promises of securing jobs through illegal means. Recruitment is based purely on merit.
-      </p>
-      <br>
-      <a href="resources/warning.pdf" target="_blank" class="bg-white text-blue-900 font-bold px-4 py-2 rounded hover:scale-105 transition duration-200">
-        Click here for details
-      </a>
-    </div>
+  <style>
+    .notice-box {
+      background-color: #153865;
+      color: white;
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+    .notice-box:hover {
+      transform: scale(1.05);
+    }
+  </style>
 
-    <!-- Notice 3 -->
-    <div class="notice-box">
-      <p class="text-sm mb-3">
-        For any further clarification regarding Appointment, Candidates are advised to contact the following address, if necessary.
-      </p>
-      <div class="grid grid-cols-2 gap-6 text-sm text-left font-light">
-        <div>
-          <div class="text-white text-center font-semibold py-1 rounded">Southern Railway</div>
-          <p class="mt-2">
-            Deputy Chief Personnel Officer/R&T/HQ,<br />
-            Southern Railway, Park Town, Chennai<br />
-            Pin: 600 003<br />
-            Phone: 044-25355283<br />
-            E-mail: <a href="mailto:dycpow@sr.railnet.gov.in" class="underline text-white">dycpow@sr.railnet.gov.in</a>
-          </p>
-        </div>
-        <div>
-          <div class="text-white text-center font-semibold py-1 rounded">ICF</div>
-          <p class="mt-2">
-            Principal Chief Personnel Officer,<br />
-            (Recruitment Section),<br />
-            Integral Coach Factory, Chennai<br />
-            Pin: 600 038<br />
-            Phone: 044 – 26147708<br />
-            E-mail: <a href="mailto:pbicf38@gmail.com" class="underline text-white">pbicf38@gmail.com</a>
-          </p>
-        </div>
+  <!-- Footer Section -->
+  <footer class="bg-gray-900 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <h4 id="footerGov" class="text-xl font-semibold mb-2">Government of India</h4>
+        <p id="footerMinistry" class="text-sm">Ministry of Railways</p>
+        <p id="footerCall" class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+      </div>
+      <div class="flex flex-col items-start md:items-end">
+        <h4 id="footerQuick" class="text-xl font-semibold mb-2">Quick Links</h4>
+        <ul class="space-y-1 text-sm text-right w-full md:w-auto">
+          <li><a id="footerAbout" href="./about.html" class="hover:text-gray-300 transition-colors">About Us</a></li>
+          <li><a id="footerResults" href="#results" class="hover:text-gray-300 transition-colors">Results</a></li>
+          <li><a id="footerRecruit" href="./recruitment.html" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
+          <li><a id="footerContact" href="#contact" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
+        </ul>
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- Custom Styles -->
-<style>
-  .notice-box {
-    background-color: #153865;
-    color: white;
-    padding: 1.25rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-  }
-
-  .notice-box:hover {
-    transform: scale(1.05);
-  }
-</style>
-
-
-  <!-- Footer Section -->
-<footer class="bg-gray-900 text-white py-8 mt-12">
-  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-    
-    <!-- Left: Info -->
-    <div>
-      <h4 class="text-xl font-semibold mb-2">Government of India</h4>
-      <p class="text-sm">Ministry of Railways</p>
-      <p class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+    <div id="footerNote" class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
+      © 2022 Railway Recruitment Board Chennai. All Rights Reserved.
     </div>
+  </footer>
 
-    <!-- Right: Quick Links (Improved Alignment) -->
-    <div class="flex flex-col items-start md:items-end">
-      <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
-      <ul class="space-y-1 text-sm text-right w-full md:w-auto">
-        <li><a href="./about.html" class="hover:text-gray-300 transition-colors">About Us</a></li>
-        <li><a href="#results" class="hover:text-gray-300 transition-colors">Results</a></li>
-        <li><a href="./recruitment.html" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
-        <li><a href="#contact" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Divider -->
-  <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
-    © 2022 Railway Recruitment Board Chennai. All Rights Reserved.
-  </div>
-</footer>
-
-<!-- Mobile Menu Script -->
+  <!-- Translation Script -->
   <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
+    const translations = {
+      en: {
+        title: "Railway Recruitment Board",
+        subtitle: "Chennai",
+        navAbout: "About Us",
+        navResults: "Results",
+        navRecruit: "Recruitments",
+        navContact: "Contact",
+        aboutTitle: "About Us",
+        aboutPara1: "The Railway Recruitment Board (RRB) is a statutory body functioning under the Ministry of Railways, Government of India. It is entrusted with the responsibility of recruiting eligible candidates for various posts in the Indian Railways through a fair, transparent, and merit-based selection process.",
+        aboutPara2: "RRBs were initially known as Railway Service Commissions when they were formed in 1942. In 1985, they were renamed as Railway Recruitment Boards. There are currently 21 RRBs across India, each catering to specific geographical zones. RRB Chennai is responsible for recruitment in the southern region, particularly Tamil Nadu and surrounding areas.",
+        aboutPara3: "The RRBs conduct recruitment for a wide range of positions across different categories such as:",
+        aboutList: "Group C posts including Technical and Non-Technical staff; Junior Engineers (JE), Depot Material Superintendent (DMS), and Chemical & Metallurgical Assistant (CMA); Assistant Loco Pilots (ALP) and Technicians; Traffic Assistants, Station Masters, and Goods Guards; Paramedical and Ministerial categories",
+        aboutPara4: "The recruitment process includes Computer-Based Tests (CBT), Skill Tests, Document Verification, and Medical Examinations, depending on the nature of the post. RRBs follow strict protocols to maintain the sanctity of the process, using advanced technology to ensure accuracy and prevent malpractices.",
+        aboutPara5: "The Railway Recruitment Control Board (RRCB), headquartered in New Delhi, supervises the activities of all RRBs and issues guidelines to bring uniformity across the country. It also monitors the resolution of complaints, legal cases, and administrative coordination.",
+        aboutPara6: "RRB Chennai is committed to upholding the principles of equal opportunity, integrity, and efficiency in public service by recruiting the best-suited candidates to contribute to one of the world’s largest and busiest railway networks.",
+        noticeTitle: "Important Notices",
+        notice1Title: "Important",
+        notice1Text: "For any notice/information regarding Railway Recruitment Board (RRB), candidates should visit official websites only. Any information/notices being circulated in the social media regarding RRBs may please be ignored.",
+        notice2Title: "Beware of Touts",
+        notice2Text: "Candidates are cautioned against touts and job racketeers trying to deceive by false promises of securing jobs through illegal means. Recruitment is based purely on merit.",
+        notice2Link: "Click here for details",
+        notice3Text: "For any further clarification regarding Appointment, Candidates are advised to contact the following address, if necessary.",
+        footerGov: "Government of India",
+        footerMinistry: "Ministry of Railways",
+        footerQuick: "Quick Links",
+        footerAbout: "About Us",
+        footerResults: "Results",
+        footerRecruit: "Recruitments",
+        footerContact: "Contact Us",
+        footerNote: "© 2022 Railway Recruitment Board Chennai. All Rights Reserved."
+      },
+      ta: {
+        title: "ரயில்வே ஆட்சேர்ப்பு வாரியம்",
+        subtitle: "சென்னை",
+        navAbout: "எங்களை பற்றி",
+        navResults: "விளைவுகள்",
+        navRecruit: "ஆட்சேர்ப்புகள்",
+        navContact: "தொடர்பு கொள்ள",
+        aboutTitle: "எங்களை பற்றி",
+        aboutPara1: "ரயில்வே ஆட்சேர்ப்பு வாரியம் (RRB) என்பது இந்திய அரசின் ரயில்வே அமைச்சகத்தின் கீழ் செயல்படும் சட்டபூர்வ அமைப்பாகும். இது இந்திய ரயில்வேயில் உள்ள பல்வேறு பணியிடங்களுக்கு தகுதியான விண்ணப்பதாரர்களை நியாயமான, வெளிப்படையான மற்றும் திறமையின் அடிப்படையில் ஆட்சேர்ப்பு செய்வதற்குப் பொறுப்பாக உள்ளது.",
+        aboutPara2: "RRBகள் முதலில் 1942 ஆம் ஆண்டில் உருவாக்கப்பட்ட போது ரயில்வே சர்வீஸ் கமிஷன்ஸ் என்று அழைக்கப்பட்டன. 1985 இல், அவை ரயில்வே ஆட்சேர்ப்பு வாரியங்கள் என்று மறுபெயரிடப்பட்டன. தற்போது இந்தியா முழுவதும் 21 RRBகள் உள்ளன, ஒவ்வொன்றும் தனித்தனி புவியியல் பகுதிகளுக்காகப் பணிபுரிகின்றன. ரயில்வே ஆட்சேர்ப்பு வாரியம், சென்னை தெற்குப் பிரதேசத்திற்கான ஆட்சேர்ப்புகளுக்குப் பொறுப்பாக உள்ளது, குறிப்பாக தமிழ்நாடு மற்றும் அதனைச் சூழ்ந்த பகுதிகளுக்கு.",
+        aboutPara3: "RRBகள் பல்வேறு பிரிவுகளுக்கான பல பதவிகளுக்காக ஆட்சேர்ப்புகளை நடத்துகின்றன, அவை பின்வருமாறு:",
+        aboutList: "Group C பணியிடங்கள் (தொழில்நுட்ப மற்றும் தொழில்நுட்பமல்லாத பணியாளர்கள்), ஜூனியர் என்ஜினீயர்கள் (JE), டெப்போ மேட்டீரியல் சூப்பரிண்டெண்ட் (DMS), கெமிக்கல் மற்றும் மெட்டலர்ஜிக்கல் அசிஸ்டண்ட் (CMA), உதவி லோகோ பைலட்டுகள் (ALP) மற்றும் டெக்னீஷியன்கள், டிராஃபிக் உதவியாளர்கள், ஸ்டேஷன் மாஸ்டர்கள், குட்ஸ் கார்டுகள், பராமெடிக்கல் மற்றும் நிர்வாகப் பிரிவுகள்.",
+        aboutPara4: "ஆட்சேர்ப்பு செயல்முறை கணினி அடிப்படையிலான தேர்வுகள் (CBT), திறன்தேர்வுகள், ஆவணச் சரிபார்ப்பு மற்றும் மருத்துவ பரிசோதனைகளை உள்ளடக்கியது. செயல்முறை நேர்மையும் துல்லியமும் பாதுகாக்கப்படுவதற்காக RRBகள் மேம்பட்ட தொழில்நுட்பத்தைப் பயன்படுத்துகின்றன.",
+        aboutPara5: "நியூ டெல்லியில் தலைமையகமுள்ள ரயில்வே ஆட்சேர்ப்பு கட்டுப்பாட்டு வாரியம் (RRCB) அனைத்து RRBகளின் நடவடிக்கைகளையும் மேற்பார்வை செய்து, நாடு முழுவதும் ஒரே மாதிரி நடைமுறைகளை உறுதி செய்வதற்கான வழிகாட்டுதல்களை வெளியிடுகிறது. மேலும் புகார்கள், வழக்குகள் மற்றும் நிர்வாக ஒருங்கிணைப்புகளையும் கண்காணிக்கிறது.",
+        aboutPara6: "ரயில்வே ஆட்சேர்ப்பு வாரியம் சென்னை சமநிலை வாய்ப்பு, நேர்மை மற்றும் திறன் ஆகியவற்றை நிலைநிறுத்துவதற்கு உறுதியாக உள்ளது. உலகின் மிகப்பெரிய மற்றும் மிகப் பரபரப்பான ரயில்வே வலையமைப்புகளில் ஒன்றில் சிறந்த விண்ணப்பதாரர்களைத் தேர்ந்தெடுத்து பங்களிக்கிறது.",
+        noticeTitle: "முக்கிய அறிவிப்புகள்",
+        notice1Title: "முக்கியம்",
+        notice1Text: "ரயில்வே ஆட்சேர்ப்பு வாரியம் (RRB) தொடர்பான எந்த அறிவிப்பு/தகவலுக்கும் விண்ணப்பதாரர்கள் அதிகாரப்பூர்வ இணையதளத்திலேயே பார்வையிட வேண்டும். சமூக ஊடகங்களில் பரவிவரும் எந்த தகவலும் புறக்கணிக்கப்பட வேண்டும்.",
+        notice2Title: "மோசடிகளிடம் எச்சரிக்கை",
+        notice2Text: "போலி வாக்குறுதிகளின் மூலம் வேலைவாய்ப்பு பெறுவதாக கூறி ஏமாற்ற முயலும் மோசடிகள் மற்றும் பணமோசடிகளிடம் விண்ணப்பதாரர்கள் எச்சரிக்கையுடன் இருக்க வேண்டும். ஆட்சேர்ப்பு முற்றிலும் திறமையின் அடிப்படையில் நடைபெறும்.",
+        notice2Link: "விவரங்களுக்கு இங்கே சொடுக்கவும்",
+        notice3Text: "பணிநியமனம் தொடர்பான மேலும் விளக்கங்களுக்கு, தேவையானால் கீழ்கண்ட முகவரியைத் தொடர்பு கொள்ள விண்ணப்பதாரர்கள் அறிவுறுத்தப்படுகிறார்கள்.",
+        footerGov: "இந்திய அரசு",
+        footerMinistry: "ரயில்வே அமைச்சகம்",
+        footerQuick: "விரைவு இணைப்புகள்",
+        footerAbout: "எங்களை பற்றி",
+        footerResults: "விளைவுகள்",
+        footerRecruit: "ஆட்சேர்ப்புகள்",
+        footerContact: "தொடர்பு கொள்ள",
+        footerNote: "© 2022 ரயில்வே ஆட்சேர்ப்பு வாரியம் சென்னை. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
+      }
+    };
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+    function switchLanguage(lang) {
+      for (let key in translations[lang]) {
+        const el = document.getElementById(key);
+        if (el) el.innerText = translations[lang][key];
+      }
+    }
+
+    function loadLanguageFromSession() {
+      let lang = sessionStorage.getItem("lang") || "en"; // default English
+      switchLanguage(lang);
+      document.getElementById("tamilBtn").innerText = lang === "en" ? "In Tamil" : "In English";
+    }
+
+    function toggleLanguage() {
+      let currentLang = sessionStorage.getItem("lang") || "en";
+      currentLang = currentLang === "en" ? "ta" : "en";
+      sessionStorage.setItem("lang", currentLang);
+      switchLanguage(currentLang);
+      document.getElementById("tamilBtn").innerText = currentLang === "en" ? "In Tamil" : "In English";
+    }
+
+    let currentLang = "en";
+    document.getElementById("tamilBtn").addEventListener("click", (e) => {
+      e.preventDefault();
+      currentLang = currentLang === "en" ? "ta" : "en";
+      switchLanguage(currentLang);
+      document.getElementById("tamilBtn").innerText = currentLang === "en" ? "In Tamil" : "In English";
     });
+
+    function switchLanguage(lang) {
+      for (let key in translations[lang]) {
+        const el = document.getElementById(key);
+        if (el) el.innerText = translations[lang][key];
+      }
+    }
+    window.addEventListener("DOMContentLoaded", loadLanguageFromSession);
+    document.getElementById("tamilBtn").addEventListener("click", toggleLanguage);
   </script>
+
 </body>
 </html>
