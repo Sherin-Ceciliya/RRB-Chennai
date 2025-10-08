@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="home.css" />
   <style>
   body {
-    background-color: #f9f9f9; /* page background */
+    background-color: #f9f9f9;
     font-family: "Segoe UI", Arial, sans-serif;
   }
 
@@ -48,17 +48,13 @@
     text-align: left;
     vertical-align: top;
     font-size: 15px;
+    background: transparent;
   }
 
   .bulletin th {
     background: #0055a5;
     color: white;
     letter-spacing: 0.3px;
-  }
-
-  .bulletin td {
-    background: transparent; /* key fix */
-    border-radius: 4px;
   }
 
   footer {
@@ -79,6 +75,8 @@
     color: #0077c0;
     font-weight: bold;
     text-decoration: none;
+    display:inline-block;
+    margin-right:8px;
   }
 
   .btn-link:hover {
@@ -88,10 +86,24 @@
   .custom-header {
     background-color: #153865;
   }
+
+  .search-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid #153865; /* dark blue border as requested earlier */
+    background: white;
+    color: black;
+  }
+
+  .search-input::placeholder {
+    color: #153865; /* dark blue placeholder */
+    opacity: 0.9;
+  }
 </style>
 
 </head>
-<body>
+<body class="bg-gray-100">
 
  <!-- Header -->
   <header class="custom-header text-white shadow-md">
@@ -99,138 +111,293 @@
       <div class="flex items-center space-x-4">
         <img src="images/railways.png" alt="RRB Logo" class="h-28 w-auto" />
         <div class="leading-tight">
-          <h1 class="text-3xl font-bold">Railway Recruitment Board</h1>
-          <p class="text-xl ml-1">Chennai</p>
+          <h1 id="hdrTitle" class="text-3xl font-bold">Railway Recruitment Board</h1>
+          <p id="hdrPlace" class="text-xl ml-1">Chennai</p>
         </div>
       </div>
       <nav class="hidden md:flex space-x-10 text-xl font-semibold">
-        <a href="home.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="results.html" class="nav-link">Results</a>
-        <a href="recruitment.html" class="nav-link">Recruitments</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a id="navHome" href="home.html" class="nav-link">Home</a>
+        <a id="navAbout" href="about.html" class="nav-link">About Us</a>
+        <a id="navResults" href="results.html" class="nav-link">Results</a>
+        <a id="navRecruit" href="recruitment.html" class="nav-link">Recruitments</a>
+        <a id="navContact" href="contact.html" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
 
   <div class="container">
     <div class="section">
-      <p style="margin-bottom: 20px; font-size: 1rem; line-height: 1.6; color: #333;">
-      The following candidates (Merit Order wise) are provisionally selected and recommended for appointment to the post mentioned against their roll numbers based on their performance in the written examination and counselling/verification of their certificates, subject to all other criteria including the prescribed medical standards.
-    </p>
-    <p style="margin-bottom: 20px; font-size: 1rem; line-height: 1.6; color: #333;">
-      You will be intimated further regarding medical examination/appointment by Southern Railway/ICF. For any further clarification regarding the above, you are advised to contact the following address, if necessary.
-    </p>
+      <h2 id="mainHeading" class="text-2xl font-semibold mb-4">Results for Additional and Replacement Roles</h2>
 
-      <h2>Results for Additional and Replacement Roles</h2>
+      <p id="para1" style="margin-bottom: 20px; font-size: 1rem; line-height: 1.6; color: #333;">
+        The following candidates (Merit Order wise) are provisionally selected and recommended for appointment to the post mentioned against their roll numbers based on their performance in the written examination and counselling/verification of their certificates, subject to all other criteria including the prescribed medical standards.
+      </p>
+      <p id="para2" style="margin-bottom: 20px; font-size: 1rem; line-height: 1.6; color: #333;">
+        You will be intimated further regarding medical examination/appointment by Southern Railway/ICF. For any further clarification regarding the above, you are advised to contact the following address, if necessary.
+      </p>
+
       <div class="mb-4">
-  <div class="mb-4">
-  <input type="text" id="searchInput" 
-         placeholder="Enter Roll Number or Candidate Name" 
-         class="w-full p-3 rounded border border-blue-900 bg-white text-black placeholder-blue-900" />
-</div>
+        <input type="text" id="searchInput"
+               placeholder="Enter Roll Number or Candidate Name"
+               class="search-input" />
+      </div>
 
-
-</div>
       <table class="bulletin">
         <thead>
-          <tr>
-            <th>CAT Number</th>
-            <th>CEN Number</th>
-            <th>Post Name</th>
-            <th>Railway / Production Unit</th>
-            <th>Roll Numbers</th>
-            <th>Candidate Name</th>
-            <th>Type</th>
-            <th>Date of Publication</th>
+          <tr id="tableHeaderRow">
+            <th id="thCat">CAT Number</th>
+            <th id="thCEN">CEN Number</th>
+            <th id="thPost">Post Name</th>
+            <th id="thUnit">Railway / Production Unit</th>
+            <th id="thRoll">Roll Numbers</th>
+            <th id="thCandidate">Candidate Name</th>
+            <th id="thType">Type</th>
+            <th id="thDate">Date of Publication</th>
           </tr>
         </thead>
-        <tbody>
-  <!-- CEN 7 -->
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130311000668</td><td>Prakash Kumar Khan</td><td>Replacement</td><td>15.09.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130311000994</td><td>Love Kumar</td><td>Replacement</td><td>15.09.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130311001192</td><td>Shashi Raj</td><td>Replacement</td><td>15.09.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130311000315</td><td>Bijendra Kumar Singh M R</td><td>Replacement</td><td>15.09.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130311000190</td><td>Rajnish Kumar</td><td>Replacement</td><td>15.09.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130311000758</td><td>Ram Chandra</td><td>Replacement</td><td>15.09.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130314004037</td><td>Shri Kant Prasad</td><td>Replacement</td><td>15.09.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130314003466</td><td>Santosh Kumar</td><td>Replacement</td><td>15.09.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130314003157</td><td>Raghunath Sah</td><td>Replacement</td><td>15.09.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130314004117</td><td>Annu Kumar</td><td>Replacement</td><td>15.09.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130313011664</td><td>Ratti Lal Meena</td><td>Replacement</td><td>15.09.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130311000716</td><td>Satendra Kumar Singh</td><td>Replacement</td><td>16.10.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130311000398</td><td>Manish</td><td>Replacement</td><td>16.10.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130311000064</td><td>Sonu Kumar</td><td>Replacement</td><td>16.10.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130311000254</td><td>Shyam Rao</td><td>Replacement</td><td>16.10.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130311001266</td><td>Razi Imam Rizvi</td><td>Replacement</td><td>16.10.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130311000647</td><td>Rahul Kumar</td><td>Replacement</td><td>16.10.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130314002785</td><td>Akhay Ram Gurjar</td><td>Replacement</td><td>16.10.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130314005009</td><td>Subhash Kumar Singh</td><td>Replacement</td><td>16.10.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130314008013</td><td>Buddhi Prakash</td><td>Replacement</td><td>16.10.2014</td></tr>
-  <tr><td>7</td><td>03/2012</td><td>Assistant Station Master</td><td>SR</td><td>18130314004862</td><td>Ramdular Rai</td><td>Replacement</td><td>16.10.2014</td></tr>
-
-  <!-- CEN 11 -->
-  <tr><td>11</td><td>04/2012</td><td>Technician Gr-III / Diesel Electrical</td><td>SR</td><td>18124024072039</td><td>Nishikant Kumar</td><td>Additional</td><td>30.04.2014</td></tr>
-  <tr><td>11</td><td>04/2012</td><td>Technician Gr-III / Diesel Electrical</td><td>SR</td><td>18124024064425</td><td>Md Amanat Husain</td><td>Additional</td><td>30.04.2014</td></tr>
-  <tr><td>11</td><td>04/2012</td><td>Technician Gr-III / Diesel Electrical</td><td>SR</td><td>18124024073936</td><td>Mathan T</td><td>Additional</td><td>30.04.2014</td></tr>
-  <tr><td>11</td><td>04/2012</td><td>Technician Gr-III / Diesel Electrical</td><td>SR</td><td>18124023047911</td><td>Lakhan Lal Meena</td><td>Additional</td><td>30.04.2014</td></tr>
-  <tr><td>11</td><td>04/2012</td><td>Technician Gr-III / Diesel Electrical</td><td>SR</td><td>18124023051059</td><td>Rajveer Meena</td><td>Additional</td><td>30.04.2014</td></tr>
-  <tr><td>11</td><td>04/2012</td><td>Technician Gr-III / Diesel Electrical</td><td>SR</td><td>18124023049923</td><td>Mastram Meena</td><td>Additional</td><td>30.04.2014</td></tr>
-  <tr><td>11</td><td>04/2012</td><td>Technician Gr-III / Diesel Electrical</td><td>SR</td><td>18124022033809</td><td>Shyamsundara Raju Y</td><td>Additional</td><td>30.04.2014</td></tr>
-  <tr><td>11</td><td>04/2012</td><td>Technician Gr-III / Diesel Electrical</td><td>SR</td><td>18124022036329</td><td>Tekkalakotaraju</td><td>Additional</td><td>30.04.2014</td></tr>
-  <tr><td>11</td><td>04/2012</td><td>Technician Gr-III / Diesel Electrical</td><td>SR</td><td>18124022085868</td><td>Ajay Kumar</td><td>Additional</td><td>30.04.2014</td></tr>
-  <tr><td>11</td><td>04/2012</td><td>Technician Gr-III / Diesel Electrical</td><td>SR</td><td>18124022035578</td><td>Jitendra Kumar Kardam</td><td>Additional</td><td>30.04.2014</td></tr>
-  <tr><td>11</td><td>04/2012</td><td>Technician Gr-III / Diesel Electrical</td><td>SR</td><td>18124022031955</td><td>Jitendra Kumar Ram</td><td>Additional</td><td>30.04.2014</td></tr>
-
-  <!-- CEN 13 -->
-  <tr><td>13</td><td>04/2012</td><td>Technician Gr-III / Diesel Mechanic</td><td>SR</td><td>18124132041181</td><td>Suresh Kumar Verma</td><td>Replacement</td><td>30.04.2014</td></tr>
-  <tr><td>13</td><td>04/2012</td><td>Technician Gr-III / Diesel Mechanic</td><td>SR</td><td>18124132038621</td><td>Raju Kumar Rajwar</td><td>Replacement</td><td>30.04.2014</td></tr>
-  <tr><td>13</td><td>04/2012</td><td>Technician Gr-III / Diesel Mechanic</td><td>SR</td><td>18124133056658</td><td>Arjun Lal Meena</td><td>Replacement</td><td>30.04.2014</td></tr>
-
-  <!-- CEN 16 -->
-  <tr><td>16</td><td>04/2012</td><td>Technician Gr-III / Fitter WS</td><td>SR</td><td>18124131021911</td><td>Kompala Siva Prasad</td><td>Replacement</td><td>30.04.2014</td></tr>
-  <tr><td>16</td><td>04/2012</td><td>Technician Gr-III / Fitter WS</td><td>SR</td><td>18124132041548</td><td>Raja M</td><td>Replacement</td><td>30.04.2014</td></tr>
-  <tr><td>16</td><td>04/2012</td><td>Technician Gr-III / Fitter C&W</td><td>SR</td><td>18124131019886</td><td>Salamonraja S</td><td>Replacement</td><td>30.04.2014</td></tr>
-</tbody>
-
+        <tbody id="resultTable">
+          <!-- rendered by script -->
+        </tbody>
       </table>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6 mt-10">
-    <div class="container text-center">
-      <p>&copy; 2025 Railway Recruitment Board, Chennai. All rights reserved.</p>
+  <footer>
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <h4 id="fGov" class="text-xl font-semibold mb-2">Government of India</h4>
+        <p id="fMin" class="text-sm">Ministry of Railways</p>
+        <p id="fEnq" class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+      </div>
+      <div class="flex flex-col items-start md:items-end">
+        <h4 id="fLinks" class="text-xl font-semibold mb-2">Quick Links</h4>
+        <ul class="space-y-1 text-sm text-right w-full md:w-auto">
+          <li><a id="fAbout" href="./about.html" class="hover:text-gray-300 transition-colors">About Us</a></li>
+          <li><a id="fResults" href="#results" class="hover:text-gray-300 transition-colors">Results</a></li>
+          <li><a id="fRecruit" href="./recruitment.html" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
+          <li><a id="fContact" href="#contact" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="fCopy" class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
+      © 2022 Railway Recruitment Board Chennai. All Rights Reserved.
     </div>
   </footer>
-  <!-- Place this inside your container, above the table -->
 
 <script>
-  const searchInput = document.getElementById('searchInput');
-  const table = document.querySelector('.bulletin tbody');
-  const rows = Array.from(table.getElementsByTagName('tr'));
+// Read language from sessionStorage; default to "en"
+const currentLang = (sessionStorage.getItem('lang') === 'ta') ? 'ta' : 'en';
 
-  searchInput.addEventListener('input', function() {
-    const filter = this.value.trim().toLowerCase();
+/* ---------- Static label translations ---------- */
+const labels = {
+  en: {
+    hdrTitle: "Railway Recruitment Board",
+    hdrPlace: "Chennai",
+    navHome: "Home",
+    navAbout: "About Us",
+    navResults: "Results",
+    navRecruit: "Recruitments",
+    navContact: "Contact",
+    mainHeading: "Results for Additional and Replacement Roles",
+    para1: "The following candidates (Merit Order wise) are provisionally selected and recommended for appointment to the post mentioned against their roll numbers based on their performance in the written examination and counselling/verification of their certificates, subject to all other criteria including the prescribed medical standards.",
+    para2: "You will be intimated further regarding medical examination/appointment by Southern Railway/ICF. For any further clarification regarding the above, you are advised to contact the following address, if necessary.",
+    placeholder: "Enter Roll Number or Candidate Name",
+    thCat: "CAT Number",
+    thCEN: "CEN Number",
+    thPost: "Post Name",
+    thUnit: "Railway / Production Unit",
+    thRoll: "Roll Numbers",
+    thCandidate: "Candidate Name",
+    thType: "Type",
+    thDate: "Date of Publication",
+    fGov: "Government of India",
+    fMin: "Ministry of Railways",
+    fEnq: "For Enquiry call:",
+    fLinks: "Quick Links",
+    fAbout: "About Us",
+    fResults: "Results",
+    fRecruit: "Recruitments",
+    fContact: "Contact Us",
+    fCopy: "© 2022 Railway Recruitment Board Chennai. All Rights Reserved."
+  },
+  ta: {
+    hdrTitle: "ரயில்வே ஆட்சேர்ப்பு வாரியம்",
+    hdrPlace: "சென்னை",
+    navHome: "முகப்பு",
+    navAbout: "எங்களைப் பற்றி",
+    navResults: "முடிவுகள்",
+    navRecruit: "ஆட்சேர்ப்பு",
+    navContact: "தொடர்பு",
+    mainHeading: "கூட்டுதல் மற்றும் மாற்று பணிகளுக்கான முடிவுகள்",
+    para1: "கீழே கொடுக்கப்பட்டுள்ள வேட்பாளர்கள் (மெரிட் வரிசையின்படி) எழுத்துப்பரீட்சை மற்றும் சான்றிதழ்களின் சரிபார்ப்பு/ஆலோசனை ஆகியவற்றில் தங்கள் செயல்திறனை அடிப்படையாக்கொண்டு தற்காலிகமாக தேர்ந்தெடுக்கப்பட்டு குறிப்பிட்ட பணிகளுக்கான நியமனத்திற்கு பரிந்துரைக்கப்படுகிறார்கள். இது அனைத்து பிற நிபந்தனைகளுக்கும் மற்றும் குறிப்பிடப்பட்ட மருத்துவத் தரநிலைகளுக்கும் உட்பட்டது.",
+    para2: "மருத்துவப் பரீட்சை/நியமனம் தொடர்பாக மேலும் தகவல் தென்னிந்திய ரயில்வே/ICF மூலம் அறிவிக்கப்படும். மேலே குறிப்பிட்ட விஷயங்களில் மேலதிக விளக்கங்கள் தேவைப்பட்டால் கீழ்காணும் முகவரியுடன் தொடர்பு கொள்ளவும்.",
+    placeholder: "ரோல் எண் அல்லது விண்ணப்பதாரர் பெயரை உள்ளிடவும்",
+    thCat: "CAT எண்",
+    thCEN: "CEN எண்",
+    thPost: "பதவி பெயர்",
+    thUnit: "ரயில் / உற்பத்தி அலகு",
+    thRoll: "ரோல் எண்கள்",
+    thCandidate: "விண்ணப்பதாரர் பெயர்",
+    thType: "வகை",
+    thDate: "பதிப்பு தேதி",
+    fGov: "இந்திய அரசு",
+    fMin: "ரயில்வே அமைச்சு",
+    fEnq: "தகவலுக்கு அழைக்கவும்:",
+    fLinks: "முக்கிய இணைப்புகள்",
+    fAbout: "எங்களைப் பற்றி",
+    fResults: "முடிவுகள்",
+    fRecruit: "ஆட்சேர்ப்பு",
+    fContact: "தொடர்பு",
+    fCopy: "© 2022 ரயில்வே ஆட்சேர்ப்பு வாரியம், சென்னை. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
+  }
+};
 
-    rows.forEach(row => {
-      const cells = row.getElementsByTagName('td');
-      const rollNo = cells[4].textContent.toLowerCase();
-      const name = cells[5].textContent.toLowerCase();
-      let show = true;
+/* ---------- Table data (complete rows) ----------
+   Each row holds both English and Tamil values where applicable:
+   { cat, cen, post_en, post_ta, unit_en, unit_ta, roll, name_en, name_ta, type_en, type_ta, date }
+--------------------------------------------------*/
+const tableData = [
+  /* CEN 7 */
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130311000668", name_en:"Prakash Kumar Khan", name_ta:"பிரகாஷ் குமார் கான்", type_en:"Replacement", type_ta:"மாற்று", date:"15.09.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130311000994", name_en:"Love Kumar", name_ta:"லவ் குமார்", type_en:"Replacement", type_ta:"மாற்று", date:"15.09.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130311001192", name_en:"Shashi Raj", name_ta:"ஷாஷி ராஜ்", type_en:"Replacement", type_ta:"மாற்று", date:"15.09.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130311000315", name_en:"Bijendra Kumar Singh M R", name_ta:"பிஜேந்திர குமார் சிங் எம் ஆர்", type_en:"Replacement", type_ta:"மாற்று", date:"15.09.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130311000190", name_en:"Rajnish Kumar", name_ta:"ரஜ்னீஷ் குமார்", type_en:"Replacement", type_ta:"மாற்று", date:"15.09.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130311000758", name_en:"Ram Chandra", name_ta:"ராம் சந்திரா", type_en:"Replacement", type_ta:"மாற்று", date:"15.09.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130314004037", name_en:"Shri Kant Prasad", name_ta:"ஸ்ரீ காந்த் பிரசாத்", type_en:"Replacement", type_ta:"மாற்று", date:"15.09.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130314003466", name_en:"Santosh Kumar", name_ta:"சந்தோஷ் குமார்", type_en:"Replacement", type_ta:"மாற்று", date:"15.09.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130314003157", name_en:"Raghunath Sah", name_ta:"ராகுநாத் சா", type_en:"Replacement", type_ta:"மாற்று", date:"15.09.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130314004117", name_en:"Annu Kumar", name_ta:"அன்னு குமார்", type_en:"Replacement", type_ta:"மாற்று", date:"15.09.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130313011664", name_en:"Ratti Lal Meena", name_ta:"ரட்டி லால் மீனா", type_en:"Replacement", type_ta:"மாற்று", date:"15.09.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130311000716", name_en:"Satendra Kumar Singh", name_ta:"சதேந்திர் குமார் சிங்", type_en:"Replacement", type_ta:"மாற்று", date:"16.10.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130311000398", name_en:"Manish", name_ta:"மானிஷ்", type_en:"Replacement", type_ta:"மாற்று", date:"16.10.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130311000064", name_en:"Sonu Kumar", name_ta:"சோனு குமார்", type_en:"Replacement", type_ta:"மாற்று", date:"16.10.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130311000254", name_en:"Shyam Rao", name_ta:"ஷ்யாம் ராவ்", type_en:"Replacement", type_ta:"மாற்று", date:"16.10.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130311001266", name_en:"Razi Imam Rizvi", name_ta:"ராசி இமாம் ரிஸ்வி", type_en:"Replacement", type_ta:"மாற்று", date:"16.10.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130311000647", name_en:"Rahul Kumar", name_ta:"ராகுல் குமார்", type_en:"Replacement", type_ta:"மாற்று", date:"16.10.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130314002785", name_en:"Akhay Ram Gurjar", name_ta:"அக்ஹய் ராம் குர்ஜார்", type_en:"Replacement", type_ta:"மாற்று", date:"16.10.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130314005009", name_en:"Subhash Kumar Singh", name_ta:"சுபாஷ் குமார் சிங்", type_en:"Replacement", type_ta:"மாற்று", date:"16.10.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130314008013", name_en:"Buddhi Prakash", name_ta:"புத்தி பிரகாஷ்", type_en:"Replacement", type_ta:"மாற்று", date:"16.10.2014"},
+  {cat:"7", cen:"03/2012", post_en:"Assistant Station Master", post_ta:"உதவி நிலைய மேலாளர்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18130314004862", name_en:"Ramdular Rai", name_ta:"ரம்துலர் ராய்", type_en:"Replacement", type_ta:"மாற்று", date:"16.10.2014"},
 
-      if (filter) {
-        if (/^\d+$/.test(filter)) {
-          // Input is numeric → filter by Roll Number
-          show = rollNo.includes(filter);
-        } else {
-          // Input contains letters → filter by Candidate Name
-          show = name.includes(filter);
-        }
+  /* CEN 11 */
+  {cat:"11", cen:"04/2012", post_en:"Technician Gr-III / Diesel Electrical", post_ta:"டெக்னீஷியன் தரம்-III / டீசல் எலக்ட்ரிக்கல்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124024072039", name_en:"Nishikant Kumar", name_ta:"நிஷிகாந்த் குமார்", type_en:"Additional", type_ta:"கூடுதல்", date:"30.04.2014"},
+  {cat:"11", cen:"04/2012", post_en:"Technician Gr-III / Diesel Electrical", post_ta:"டெக்னீஷியன் தரம்-III / டீசல் எலக்ட்ரிக்கல்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124024064425", name_en:"Md Amanat Husain", name_ta:"எம்.டி. அமானத் ஹுஸேன்", type_en:"Additional", type_ta:"கூடுதல்", date:"30.04.2014"},
+  {cat:"11", cen:"04/2012", post_en:"Technician Gr-III / Diesel Electrical", post_ta:"டெக்னீஷியன் தரம்-III / டீசல் எலக்ட்ரிக்கல்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124024073936", name_en:"Mathan T", name_ta:"மாதன் டி", type_en:"Additional", type_ta:"கூடுதல்", date:"30.04.2014"},
+  {cat:"11", cen:"04/2012", post_en:"Technician Gr-III / Diesel Electrical", post_ta:"டெக்னீஷியன் தரம்-III / டீசல் எலக்ட்ரிக்கல்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124023047911", name_en:"Lakhan Lal Meena", name_ta:"லகன் லால் மீனா", type_en:"Additional", type_ta:"கூடுதல்", date:"30.04.2014"},
+  {cat:"11", cen:"04/2012", post_en:"Technician Gr-III / Diesel Electrical", post_ta:"டெக்னீஷியன் தரம்-III / டீசல் எலக்ட்ரிக்கல்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124023051059", name_en:"Rajveer Meena", name_ta:"ராஜ்வீர் மீனா", type_en:"Additional", type_ta:"கூடுதல்", date:"30.04.2014"},
+  {cat:"11", cen:"04/2012", post_en:"Technician Gr-III / Diesel Electrical", post_ta:"டெக்னீஷியன் தரம்-III / டீசல் எலக்ட்ரிக்கல்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124023049923", name_en:"Mastram Meena", name_ta:"மாஸ்ட்ரம் மீனா", type_en:"Additional", type_ta:"கூடுதல்", date:"30.04.2014"},
+  {cat:"11", cen:"04/2012", post_en:"Technician Gr-III / Diesel Electrical", post_ta:"டெக்னீஷியன் தரம்-III / டீசல் எலக்ட்ரிக்கல்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124022033809", name_en:"Shyamsundara Raju Y", name_ta:"ஷ்யாம்சுந்தர ராஜு வை", type_en:"Additional", type_ta:"கூடுதல்", date:"30.04.2014"},
+  {cat:"11", cen:"04/2012", post_en:"Technician Gr-III / Diesel Electrical", post_ta:"டெக்னீஷியன் தரம்-III / டீசல் எலக்ட்ரிக்கல்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124022036329", name_en:"Tekkalakotaraju", name_ta:"தெக்கலகோட்டராஜு", type_en:"Additional", type_ta:"கூடுதல்", date:"30.04.2014"},
+  {cat:"11", cen:"04/2012", post_en:"Technician Gr-III / Diesel Electrical", post_ta:"டெக்னீஷியன் தரம்-III / டீசல் எலக்ட்ரிக்கல்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124022085868", name_en:"Ajay Kumar", name_ta:"அஜய் குமார்", type_en:"Additional", type_ta:"கூடுதல்", date:"30.04.2014"},
+  {cat:"11", cen:"04/2012", post_en:"Technician Gr-III / Diesel Electrical", post_ta:"டெக்னீஷியன் தரம்-III / டீசல் எலக்ட்ரிக்கல்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124022035578", name_en:"Jitendra Kumar Kardam", name_ta:"ஜிதேந்திர் குமார் கார்டம்", type_en:"Additional", type_ta:"கூடுதல்", date:"30.04.2014"},
+  {cat:"11", cen:"04/2012", post_en:"Technician Gr-III / Diesel Electrical", post_ta:"டெக்னீஷியன் தரம்-III / டீசல் எலக்ட்ரிக்கல்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124022031955", name_en:"Jitendra Kumar Ram", name_ta:"ஜிதேந்திர் குமார் ராம்", type_en:"Additional", type_ta:"கூடுதல்", date:"30.04.2014"},
+
+  /* CEN 13 */
+  {cat:"13", cen:"04/2012", post_en:"Technician Gr-III / Diesel Mechanic", post_ta:"டெக்னீஷியன் தரம்-III / டீசல் மெக்கானிக்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124132041181", name_en:"Suresh Kumar Verma", name_ta:"சுரேஷ் குமார் வர்மா", type_en:"Replacement", type_ta:"மாற்று", date:"30.04.2014"},
+  {cat:"13", cen:"04/2012", post_en:"Technician Gr-III / Diesel Mechanic", post_ta:"டெக்னீஷியன் தரம்-III / டீசல் மெக்கானிக்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124132038621", name_en:"Raju Kumar Rajwar", name_ta:"ராஜு குமார் ராஜ்வார்", type_en:"Replacement", type_ta:"மாற்று", date:"30.04.2014"},
+  {cat:"13", cen:"04/2012", post_en:"Technician Gr-III / Diesel Mechanic", post_ta:"டெக்னீஷியன் தரம்-III / டீசல் மெக்கானிக்", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124133056658", name_en:"Arjun Lal Meena", name_ta:"அர்ஜுன் லால் மீனா", type_en:"Replacement", type_ta:"மாற்று", date:"30.04.2014"},
+
+  /* CEN 16 */
+  {cat:"16", cen:"04/2012", post_en:"Technician Gr-III / Fitter WS", post_ta:"டெக்னீஷியன் தரம்-III / ஃபிட்டர் WS", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124131021911", name_en:"Kompala Siva Prasad", name_ta:"கோம்பல சிவா பிரசாத்", type_en:"Replacement", type_ta:"மாற்று", date:"30.04.2014"},
+  {cat:"16", cen:"04/2012", post_en:"Technician Gr-III / Fitter WS", post_ta:"டெக்னீஷியன் தரம்-III / ஃபிட்டர் WS", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124132041548", name_en:"Raja M", name_ta:"ராஜா எம்", type_en:"Replacement", type_ta:"மாற்று", date:"30.04.2014"},
+  {cat:"16", cen:"04/2012", post_en:"Technician Gr-III / Fitter C&W", post_ta:"டெக்னீஷியன் தரம்-III / ஃபிட்டர் C&W", unit_en:"SR", unit_ta:"தென்னிந்திய ரயில்வே (SR)", roll:"18124131019886", name_en:"Salamonraja S", name_ta:"சாலமன் ராஜா எஸ்", type_en:"Replacement", type_ta:"மாற்று", date:"30.04.2014"}
+];
+
+/* ---------- Apply static labels based on language ---------- */
+function applyStaticLabels(lang) {
+  const L = labels[lang];
+
+  document.getElementById('hdrTitle').textContent = L.hdrTitle;
+  document.getElementById('hdrPlace').textContent = L.hdrPlace;
+
+  document.getElementById('navHome').textContent = L.navHome;
+  document.getElementById('navAbout').textContent = L.navAbout;
+  document.getElementById('navResults').textContent = L.navResults;
+  document.getElementById('navRecruit').textContent = L.navRecruit;
+  document.getElementById('navContact').textContent = L.navContact;
+
+  document.getElementById('mainHeading').textContent = L.mainHeading;
+  document.getElementById('para1').textContent = L.para1;
+  document.getElementById('para2').textContent = L.para2;
+
+  document.getElementById('searchInput').placeholder = L.placeholder;
+
+  document.getElementById('thCat').textContent = L.thCat;
+  document.getElementById('thCEN').textContent = L.thCEN;
+  document.getElementById('thPost').textContent = L.thPost;
+  document.getElementById('thUnit').textContent = L.thUnit;
+  document.getElementById('thRoll').textContent = L.thRoll;
+  document.getElementById('thCandidate').textContent = L.thCandidate;
+  document.getElementById('thType').textContent = L.thType;
+  document.getElementById('thDate').textContent = L.thDate;
+
+  document.getElementById('fGov').textContent = L.fGov;
+  document.getElementById('fMin').textContent = L.fMin;
+  // fEnq contains both label + phone; keep phone span
+  document.getElementById('fEnq').innerHTML = `${L.fEnq} <span class="font-medium">044 - 2827 5323</span>`;
+  document.getElementById('fLinks').textContent = L.fLinks;
+  document.getElementById('fAbout').textContent = L.fAbout;
+  document.getElementById('fResults').textContent = L.fResults;
+  document.getElementById('fRecruit').textContent = L.fRecruit;
+  document.getElementById('fContact').textContent = L.fContact;
+  document.getElementById('fCopy').textContent = L.fCopy;
+}
+
+/* ---------- Render table (optionally with a filter) ---------- */
+function renderTable(filter = "") {
+  const tbody = document.getElementById('resultTable');
+  tbody.innerHTML = "";
+  const isNumeric = /^\d+$/.test(filter);
+  const lang = currentLang;
+
+  // for each row, decide whether to show and then append
+  tableData.forEach(row => {
+    let compareName = (lang === 'ta') ? row.name_ta : row.name_en;
+    let compareRoll = row.roll;
+
+    let show = true;
+    if (filter) {
+      if (isNumeric) {
+        show = compareRoll.toLowerCase().includes(filter.toLowerCase());
+      } else {
+        // compareName might be Tamil or English depending on lang
+        // normalize both to lower-case for comparison
+        show = compareName.toLowerCase().includes(filter.toLowerCase());
       }
-      row.style.display = show ? '' : 'none';
-    });
+    }
+
+    if (show) {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${row.cat}</td>
+        <td>${row.cen}</td>
+        <td>${(lang === 'ta') ? row.post_ta : row.post_en}</td>
+        <td>${(lang === 'ta') ? row.unit_ta : row.unit_en}</td>
+        <td>${row.roll}</td>
+        <td>${(lang === 'ta') ? row.name_ta : row.name_en}</td>
+        <td>${(lang === 'ta') ? row.type_ta : row.type_en}</td>
+        <td>${row.date}</td>
+      `;
+      tbody.appendChild(tr);
+    }
   });
+}
+
+/* ---------- Initialization ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+  applyStaticLabels(currentLang);
+  renderTable(); // initial render with no filter
+
+  // hook up search input
+  const searchInput = document.getElementById('searchInput');
+  searchInput.addEventListener('input', function () {
+    const raw = this.value.trim();
+    renderTable(raw);
+  });
+});
 </script>
 
 </body>

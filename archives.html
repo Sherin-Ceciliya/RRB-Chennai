@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RRB Chennai - Archives</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    body { background-color: #f9f9f9; font-family: "Segoe UI", Arial, sans-serif; }
+    .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+    .section { background: transparent; padding: 20px; border-radius: 6px; margin-bottom: 30px; }
+    .section h2 { color: #0055a5; border-bottom: 2px solid #ddd; padding-bottom: 8px; margin-bottom: 16px; font-weight: bold; font-size: 1.5rem; }
+    .bulletin { margin-top: 10px; width: 100%; border-collapse: separate; border-spacing: 0 10px; background: transparent; }
+    .bulletin th, .bulletin td { padding: 14px 18px; border-bottom: 1px solid #ddd; text-align: left; vertical-align: top; background: transparent; font-size: 15px; }
+    .bulletin th { background: #0055a5; color: white; letter-spacing: 0.5px; }
+    .bulletin th:nth-child(1), .bulletin td:nth-child(1) { width: 20%; }
+    .bulletin th:nth-child(2), .bulletin td:nth-child(2) { width: 35%; }
+    .bulletin th:nth-child(3), .bulletin td:nth-child(3) { width: 15%; }
+    .bulletin th:nth-child(4), .bulletin td:nth-child(4) { width: 30%; }
+    .btn-link { color: #0077c0; font-weight: bold; text-decoration: none; display: block; margin-bottom: 4px; }
+    .btn-link:hover { text-decoration: underline; }
+    .custom-header { background-color: #153865; }
+    input::placeholder { color: #1e3a8a; }
+    input { border-color: #1e3a8a; }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  <header class="custom-header text-white shadow-md">
+    <div class="flex justify-between items-center h-32 w-full px-4">
+      <div class="flex items-center space-x-4">
+        <img src="images/railways.png" alt="RRB Logo" class="h-28 w-auto" />
+        <div class="leading-tight">
+          <h1 id="headerTitle" class="text-3xl font-bold">Railway Recruitment Board</h1>
+          <p id="headerSub" class="text-xl ml-1">Chennai</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex space-x-10 text-xl font-semibold">
+        <a href="home.html" id="navHome" class="nav-link">Home</a>
+        <a href="about.html" id="navAbout" class="nav-link">About Us</a>
+        <a href="results.html" id="navResults" class="nav-link">Results</a>
+        <a href="recruitment.html" id="navRecruit" class="nav-link">Recruitments</a>
+        <a href="contact.html" id="navContact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2 id="archiveTitle" class="text-2xl font-semibold mb-4">Archives</h2>
+
+      <table class="bulletin" id="archiveTable">
+        <thead>
+          <tr>
+            <th><input type="text" id="searchCEN" placeholder="MM/YYYY" class="w-full p-1 rounded border border-blue-900 bg-white text-black placeholder-blue-900" /></th>
+            <th><input type="text" id="searchPost" placeholder="Enter Post Name" class="w-full p-1 rounded border border-blue-900 bg-white text-black placeholder-blue-900" /></th>
+            <th><input type="text" id="searchDate" placeholder="DD/MM/YYYY" class="w-full p-1 rounded border border-blue-900 bg-white text-black placeholder-blue-900" /></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th id="colCEN">CEN Number</th>
+            <th id="colPost">Post Name</th>
+            <th id="colDate">Date of Publication</th>
+            <th id="colLinks">Links</th>
+          </tr>
+        </thead>
+        <tbody> <!-- 2014 --> <tr><td>01/2014</td><td>ALP and Technician</td><td>18/01/2014</td><td> <a href="./resources/results.pdf" class="btn-link">Detailed Notification</a> </td></tr> <tr><td>02/2014</td><td>SSE/CDMS/JE/DMS/CMA</td><td>20/09/2014</td><td> <a href="./resources/results.pdf" class="btn-link">Detailed Notification</a> </td></tr> <tr><td>03/2014</td><td>Ministerial, Isolated Categories & Teachers</td><td>11/10/2014</td><td> <a href="./resources/results.pdf" class="btn-link">Detailed Notification</a> </td></tr> <tr><td>04/2014</td><td>Para-Medical</td><td>01/11/2014</td><td> <a href="./resources/results.pdf" class="btn-link">Detailed Notification</a> </td></tr> <!-- 2015 --> <tr><td>01/2015</td><td>SSE/CDMS/JE/DMS/CMA</td><td>27/06/2015</td><td> <a href="./resources/results.pdf" class="btn-link">Detailed Notification</a> </td></tr> <tr><td>02/2015</td><td>SRD for PWD – NTPC (UG)</td><td>22/08/2015</td><td> <a href="./resources/results.pdf" class="btn-link">Detailed Notification</a> </td></tr> <tr><td>03/2015</td><td>NTPC (Graduate)</td><td>26/12/2015</td><td> <a href="./resources/results.pdf" class="btn-link">Detailed Notification</a> </td></tr> <!-- 2018 --> <tr><td>01/2018</td><td>ALP & Technician</td><td>03/02/2018</td><td> <a href="./resources/results.pdf" class="btn-link">Detailed Notification</a> </td></tr> <tr><td>02/2018</td><td>Level 1 Posts</td><td>10/02/2018</td><td> <a href="./resources/results.pdf" class="btn-link">Detailed Notification</a> </td></tr> <tr><td>03/2018</td><td>Junior Engineer (JE), DMS and CMA</td><td>29/12/2018</td><td> <a href="./resources/results.pdf" class="btn-link">Notice on Vacancies</a> </td></tr> <!-- 2019 --> <tr><td>01/2019</td><td>Non-Technical Categories</td><td>28/02/2019</td><td> <a href="./resources/results.pdf" class="btn-link">Detailed Notification (English)</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum (English)</a> </td></tr> <tr><td>02/2019</td><td>Paramedical Categories</td><td>23/02/2019</td><td> <a href="./resources/results.pdf" class="btn-link">Detailed Notification (English)</a> <a href="./resources/results.pdf" class="btn-link">Detailed Notification (Hindi)</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum CEN-02/2019 (English)</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum CEN-02/2019 (Hindi)</a> <a href="./resources/results.pdf" class="btn-link">Notice on Exam Schedule</a> </td></tr> <tr><td>03/2019</td><td>Ministerial and Isolated Categories</td><td>23/02/2019</td><td> <a href="./resources/results.pdf" class="btn-link">Detailed Notification (English)</a> <a href="./resources/results.pdf" class="btn-link">Syllabus for Lab Asst Gr-III</a> </td></tr> <!-- Corrigenda and RRC entries --> <tr><td>01/2019</td><td>-</td><td>02/03/2020</td><td> <a href="./resources/results.pdf" class="btn-link">Corrigendum 11 - Chennai</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum 7 - Chennai (ECA)</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum 6 - Chennai (ECA)</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum 5 - Chennai (ECA)</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum 4 - Chennai (NTPC)</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum 3 - Chennai (NTPC)</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum 2 - Chennai (NTPC)</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum - Chennai (NTPC)</a> <a href="./resources/results.pdf" class="btn-link">Indicative ad - CEN 01/2019 (ECA)</a> </td></tr> <tr><td>03/2019</td><td>-</td><td>02/03/2020</td><td> <a href="./resources/results.pdf" class="btn-link">Corrigendum 12 - Ajmer</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum 11 - Ajmer</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum 7 - Ajmer</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum 6 - Ajmer</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum 5 - Ajmer</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum 4 - Ajmer</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum 3 - Ajmer</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum 2 - Ajmer</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum - Ajmer</a> <a href="./resources/results.pdf" class="btn-link">Indicative ad - CEN 03/2019 (ECA)</a> </td></tr> <tr><td>RRC-01/2019</td><td>Level 1 Posts</td><td>23/02/2019</td><td> <a href="./resources/results.pdf" class="btn-link">Detailed Notification (English)</a> <a href="./resources/results.pdf" class="btn-link">Corrigendum (English)</a> </td></tr> <tr><td>RRC-01/2019</td><td>-</td><td>02/03/2020</td><td> <a href="./resources/results.pdf" class="btn-link">Corrigendum No.1 - BHOPAL</a> </td></tr> </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="bg-gray-900 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <h4 id="footerGov" class="text-xl font-semibold mb-2">Government of India</h4>
+        <p id="footerMinistry" class="text-sm">Ministry of Railways</p>
+        <p class="text-sm mt-1" id="footerCall">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+      </div>
+      <div class="flex flex-col items-start md:items-end">
+        <h4 id="quickLinks" class="text-xl font-semibold mb-2">Quick Links</h4>
+        <ul class="space-y-1 text-sm text-right w-full md:w-auto">
+          <li><a href="./about.html" id="quickAbout" class="hover:text-gray-300 transition-colors">About Us</a></li>
+          <li><a href="#results" id="quickResults" class="hover:text-gray-300 transition-colors">Results</a></li>
+          <li><a href="./recruitment.html" id="quickRecruit" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
+          <li><a href="#contact" id="quickContact" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400" id="footerCopy">
+      © 2022 Railway Recruitment Board Chennai. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      ta: {
+        headerTitle: "இரயில்வே ஆட்சேர்ப்பு வாரியம்",
+        headerSub: "சென்னை",
+        navHome: "முகப்பு",
+        navAbout: "எங்களை பற்றி",
+        navResults: "முடிவுகள்",
+        navRecruit: "ஆட்சேர்ப்பு",
+        navContact: "தொடர்பு",
+        archiveTitle: "காப்பகங்கள்",
+        colCEN: "CEN எண்",
+        colPost: "பதவியின் பெயர்",
+        colDate: "வெளியீட்டுத் தேதி",
+        colLinks: "இணைப்புகள்",
+        footerGov: "இந்திய அரசு",
+        footerMinistry: "இரயில்வே அமைச்சகம்",
+        footerCall: "விசாரணைக்கான அழைப்பு: 044 - 2827 5323",
+        quickLinks: "விரைவு இணைப்புகள்",
+        quickAbout: "எங்களை பற்றி",
+        quickResults: "முடிவுகள்",
+        quickRecruit: "ஆட்சேர்ப்பு",
+        quickContact: "தொடர்பு கொள்ள",
+        footerCopy: "© 2022 இரயில்வே ஆட்சேர்ப்பு வாரியம் சென்னை. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டுள்ளன."
+      }
+    };
+
+    const currentLang = sessionStorage.getItem("lang") || "en";
+    if (currentLang === "ta") {
+      const t = translations.ta;
+      for (const id in t) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = t[id];
+      }
+
+      document.querySelectorAll("#archiveTable tbody tr").forEach(tr => {
+        const tds = tr.querySelectorAll("td");
+        if (tds[1]) {
+          tds[1].textContent = tds[1].textContent
+            .replace("ALP and Technician", "உதவி இயக்குநர் மற்றும் தொழில்நுட்ப நிபுணர்")
+            .replace("Level 1 Posts", "நிலை 1 பணியிடங்கள்")
+            .replace("Junior Engineer (JE), DMS and CMA", "இளநிலை பொறியாளர் (JE), DMS மற்றும் CMA")
+            .replace("Non-Technical Categories", "தொழில்நுட்பமற்ற பிரிவுகள்")
+            .replace("Paramedical Categories", "பராமெடிக்கல் பிரிவுகள்")
+            .replace("Ministerial and Isolated Categories", "அமைச்சு மற்றும் தனித்த பிரிவுகள்")
+            .replace("NTPC (Graduate)", "NTPC (பட்டதாரி)")
+            .replace("SSE/CDMS/JE/DMS/CMA", "மூத்த பிரிவு பொறியாளர் /CDMS/JE/DMS/CMA")
+            .replace("Para-Medical", "பராமெடிக்கல்")
+            .replace("SRD for PWD – NTPC (UG)", "மாற்றுத் திறனாளிகளுக்கான SRD – NTPC (UG)")
+            .replace("ALP & Technician","உதவி லோகோ பைலட் (ALP) மற்றும் தொழில்நுட்ப நிபுணர்");
+        }
+        if (tds[3]) {
+          tds[3].querySelectorAll(".btn-link").forEach(a => {
+            a.textContent = a.textContent
+              .replace("Detailed Notification", "விரிவான அறிவிப்பு")
+              .replace("Corrigendum", "திருத்தம்")
+              .replace("Notice on Exam Schedule", "தேர்வு அட்டவணை குறித்த அறிவிப்பு")
+              .replace("Syllabus", "பாடத்திட்டம்")
+              .replace("Indicative ad", "குறிப்பிடப்பட்ட விளம்பரம்");
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
