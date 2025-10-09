@@ -7,235 +7,209 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="home.css" />
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fdfcf8;
-      color: #333;
-      line-height: 1.6;
-    }
+    body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fdfcf8; color: #333; line-height: 1.6; }
     header h1 { margin: 0; font-size: 2rem; }
     .container { max-width: 1100px; margin: auto; padding: 20px; }
     .section { margin-bottom: 40px; }
-    .section h2 {
-      color: #0055a5;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 8px;
-      margin-bottom: 16px;
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-    .rules-box {
-      background-color: #eef5fb;
-      border-left: 5px solid #0077c0;
-      padding: 15px 20px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-    }
+    .section h2 { color: #0055a5; border-bottom: 2px solid #ddd; padding-bottom: 8px; margin-bottom: 16px; font-weight: bold; font-size: 1.5rem; }
+    .rules-box { background-color: #eef5fb; border-left: 5px solid #0077c0; padding: 15px 20px; margin-bottom: 20px; border-radius: 5px; }
     table { width: 100%; border-collapse: collapse; background-color: white; }
     th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }
     th { background-color: #0055a5; color: white; }
     tr:hover { background-color: #f1f1f1; }
-    a.btn {
-      display: inline-block;
-      background-color: #0077c0;
-      color: white;
-      padding: 6px 12px;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
+    a.btn { display: inline-block; background-color: #0077c0; color: white; padding: 6px 12px; text-decoration: none; border-radius: 4px; transition: background-color 0.3s ease; }
     a.btn:hover { background-color: #004c87; }
-    .rules-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 10px 40px;
-    }
-    .rules-grid a {
-      display: block;
-      color: #0083db;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-      padding-left: 15px;
-    }
-    .rules-grid a::before {
-      content: '›';
-      position: absolute;
-      left: 0;
-      color: #2196f3;
-    }
+    .rules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 10px 40px; }
+    .rules-grid a { display: block; color: #0083db; text-decoration: none; font-weight: bold; position: relative; padding-left: 15px; }
+    .rules-grid a::before { content: '›'; position: absolute; left: 0; color: #2196f3; }
     .rules-grid a:hover { text-decoration: underline; }
     .status-open { color: green; font-weight: bold; }
     .status-closed { color: red; font-weight: bold; }
+    .status-upcoming { color: goldenrod; font-weight: bold; }
     .custom-header { background-color: #153865; }
-    .nav-link {
-      position: relative;
-      padding-bottom: 4px;
-      transition: color 0.3s ease-in-out;
-    }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      left: 0;
-      bottom: 0;
-      background-color: white;
-      transition: width 1s ease;
-    }
+    .nav-link { position: relative; padding-bottom: 4px; transition: color 0.3s ease-in-out; }
+    .nav-link::after { content: ''; position: absolute; width: 0%; height: 2px; left: 0; bottom: 0; background-color: white; transition: width 1s ease; }
     .nav-link:hover::after { width: 100%; }
-    @media (max-width: 768px) {
-      th, td { font-size: 0.95rem; }
-      header h1 { font-size: 1.6rem; }
-      .rules-box { font-size: 0.95rem; }
-    }
+    @media (max-width: 768px) { th, td { font-size: 0.95rem; } header h1 { font-size: 1.6rem; } .rules-box { font-size: 0.95rem; } }
   </style>
 </head>
 <body class="bg-gray-100">
 
-  <!-- Header Section -->
-  <header class="custom-header text-white shadow-md">
-    <div class="flex justify-between items-center h-32 w-full px-4">
-      <div class="flex items-center space-x-4">
-        <img src="images/railways.png" alt="RRB Logo" class="h-28 w-auto" />
-        <div class="leading-tight">
-          <h1 class="text-3xl font-bold">Railway Recruitment Board</h1>
-          <p class="text-xl ml-1">Chennai</p>
-        </div>
+<header class="custom-header text-white shadow-md">
+  <div class="flex justify-between items-center h-32 w-full px-4">
+    <div class="flex items-center space-x-4">
+      <img src="images/railways.png" alt="RRB Logo" class="h-28 w-auto" />
+      <div class="leading-tight">
+        <h1 class="text-3xl font-bold" id="headerTitle">Railway Recruitment Board</h1>
+        <p class="text-xl ml-1" id="headerSubtitle">Chennai</p>
       </div>
-      <nav class="hidden md:flex space-x-10 text-xl font-semibold">
-        <a href="home.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="results.html" class="nav-link">Results</a>
-        <a href="recruitment.html" class="nav-link">Recruitments</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
     </div>
-  </header>
-
-  <div class="container">
-    <section class="section">
-      <h2>Welcome to the Recruitment Portal</h2>
-      <p>
-        This portal provides all the latest updates regarding recruitments conducted by the Railway Recruitment Board (RRB), Chennai.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>Recruitment Rules</h2>
-      <div class="rules-box">
-        All appointments made through this board will strictly adhere to the guidelines laid down by the Ministry of Railways.
-      </div>
-      <div class="rules-grid">
-        <a href="./resources/results.pdf">General Instructions</a>
-        <a href="./resources/results.pdf">Serving Employees</a>
-        <a href="./resources/results.pdf">Age Relaxation</a>
-        <a href="./resources/results.pdf">Miscellaneous</a>
-        <a href="./resources/results.pdf">Examination Fees</a>
-        <a href="./resources/results.pdf">Impersonation Supression of Facts</a>
-        <a href="./resources/results.pdf">Community Reservation</a>
-        <a href="./resources/results.pdf">Facilities for SC / ST Candidates</a>
-        <a href="./resources/results.pdf">Recruitment Process</a>
-        <a href="./resources/results.pdf">Warning</a>
-        <a href="./resources/results.pdf">Medical Standard</a>
-        <a href="./resources/results.pdf">Frequently Committed Mistakes</a>
-        <a href="./resources/results.pdf">Ex-serviceman & Persons With Disabilities</a>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Current Openings</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>CEN No.</th>
-            <th>Recruitment Role</th>
-            <th>Opening Date</th>
-            <th>Closing Date</th>
-            <th>Status</th>
-            <th>Details</th>
-          </tr>
-        </thead>
-        <tbody id="recruitment-body">
-          <!-- Rows will be populated dynamically -->
-        </tbody>
-      </table>
-    </section>
+    <nav class="hidden md:flex space-x-10 text-xl font-semibold">
+      <a href="#" id="langToggle" class="nav-link">In Tamil</a>
+      <a href="home.html" class="nav-link" id="navHome">Home</a>
+      <a href="about.html" class="nav-link" id="navAbout">About Us</a>
+      <a href="results.html" class="nav-link" id="navResults">Results</a>
+      <a href="recruitment.html" class="nav-link" id="navRecruitments">Recruitments</a>
+      <a href="contact.html" class="nav-link" id="navContact">Contact</a>
+    </nav>
   </div>
+</header>
 
-  <footer class="bg-gray-900 text-white py-8 mt-12">
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div>
-        <h4 class="text-xl font-semibold mb-2">Government of India</h4>
-        <p class="text-sm">Ministry of Railways</p>
-        <p class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
-      </div>
-      <div class="flex flex-col items-start md:items-end">
-        <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
-        <ul class="space-y-1 text-sm text-right w-full md:w-auto">
-          <li><a href="#about" class="hover:text-gray-300 transition-colors">About Us</a></li>
-          <li><a href="#results" class="hover:text-gray-300 transition-colors">Results</a></li>
-          <li><a href="#recruitments" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
-          <li><a href="#contact" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
-        </ul>
-      </div>
+<div class="container">
+  <section class="section">
+    <h2 id="welcomeTitle">Welcome to the Recruitment Portal</h2>
+    <p id="welcomeText">This portal provides all the latest updates regarding recruitments conducted by the Railway Recruitment Board (RRB), Chennai.</p>
+  </section>
+
+  <section class="section">
+    <h2 id="rulesTitle">Recruitment Rules</h2>
+    <div class="rules-box" id="rulesBox">All appointments made through this board will strictly adhere to the guidelines laid down by the Ministry of Railways.</div>
+    <div class="rules-grid" id="rulesGrid">
+      <a href="./resources/results.pdf">General Instructions</a>
+      <a href="./resources/results.pdf">Serving Employees</a>
+      <a href="./resources/results.pdf">Age Relaxation</a>
+      <a href="./resources/results.pdf">Miscellaneous</a>
+      <a href="./resources/results.pdf">Examination Fees</a>
+      <a href="./resources/results.pdf">Impersonation Supression of Facts</a>
+      <a href="./resources/results.pdf">Community Reservation</a>
+      <a href="./resources/results.pdf">Facilities for SC / ST Candidates</a>
+      <a href="./resources/results.pdf">Recruitment Process</a>
+      <a href="./resources/results.pdf">Warning</a>
+      <a href="./resources/results.pdf">Medical Standard</a>
+      <a href="./resources/results.pdf">Frequently Committed Mistakes</a>
+      <a href="./resources/results.pdf">Ex-serviceman & Persons With Disabilities</a>
     </div>
-    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
-      © 2022 Railway Recruitment Board Chennai. All Rights Reserved.
+  </section>
+
+  <section class="section">
+    <h2 id="openingsTitle">Current Openings</h2>
+    <table>
+      <thead>
+        <tr>
+          <th id="colCEN">CEN No.</th>
+          <th id="colRole">Recruitment Role</th>
+          <th id="colOpenDate">Opening Date</th>
+          <th id="colCloseDate">Closing Date</th>
+          <th id="colStatus">Status</th>
+          <th id="colDetails">Details</th>
+        </tr>
+      </thead>
+      <tbody id="recruitment-body"></tbody>
+    </table>
+  </section>
+</div>
+
+<footer class="bg-gray-900 text-white py-8 mt-12">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <h4 class="text-xl font-semibold mb-2" id="footerGov">Government of India</h4>
+      <p class="text-sm" id="footerMinistry">Ministry of Railways</p>
+      <p class="text-sm mt-1" id="footerEnquiry">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
     </div>
-  </footer>
+    <div class="flex flex-col items-start md:items-end">
+      <h4 class="text-xl font-semibold mb-2" id="footerQuick">Quick Links</h4>
+      <ul class="space-y-1 text-sm text-right w-full md:w-auto">
+        <li><a href="#about" class="hover:text-gray-300 transition-colors" id="quickAbout">About Us</a></li>
+        <li><a href="#results" class="hover:text-gray-300 transition-colors" id="quickResults">Results</a></li>
+        <li><a href="#recruitments" class="hover:text-gray-300 transition-colors" id="quickRecruitments">Recruitments</a></li>
+        <li><a href="#contact" class="hover:text-gray-300 transition-colors" id="quickContact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400" id="footerCopy">© 2022 Railway Recruitment Board Chennai. All Rights Reserved.</div>
+</footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", async function () {
-      const tbody = document.getElementById("recruitment-body");
-      const today = new Date();
+<script>
+let tamilMode = false;
 
-      try {
-        const response = await fetch("./database.json");
-        if (!response.ok) throw new Error("HTTP error " + response.status);
+const staticText = {
+  en: {
+    headerTitle:"Railway Recruitment Board",headerSubtitle:"Chennai",navHome:"Home",navAbout:"About Us",
+    navResults:"Results",navRecruitments:"Recruitments",navContact:"Contact",langToggle:"In Tamil",
+    welcomeTitle:"Welcome to the Recruitment Portal",welcomeText:"This portal provides all the latest updates regarding recruitments conducted by the Railway Recruitment Board (RRB), Chennai.",
+    rulesTitle:"Recruitment Rules",rulesBox:"All appointments made through this board will strictly adhere to the guidelines laid down by the Ministry of Railways.",
+    openingsTitle:"Current Openings",colCEN:"CEN No.",colRole:"Recruitment Role",colOpenDate:"Opening Date",
+    colCloseDate:"Closing Date",colStatus:"Status",colDetails:"Details",footerGov:"Government of India",footerMinistry:"Ministry of Railways",
+    footerEnquiry:"For Enquiry call: 044 - 2827 5323",footerQuick:"Quick Links",quickAbout:"About Us",quickResults:"Results",
+    quickRecruitments:"Recruitments",quickContact:"Contact Us",footerCopy:"© 2022 Railway Recruitment Board Chennai. All Rights Reserved.",
+    open:"Open",closed:"Closed",upcoming:"Upcoming",view:"View"
+  },
+  ta: {
+    headerTitle:"ரயில்வே ஆட்சேர்ப்பு வாரியம்",headerSubtitle:"சென்னை",navHome:"முகப்பு",navAbout:"எங்களை பற்றி",
+    navResults:"விளைவுகள்",navRecruitments:"ஆட்சேர்ப்புகள்",navContact:"தொடர்பு கொள்ள",langToggle:"In English",
+    welcomeTitle:"ஆட்சேர்ப்பு தளத்திற்கு வரவேற்கிறோம்",welcomeText:"இந்த தளம் சென்னை ரயில்வே ஆட்சேர்ப்பு வாரியத்தால் நடத்தப்படும் அனைத்து ஆட்சேர்ப்புகளின் சமீபத்திய தகவல்களையும் வழங்குகிறது.",
+    rulesTitle:"ஆட்சேர்ப்பு விதிகள்",rulesBox:"இந்த வாரியத்தின் மூலம் செய்யப்பட்ட அனைத்து நியமனங்களும் ரயில்வே அமைச்சகம் வகுத்த வழிகாட்டுதல்களைக் கடைப்பிடிக்கும்.",
+    openingsTitle:"தற்போதைய திறந்த பணியிடங்கள்",colCEN:"CEN எண்",colRole:"ஆட்சேர்ப்பு பணி",colOpenDate:"திறப்பு தேதி",
+    colCloseDate:"மூடும் தேதி",colStatus:"நிலை",colDetails:"விவரங்கள்",footerGov:"இந்திய அரசு",footerMinistry:"ரயில்வே அமைச்சகம்",
+    footerEnquiry:"விசாரணைக்கு அழைக்கவும்: 044 - 2827 5323",footerQuick:"விரைவு இணைப்புகள்",quickAbout:"எங்களை பற்றி",
+    quickResults:"விளைவுகள்",quickRecruitments:"ஆட்சேர்ப்புகள்",quickContact:"தொடர்பு கொள்ள",
+    footerCopy:"© 2022 ரயில்வே ஆட்சேர்ப்பு வாரியம் சென்னை. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
+    open:"திறந்தது",closed:"மூடப்பட்டது",upcoming:"வரவிருக்கும்",view:"பார்வையிடு"
+  }
+};
 
-        const data = await response.json();
+const ruleLinks = {
+  en:["General Instructions","Serving Employees","Age Relaxation","Miscellaneous","Examination Fees","Impersonation Supression of Facts","Community Reservation","Facilities for SC / ST Candidates","Recruitment Process","Warning","Medical Standard","Frequently Committed Mistakes","Ex-serviceman & Persons With Disabilities"],
+  ta:["பொது வழிமுறைகள்","பணியாற்றும் ஊழியர்கள்","வயது தளர்வு","பலவகை","தேர்வு கட்டணம்","நபர் பெயர் மோசடி","சமூக ஒதுக்கீடு","SC / ST வேட்பாளர்களுக்கான வசதிகள்","ஆட்சேர்ப்பு செயல்முறை","எச்சரிக்கை","மருத்துவ தரம்","அடிக்கடி ஏற்படும் பிழைகள்","முன்னாள் வீரர்கள் & மாற்றுத்திறனாளிகள்"]
+};
 
-        Object.keys(data).forEach(key => {
-          const record = data[key];
-          const tr = document.createElement("tr");
+function applyStaticTexts(lang) {
+  const map = staticText[lang];
+  for (const id in map) {
+    const el = document.getElementById(id);
+    if (el) el.innerText = map[id];
+  }
+  const anchors = document.querySelectorAll("#rulesGrid a");
+  anchors.forEach((a,i)=>{ if(ruleLinks[lang]&&ruleLinks[lang][i]) a.innerText=ruleLinks[lang][i]; });
+}
 
-          // Parse closing date
-          const parsedDate = new Date(record.closing_date.replace(/(\d{1,2})-(\w+)-(\d{4})/, (match, d, m, y) => {
-            const months = { Jan:0, Feb:1, Mar:2, Apr:3, May:4, Jun:5, Jul:6, Aug:7, Sep:8, Sept:8, Oct:9, Nov:10, Dec:11 };
-            return `${y}-${(months[m.slice(0,3)] + 1).toString().padStart(2,'0')}-${d.padStart(2,'0')}`;
-          }));
+function parseDateString(str) {
+  if(!str || typeof str!=="string") return null;
+  const parts = str.split("-");
+  if(parts.length!==3){ const d=new Date(str); return isNaN(d)?null:new Date(d.getFullYear(),d.getMonth(),d.getDate()); }
+  const day=parseInt(parts[0],10); const monthRaw=parts[1].trim(); const year=parseInt(parts[2],10);
+  const mKey=monthRaw.toLowerCase().slice(0,3); const months={jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
+  const mIndex=months[mKey]; if(typeof mIndex==="undefined" || isNaN(day) || isNaN(year)) return null;
+  return new Date(year,mIndex,day);
+}
 
-          // Determine status
-          let statusText = "Closed";
-          let statusClass = "status-closed";
-          if (parsedDate >= today) {
-            statusText = "Open";
-            statusClass = "status-open";
-          }
+function normalizeToDateOnly(d){ if(!d||!(d instanceof Date)||isNaN(d)) return null; return new Date(d.getFullYear(),d.getMonth(),d.getDate()); }
 
-          // Build table row with link to recruitment_details.html and CEN as query param
-          tr.innerHTML = `
-            <td>${key}</td>
-            <td>${record.title}</td>
-            <td>${record.opening_date}</td>
-            <td>${record.closing_date}</td>
-            <td class="${statusClass}">${statusText}</td>
-            <td><a class="btn" href="recruitment_details.html?cen=${key}">View</a></td>
-          `;
-
-          tbody.appendChild(tr);
-        });
-
-      } catch (error) {
-        console.error("Error loading recruitment data:", error);
-        tbody.innerHTML = `<tr><td colspan="6">Failed to load recruitment data.</td></tr>`;
-      }
+async function loadRecruitmentData(file){
+  const tbody=document.getElementById("recruitment-body"); tbody.innerHTML="";
+  const today=normalizeToDateOnly(new Date());
+  try{
+    const response=await fetch(file,{cache:"no-store"}); if(!response.ok) throw new Error("HTTP "+response.status);
+    const data=await response.json(); const keys=Object.keys(data);
+    if(keys.length===0){ tbody.innerHTML=`<tr><td colspan="6">No recruitment data available.</td></tr>`; return; }
+    keys.forEach(key=>{
+      const record=data[key]; const openDate=parseDateString(record.opening_date); const closeDate=parseDateString(record.closing_date);
+      let statusKey="closed";
+      if(openDate && closeDate){
+        const nOpen=normalizeToDateOnly(openDate); const nClose=normalizeToDateOnly(closeDate);
+        if(today<nOpen) statusKey="upcoming"; else if(today>nClose) statusKey="closed"; else statusKey="open";
+      } else if(openDate && !closeDate){ const nOpen=normalizeToDateOnly(openDate); statusKey=(today<nOpen)?"upcoming":"open"; }
+      else if(!openDate && closeDate){ const nClose=normalizeToDateOnly(closeDate); statusKey=(today>nClose)?"closed":"open"; }
+      else{ const r=(record.status||"").toString().toLowerCase(); if(r.includes("open")) statusKey="open"; else if(r.includes("upcom")) statusKey="upcoming"; else statusKey="closed"; }
+      const displayStatus=tamilMode?staticText.ta[statusKey]:staticText.en[statusKey];
+      let statusClass="status-closed"; if(statusKey==="open") statusClass="status-open"; else if(statusKey==="upcoming") statusClass="status-upcoming";
+      const titleText=record.title||""; const viewLabel=tamilMode?staticText.ta.view:staticText.en.view;
+      const tr=document.createElement("tr");
+      tr.innerHTML=`<td>${key}</td><td>${escapeHtml(titleText)}</td><td>${escapeHtml(record.opening_date||"")}</td><td>${escapeHtml(record.closing_date||"")}</td><td class="${statusClass}">${escapeHtml(displayStatus)}</td><td><a class="btn" href="recruitment_details.html?cen=${encodeURIComponent(key)}">${escapeHtml(viewLabel)}</a></td>`;
+      tbody.appendChild(tr);
     });
-    </script>
+  }catch(err){ console.error("Error loading recruitment data:",err); tbody.innerHTML=`<tr><td colspan="6">Failed to load recruitment data.</td></tr>`; }
+}
 
+function escapeHtml(str){ if(typeof str!=="string") return str===null||str===undefined?"":str.toString(); return str.replace(/[&<>"']/g,function(m){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]);}); }
+
+document.getElementById("langToggle").addEventListener("click",(e)=>{
+  e.preventDefault(); tamilMode=!tamilMode; if(tamilMode){ applyStaticTexts('ta'); loadRecruitmentData("./database_ta.json"); }
+  else{ applyStaticTexts('en'); loadRecruitmentData("./database.json"); }
+});
+
+document.addEventListener("DOMContentLoaded",()=>{ applyStaticTexts('en'); loadRecruitmentData("./database.json"); });
+</script>
 
 </body>
 </html>

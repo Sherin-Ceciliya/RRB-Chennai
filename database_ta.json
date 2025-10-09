@@ -1,0 +1,185 @@
+{
+  "01/2025": {
+    "title": "உதவி லோக்கோ பைலட் ஆட்சேர்ப்பு",
+    "opening_date": "01-ஜூன்-2025",
+    "closing_date": "30-ஜூன்-2025",
+    "last_updated": "05-ஜூலை-2025",
+    "status": "மூடப்பட்டது",
+    "description": "இந்திய இரயில்வேயில் உதவி லோக்கோ பைலட் பணியிடங்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "அறிவிப்பு", "uploaded_on": "01-ஜூன்-2025", "link": "./resources/results.pdf" },
+      { "title": "பாடத்திட்டம்", "uploaded_on": "03-ஜூன்-2025", "link": "./resources/results.pdf" }
+    ]
+  },
+  "02/2025": {
+    "title": "டெக்னீஷியன் ஆட்சேர்ப்பு",
+    "opening_date": "26-ஜூன்-2025",
+    "closing_date": "28-ஜூலை-2025",
+    "last_updated": "02-ஆகஸ்ட்-2025",
+    "status": "திறந்துள்ளது",
+    "description": "இந்திய இரயில்வேயின் பல்வேறு துறைகளில் தொழில்நுட்ப நிபுணர்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "திருத்தம்-1", "uploaded_on": "25-ஜூன்-2025", "link": "./resources/results.pdf" },
+      { "title": "அடிக்கடி கேட்கப்படும் கேள்விகள்", "uploaded_on": "30-ஜூலை-2025", "link": "./resources/results.pdf" },
+      { "title": "ஆன்லைனில் விண்ணப்பிக்கவும்", "uploaded_on": "28-ஜூன்-2025", "link": "./resources/results.pdf" }
+    ]
+  },
+  "03/2025": {
+    "title": "இளநிலை பொறியாளர் ஆட்சேர்ப்பு",
+    "opening_date": "10-ஜூலை-2025",
+    "closing_date": "15-ஆகஸ்ட்-2025",
+    "last_updated": "20-ஆகஸ்ட்-2025",
+    "status": "திறந்துள்ளது",
+    "description": "பல்வேறு துறைகளில் இளநிலை பொறியாளர்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "தகுதி அளவுகோல்கள்", "uploaded_on": "12-ஜூலை-2025", "link": "./resources/results.pdf" },
+      { "title": "அறிவிப்பு", "uploaded_on": "10-ஜூலை-2025", "link": "./resources/results.pdf" }
+    ]
+  },
+  "04/2025": {
+    "title": "அ-தொழில்நுட்ப பிரபல வகைகள் (NTPC)",
+    "opening_date": "01-ஆகஸ்ட்-2025",
+    "closing_date": "01-செப்டம்பர்-2025",
+    "last_updated": "10-செப்டம்பர்-2025",
+    "status": "திறந்துள்ளது",
+    "description": "கிளார்க், டைப்பிஸ்ட் மற்றும் குட்ஸ் கார்டு போன்ற NTPC பணியிடங்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "அறிவிப்பு", "uploaded_on": "01-ஆகஸ்ட்-2025", "link": "./resources/results.pdf" }
+    ]
+  },
+  "05/2025": {
+    "title": "குழு D ஆட்சேர்ப்பு",
+    "opening_date": "15-ஆகஸ்ட்-2025",
+    "closing_date": "20-செப்டம்பர்-2025",
+    "last_updated": "25-செப்டம்பர்-2025",
+    "status": "வரவிருக்கும்",
+    "description": "டிராக் பராமரிப்பாளர் மற்றும் உதவியாளர் போன்ற குழு D பணியிடங்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "திருத்தம்-1", "uploaded_on": "25-ஜூன்-2025", "link": "./resources/results.pdf" },
+      { "title": "அடிக்கடி கேட்கப்படும் கேள்விகள்", "uploaded_on": "30-ஜூலை-2025", "link": "./resources/results.pdf" },
+      { "title": "ஆன்லைனில் விண்ணப்பிக்கவும்", "uploaded_on": "28-ஜூன்-2025", "link": "./resources/results.pdf" }
+    ]
+  },
+  "06/2025": {
+    "title": "மருத்துவ பணியாளர் ஆட்சேர்ப்பு",
+    "opening_date": "05-செப்டம்பர்-2025",
+    "closing_date": "10-அக்டோபர்-2025",
+    "last_updated": "15-அக்டோபர்-2025",
+    "status": "திறந்துள்ளது",
+    "description": "நர்சுகள் மற்றும் மருந்தாளர்கள் போன்ற மருத்துவ பணியாளர்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "அறிவிப்பு", "uploaded_on": "05-செப்டம்பர்-2025", "link": "./resources/results.pdf" }
+    ]
+  },
+  "07/2025": {
+    "title": "அமைச்சக மற்றும் தனிமைப்படுத்தப்பட்ட பிரிவுகள்",
+    "opening_date": "12-செப்டம்பர்-2025",
+    "closing_date": "20-அக்டோபர்-2025",
+    "last_updated": "25-அக்டோபர்-2025",
+    "status": "திறந்துள்ளது",
+    "description": "ஸ்டெனோகிராபர்கள், மொழிபெயர்ப்பாளர்கள் மற்றும் பிற அலுவலக பணியிடங்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "திருத்தம்-1", "uploaded_on": "25-ஜூன்-2025", "link": "./resources/results.pdf" },
+      { "title": "அடிக்கடி கேட்கப்படும் கேள்விகள்", "uploaded_on": "30-ஜூலை-2025", "link": "./resources/results.pdf" },
+      { "title": "ஆன்லைனில் விண்ணப்பிக்கவும்", "uploaded_on": "28-ஜூன்-2025", "link": "./resources/results.pdf" }
+    ]
+  },
+  "08/2025": {
+    "title": "பயிற்சி மாணவர் ஆட்சேர்ப்பு",
+    "opening_date": "01-அக்டோபர்-2025",
+    "closing_date": "05-நவம்பர்-2025",
+    "last_updated": "10-நவம்பர்-2025",
+    "status": "வரவிருக்கும்",
+    "description": "இந்திய இரயில்வேயில் பயிற்சி மாணவர்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "தகுதி அளவுகோல்கள்", "uploaded_on": "12-ஜூலை-2025", "link": "./resources/results.pdf" },
+      { "title": "அறிவிப்பு", "uploaded_on": "10-ஜூலை-2025", "link": "./resources/results.pdf" }
+    ]
+  },
+  "09/2025": {
+    "title": "சட்ட உதவியாளர் ஆட்சேர்ப்பு",
+    "opening_date": "10-அக்டோபர்-2025",
+    "closing_date": "15-நவம்பர்-2025",
+    "last_updated": "20-நவம்பர்-2025",
+    "status": "வரவிருக்கும்",
+    "description": "இந்திய இரயில்வேயில் சட்ட உதவியாளர் பணியிடங்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "திருத்தம்-1", "uploaded_on": "25-ஜூன்-2025", "link": "./resources/results.pdf" },
+      { "title": "அடிக்கடி கேட்கப்படும் கேள்விகள்", "uploaded_on": "30-ஜூலை-2025", "link": "./resources/results.pdf" },
+      { "title": "ஆன்லைனில் விண்ணப்பிக்கவும்", "uploaded_on": "28-ஜூன்-2025", "link": "./resources/results.pdf" }
+    ]
+  },
+  "10/2025": {
+    "title": "கணக்காளர் உதவியாளர் ஆட்சேர்ப்பு",
+    "opening_date": "20-அக்டோபர்-2025",
+    "closing_date": "25-நவம்பர்-2025",
+    "last_updated": "30-நவம்பர்-2025",
+    "status": "வரவிருக்கும்",
+    "description": "கணக்காளர் மற்றும் தொடர்புடைய பணியிடங்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "அறிவிப்பு", "uploaded_on": "01-ஆகஸ்ட்-2025", "link": "./resources/results.pdf" }
+    ]
+  },
+  "11/2025": {
+    "title": "விளையாட்டு ஒதுக்கீட்டு ஆட்சேர்ப்பு",
+    "opening_date": "01-நவம்பர்-2025",
+    "closing_date": "05-டிசம்பர்-2025",
+    "last_updated": "10-டிசம்பர்-2025",
+    "status": "வரவிருக்கும்",
+    "description": "விளையாட்டு ஒதுக்கீட்டின் கீழ் வேட்பாளர்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "திருத்தம்-1", "uploaded_on": "25-ஜூன்-2025", "link": "./resources/results.pdf" },
+      { "title": "அடிக்கடி கேட்கப்படும் கேள்விகள்", "uploaded_on": "30-ஜூலை-2025", "link": "./resources/results.pdf" },
+      { "title": "ஆன்லைனில் விண்ணப்பிக்கவும்", "uploaded_on": "28-ஜூன்-2025", "link": "./resources/results.pdf" }
+    ]
+  },
+  "12/2025": {
+    "title": "கலாச்சார ஒதுக்கீட்டு ஆட்சேர்ப்பு",
+    "opening_date": "10-நவம்பர்-2025",
+    "closing_date": "15-டிசம்பர்-2025",
+    "last_updated": "20-டிசம்பர்-2025",
+    "status": "வரவிருக்கும்",
+    "description": "கலாச்சார ஒதுக்கீட்டின் கீழ் வேட்பாளர்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "தகுதி அளவுகோல்கள்", "uploaded_on": "12-ஜூலை-2025", "link": "./resources/results.pdf" },
+      { "title": "அறிவிப்பு", "uploaded_on": "10-ஜூலை-2025", "link": "./resources/results.pdf" }
+    ]
+  },
+  "13/2025": {
+    "title": "நிலைய மேலாளர் ஆட்சேர்ப்பு",
+    "opening_date": "20-நவம்பர்-2025",
+    "closing_date": "25-டிசம்பர்-2025",
+    "last_updated": "30-டிசம்பர்-2025",
+    "status": "வரவிருக்கும்",
+    "description": "இந்திய இரயில்வேயில் நிலைய மேலாளர்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "திருத்தம்-1", "uploaded_on": "25-ஜூன்-2025", "link": "./resources/results.pdf" },
+      { "title": "அடிக்கடி கேட்கப்படும் கேள்விகள்", "uploaded_on": "30-ஜூலை-2025", "link": "./resources/results.pdf" },
+      { "title": "ஆன்லைனில் விண்ணப்பிக்கவும்", "uploaded_on": "28-ஜூன்-2025", "link": "./resources/results.pdf" }
+    ]
+  },
+  "14/2025": {
+    "title": "வணிக பயிற்சி ஆட்சேர்ப்பு",
+    "opening_date": "01-டிசம்பர்-2025",
+    "closing_date": "05-ஜனவரி-2026",
+    "last_updated": "10-ஜனவரி-2026",
+    "status": "வரவிருக்கும்",
+    "description": "வணிகப் பயிற்சியாளர் பணியிடங்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "அறிவிப்பு", "uploaded_on": "01-ஆகஸ்ட்-2025", "link": "./resources/results.pdf" }
+    ]
+  },
+  "15/2025": {
+    "title": "டிக்கெட் வசூலாளர் ஆட்சேர்ப்பு",
+    "opening_date": "15-டிசம்பர்-2025",
+    "closing_date": "20-ஜனவரி-2026",
+    "last_updated": "25-ஜனவரி-2026",
+    "status": "வரவிருக்கும்",
+    "description": "இந்திய இரயில்வேயில் டிக்கெட் வசூலாளர்களுக்கான ஆட்சேர்ப்பு.",
+    "bulletin": [
+      { "title": "திருத்தம்-1", "uploaded_on": "25-ஜூன்-2025", "link": "./resources/results.pdf" },
+      { "title": "அடிக்கடி கேட்கப்படும் கேள்விகள்", "uploaded_on": "30-ஜூலை-2025", "link": "./resources/results.pdf" },
+      { "title": "ஆன்லைனில் விண்ணப்பிக்கவும்", "uploaded_on": "28-ஜூன்-2025", "link": "./resources/results.pdf" }
+    ]
+  }
+}

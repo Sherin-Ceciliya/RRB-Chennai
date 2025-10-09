@@ -1,6 +1,6 @@
 {
-  "CEN_01_2025": {
-    "title": "CEN 01/2025 - Assistant Loco Pilot Recruitment",
+  "01/2025": {
+    "title": "Assistant Loco Pilot Recruitment",
     "opening_date": "01-June-2025",
     "closing_date": "30-June-2025",
     "last_updated": "05-July-2025",
@@ -11,8 +11,8 @@
       { "title": "Syllabus", "uploaded_on": "03-June-2025", "link": "./resources/results.pdf" }
     ]
   },
-  "CEN_02_2025": {
-    "title": "CEN 02/2025 - Technician Recruitment",
+  "02/2025": {
+    "title": "Technician Recruitment",
     "opening_date": "26-June-2025",
     "closing_date": "28-July-2025",
     "last_updated": "02-Aug-2025",
@@ -24,8 +24,8 @@
       { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "./resources/results.pdf" }
     ]
   },
-  "CEN_03_2025": {
-    "title": "CEN 03/2025 - Junior Engineer Recruitment",
+  "03/2025": {
+    "title": "Junior Engineer Recruitment",
     "opening_date": "10-July-2025",
     "closing_date": "15-Aug-2025",
     "last_updated": "20-Aug-2025",
@@ -36,8 +36,8 @@
       { "title": "Notification", "uploaded_on": "10-July-2025", "link": "./resources/results.pdf" }
     ]
   },
-  "CEN_04_2025": {
-    "title": "CEN 04/2025 - Non-Technical Popular Categories (NTPC)",
+  "04/2025": {
+    "title": "Non-Technical Popular Categories (NTPC)",
     "opening_date": "01-Aug-2025",
     "closing_date": "01-Sep-2025",
     "last_updated": "10-Sep-2025",
@@ -47,8 +47,8 @@
       { "title": "Notification", "uploaded_on": "01-Aug-2025", "link": "./resources/results.pdf" }
     ]
   },
-  "CEN_05_2025": {
-    "title": "CEN 05/2025 - Group D Recruitment",
+  "05/2025": {
+    "title": "Group D Recruitment",
     "opening_date": "15-Aug-2025",
     "closing_date": "20-Sep-2025",
     "last_updated": "25-Sep-2025",
@@ -60,8 +60,8 @@
       { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "./resources/results.pdf" }
     ]
   },
-  "CEN_06_2025": {
-    "title": "CEN 06/2025 - Paramedical Staff Recruitment",
+  "06/2025": {
+    "title": "Paramedical Staff Recruitment",
     "opening_date": "05-Sep-2025",
     "closing_date": "10-Oct-2025",
     "last_updated": "15-Oct-2025",
@@ -71,8 +71,8 @@
       { "title": "Notification", "uploaded_on": "05-Sep-2025", "link": "./resources/results.pdf" }
     ]
   },
-  "CEN_07_2025": {
-    "title": "CEN 07/2025 - Ministerial and Isolated Categories",
+  "07/2025": {
+    "title": "Ministerial and Isolated Categories",
     "opening_date": "12-Sep-2025",
     "closing_date": "20-Oct-2025",
     "last_updated": "25-Oct-2025",
@@ -84,8 +84,8 @@
       { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "./resources/results.pdf" }
     ]
   },
-  "CEN_08_2025": {
-    "title": "CEN 08/2025 - Apprentice Recruitment",
+  "08/2025": {
+    "title": "Apprentice Recruitment",
     "opening_date": "01-Oct-2025",
     "closing_date": "05-Nov-2025",
     "last_updated": "10-Nov-2025",
@@ -96,8 +96,8 @@
       { "title": "Notification", "uploaded_on": "10-July-2025", "link": "./resources/results.pdf" }
     ]
   },
-  "CEN_09_2025": {
-    "title": "CEN 09/2025 - Law Assistant Recruitment",
+  "09/2025": {
+    "title": "Law Assistant Recruitment",
     "opening_date": "10-Oct-2025",
     "closing_date": "15-Nov-2025",
     "last_updated": "20-Nov-2025",
@@ -109,8 +109,8 @@
       { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "./resources/results.pdf" }
     ]
   },
-  "CEN_10_2025": {
-    "title": "CEN 10/2025 - Accounts Clerk Recruitment",
+  "10/2025": {
+    "title": "Accounts Clerk Recruitment",
     "opening_date": "20-Oct-2025",
     "closing_date": "25-Nov-2025",
     "last_updated": "30-Nov-2025",
@@ -120,8 +120,8 @@
       { "title": "Notification", "uploaded_on": "01-Aug-2025", "link": "./resources/results.pdf" }
     ]
   },
-  "CEN_11_2025": {
-    "title": "CEN 11/2025 - Sports Quota Recruitment",
+  "11/2025": {
+    "title": "Sports Quota Recruitment",
     "opening_date": "01-Nov-2025",
     "closing_date": "05-Dec-2025",
     "last_updated": "10-Dec-2025",
@@ -133,8 +133,8 @@
       { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "./resources/results.pdf" }
     ]
   },
-  "CEN_12_2025": {
-    "title": "CEN 12/2025 - Cultural Quota Recruitment",
+  "12/2025": {
+    "title": "Cultural Quota Recruitment",
     "opening_date": "10-Nov-2025",
     "closing_date": "15-Dec-2025",
     "last_updated": "20-Dec-2025",
@@ -145,8 +145,8 @@
       { "title": "Notification", "uploaded_on": "10-July-2025", "link": "./resources/results.pdf" }
     ]
   },
-  "CEN_13_2025": {
-    "title": "CEN 13/2025 - Station Master Recruitment",
+  "13/2025": {
+    "title": "Station Master Recruitment",
     "opening_date": "20-Nov-2025",
     "closing_date": "25-Dec-2025",
     "last_updated": "30-Dec-2025",
@@ -158,8 +158,8 @@
       { "title": "Apply Online", "uploaded_on": "28-June-2025", "link": "./resources/results.pdf" }
     ]
   },
-  "CEN_14_2025": {
-    "title": "CEN 14/2025 - Commercial Apprentice Recruitment",
+  "14/2025": {
+    "title": "Commercial Apprentice Recruitment",
     "opening_date": "01-Dec-2025",
     "closing_date": "05-Jan-2026",
     "last_updated": "10-Jan-2026",
@@ -169,8 +169,8 @@
       { "title": "Notification", "uploaded_on": "01-Aug-2025", "link": "./resources/results.pdf" }
     ]
   },
-  "CEN_15_2025": {
-    "title": "CEN 15/2025 - Ticket Collector Recruitment",
+  "15/2025": {
+    "title": "Ticket Collector Recruitment",
     "opening_date": "15-Dec-2025",
     "closing_date": "20-Jan-2026",
     "last_updated": "25-Jan-2026",
