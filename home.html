@@ -45,6 +45,14 @@
       <a href="contact.html" id="mobContact" class="block text-white font-semibold">Contact</a>
     </div>
   </header>
+    <!-- Rolling Email Update Notice -->
+  <div class="bg-red-600 text-white text-lg font-semibold py-2">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      The Official Email ID of RRB Chennai is changed to 
+      <strong>office.rrbmas@railnet.gov.in</strong>. Candidates are advised to make communication through this email ID only. 
+      Communications made through any other email ID will not be entertained.
+    </marquee>
+  </div>
 
   <br>
   <!-- Carousel Section -->
@@ -172,6 +180,40 @@
 
   <!-- Translation Script -->
   <script>
+      <!-- Carousel Functionality Script -->
+
+    const slides = document.querySelector("#carousel-slides");
+    const images = document.querySelectorAll("#carousel-slides img");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    let index = 0;
+    const totalSlides = images.length;
+
+    function showSlide(i) {
+      slides.style.transform = `translateX(-${i * 100}%)`;
+    }
+
+    // Move to next slide
+    function nextSlide() {
+      index = (index + 1) % totalSlides;
+      showSlide(index);
+    }
+
+    // Move to previous slide
+    function prevSlide() {
+      index = (index - 1 + totalSlides) % totalSlides;
+      showSlide(index);
+    }
+
+    // Button click events
+    nextBtn.addEventListener("click", nextSlide);
+    prevBtn.addEventListener("click", prevSlide);
+
+    // Auto-slide every 5 seconds
+    setInterval(nextSlide, 5000);
+
+
     const translations = {
       en: {
         title: "Railway Recruitment Board",
