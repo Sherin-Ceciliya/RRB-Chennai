@@ -18,7 +18,6 @@
     padding: 0 20px;
   }
 
-  /* Remove white background and shadow from section */
   .section {
     background: transparent;
     padding: 20px;
@@ -26,7 +25,6 @@
     margin-bottom: 30px;
   }
 
-  /* Match heading style with "CURRENT OPENINGS" */
   .section h2 {
     color: #0055a5;
     border-bottom: 2px solid #ddd;
@@ -36,19 +34,18 @@
     font-size: 1.5rem;
   }
 
-  /* Table styling */
   .bulletin {
     margin-top: 10px;
     width: 100%;
-    border-collapse: separate; /* allows spacing between columns */
-    border-spacing: 0 10px; /* vertical spacing between rows */
+    border-collapse: separate;
+    border-spacing: 0 10px;
     table-layout: auto;
     background: transparent;
   }
 
   .bulletin th,
   .bulletin td {
-    padding: 14px 18px; /* more breathing room */
+    padding: 14px 18px;
     border-bottom: 1px solid #ddd;
     text-align: left;
     vertical-align: top;
@@ -56,48 +53,29 @@
     font-size: 15px;
   }
 
-  /* Slightly increase header visibility */
   .bulletin th {
     background: #0055a5;
     color: white;
     letter-spacing: 0.5px;
   }
 
-  /* Adjust column widths */
   .bulletin th:nth-child(1),
-  .bulletin td:nth-child(1) {
-    width: 30%;
-  }
-
+  .bulletin td:nth-child(1) { width: 30%; }
   .bulletin th:nth-child(2),
-  .bulletin td:nth-child(2) {
-    width: 15%;
-  }
-
+  .bulletin td:nth-child(2) { width: 15%; }
   .bulletin th:nth-child(3),
-  .bulletin td:nth-child(3) {
-    width: 27%;
-  }
-
+  .bulletin td:nth-child(3) { width: 27%; }
   .bulletin th:nth-child(4),
-  .bulletin td:nth-child(4) {
-    width: 30%;
-  }
+  .bulletin td:nth-child(4) { width: 30%; }
 
-  /* Link style */
   .btn-link {
     color: #0077c0;
     font-weight: bold;
     text-decoration: none;
   }
 
-  .btn-link:hover {
-    text-decoration: underline;
-  }
-
-  .custom-header {
-    background-color: #153865;
-  }
+  .btn-link:hover { text-decoration: underline; }
+  .custom-header { background-color: #153865; }
 </style>
 
 </head>
@@ -110,16 +88,16 @@
       <div class="flex items-center space-x-4">
         <img src="images/railways.png" alt="RRB Logo" class="h-28 w-auto" />
         <div class="leading-tight">
-          <h1 class="text-3xl font-bold">Railway Recruitment Board</h1>
-          <p class="text-xl ml-1">Chennai</p>
+          <h1 class="text-3xl font-bold" id="header-title">Railway Recruitment Board</h1>
+          <p class="text-xl ml-1" id="header-location">Chennai</p>
         </div>
       </div>
       <nav class="hidden md:flex space-x-10 text-xl font-semibold">
-        <a href="home.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="results.html" class="nav-link">Results</a>
-        <a href="recruitment.html" class="nav-link">Recruitments</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="home.html" class="nav-link" id="nav-home">Home</a>
+        <a href="about.html" class="nav-link" id="nav-about">About Us</a>
+        <a href="results.html" class="nav-link" id="nav-results">Results</a>
+        <a href="recruitment.html" class="nav-link" id="nav-recruitment">Recruitments</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -127,99 +105,179 @@
   <!-- Main Section -->
   <div class="container">
     <div class="section">
-      <h2 class="text-2xl font-semibold mb-4">Result Announcements</h2>
+      <h2 class="text-2xl font-semibold mb-4" id="section-title">Result Announcements</h2>
       <table class="bulletin">
         <thead>
-            <tr>
-  <th>
-    <input type="text" id="searchNotice" 
-       placeholder="Give date as MM/YYYY or GDCE" 
-       class="w-full p-1 rounded border border-gray-300 bg-white text-black" />
-
-  </th>
-  <th>
-    <input type="text" id="searchCategory" placeholder="Enter single, comma or range" class="w-full p-1 rounded border border-gray-300 bg-white text-black" />
-
-  </th>
-  <th>
-    <input type="text" id="searchPost" placeholder="Search post name" class="w-full p-1 rounded border border-gray-300 bg-white text-black" />
-  </th>
-  <th></th> <!-- Link column has no search -->
-</tr>
-
           <tr>
-            <th>Notice Number</th>
-            <th>Category Number</th>
-            <th>Name of the Post</th>
-            <th>Link</th>
+            <th><input type="text" id="searchNotice" placeholder="Give date as MM/YYYY or GDCE" class="w-full p-1 rounded border border-gray-300 bg-white text-black" /></th>
+            <th><input type="text" id="searchCategory" placeholder="Enter single, comma or range" class="w-full p-1 rounded border border-gray-300 bg-white text-black" /></th>
+            <th><input type="text" id="searchPost" placeholder="Search post name" class="w-full p-1 rounded border border-gray-300 bg-white text-black" /></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th id="th-notice">Notice Number</th>
+            <th id="th-category">Category Number</th>
+            <th id="th-post">Name of the Post</th>
+            <th id="th-link">Link</th>
           </tr>
         </thead>
-        <tbody>
-          <!-- All rows below -->
-          <tr><td>04/2010</td><td>2</td><td>Accounts Clerk Cum Typist</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>04/2010</td><td>3</td><td>Ticket Examiner</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2012</td><td>1-7</td><td>CA, TA, ECRC, Goods Guard, Junior Accountant Assistant, Senior Clerk & Assistant Senior Manager</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2012</td><td>4</td><td>Goods Guard</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Induction / Diversion of standby/wait listed candidates for the post of Goods Guard</a></td></tr>
-<tr><td>03/2012</td><td>7</td><td>Assistant Station Master</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Induction / Diversion of standby/wait listed candidates for the post of Assistant Station Master</a></td></tr>
-<tr><td>05/2012</td><td>5</td><td>ECG Technician</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>01/2014</td><td>-</td><td>Assistant Loco Pilot & Technician Gr-III</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">List of Rejected candidates After Document Verification</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Post-wise and Community-wise cut off marks</a></td></tr>
-<tr><td>01/2014</td><td>-</td><td>Assistant Loco Pilot & Technician Gr-III Categories</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>01/2014</td><td>16,18</td><td>Technicians</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Induction / Diversion of standby candidates for the post of Technician Gr-III/Diesel Electrical and Electrical (Fitter) of CEN No. 01/2014 to various Railways</a></td></tr>
-<tr><td>02/2014</td><td>36,37,38,43,50,53,56,57,58,71,76</td><td>Junior Engineer & DMS</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Cut off marks</a></td></tr>
-<tr><td>02/2014</td><td>77</td><td>Chemical Metallurgical Assistant</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Community-wise cut off marks</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">List of Rejected candidates After Document Verification</a></td></tr>
-<tr><td>02/2014</td><td>1-32</td><td>Senior Section Engineer</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Post-wise and Community-wise cut off marks</a></td></tr>
-<tr><td>01/2015</td><td>27,29,40,41,43,47,50</td><td>Junior Engineer & DMS</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Cut off marks</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Rejection</a></td></tr>
-<tr><td>01/2015</td><td>4,7,9,10,11,14,15,16,19,20,23</td><td>Senior Section Engineer</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Cut off marks</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Rejection</a></td></tr>
-<tr><td>02/2015</td><td>-</td><td>Junior Clerk cum Typist (SR), Commercial Clerk (SR), Ticket Examiner (SR)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Cut off marks</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Rejection</a></td></tr>
-<tr><td>03/2014</td><td>2</td><td>Junior Stenographer - English</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Cut off marks</a></td></tr>
-<tr><td>03/2014</td><td>03</td><td>Chief Law Assistant</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>04</td><td>Junior Translator (Hindi)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>5-ICF</td><td>Staff & Welfare Inspector</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>5-SR</td><td>Staff & Welfare Inspector</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>8</td><td>Catering Inspector Gr. II</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>9</td><td>Catering Supervisor Gr.III</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>13</td><td>Publicity Inspector</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>14</td><td>Senior Publicity Inspector</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>28</td><td>Teacher Gr.I (Biology)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>31</td><td>Teacher Gr.II (Physical Training Instructor)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>32</td><td>Teacher Gr.IV (English)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>33</td><td>Teacher Gr.IV (Science)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>34</td><td>Teacher Gr.IV (Mathematics)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>35</td><td>Teacher Gr.IV (History)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>36</td><td>Teacher Gr.IV (Economics)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>37</td><td>Teacher Gr.IV (Commerce)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>03/2014</td><td>38</td><td>Teacher Gr.IV (Tamil)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>04/2014</td><td>0</td><td>Pharmacist Gr.III (SR) & (SWR)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>04/2014</td><td>1</td><td>Staff Nurse (SR)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>04/2014</td><td>2</td><td>Health & Malaria Inspector Gr.III (SR)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Cut off marks</a></td></tr>
-<tr><td>04/2014</td><td>5</td><td>Radiographer (SR)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>04/2014</td><td>6-7</td><td>Lab Assistant Gr-II (SR) & Lab Superintendent Gr-III (SR)</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Cutoff Marks</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Rejection</a></td></tr>
-<tr><td>01/2015</td><td>1,2,4,5,6,7</td><td>NTPC-Graduate Categories</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Cut-off Marks</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Rejection</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Standby List</a><br><a href="./resources/results.pdf" class="btn-link" target="_blank">Important Notice to Candidate</a></td></tr>
-<tr><td>03/2015</td><td>4</td><td>Goods Guard</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Induction / Diversion of standby candidates for the post of Goods Guard (Cat No. 04) of CEN No. 03/2015 to South Central Railways</a></td></tr>
-
-<tr><td>GDCE</td><td>Southern Railway</td><td>Assistant Loco Pilot</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>GDCE</td><td>Southern Railway</td><td>Assistant Station Master</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>GDCE</td><td>Southern Railway</td><td>Commercial Clerk</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-<tr><td>GDCE</td><td>Southern Railway</td><td>Ticket Examiner</td><td><a href="./resources/results.pdf" class="btn-link" target="_blank">Results</a></td></tr>
-
+        <tbody id="table-body">
+          <!-- Rows will be dynamically generated -->
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6 mt-10">
-    <div class="container text-center">
-      <p>&copy; 2025 Railway Recruitment Board, Chennai. All rights reserved.</p>
+  <footer class="bg-gray-900 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <h4 class="text-xl font-semibold mb-2" id="footer-gov">Government of India</h4>
+        <p class="text-sm" id="footer-ministry">Ministry of Railways</p>
+        <p class="text-sm mt-1" id="footer-enquiry">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+      </div>
+      <div class="flex flex-col items-start md:items-end">
+        <h4 class="text-xl font-semibold mb-2" id="footer-links-title">Quick Links</h4>
+        <ul class="space-y-1 text-sm text-right w-full md:w-auto">
+          <li><a href="./about.html" class="hover:text-gray-300 transition-colors" id="footer-about">About Us</a></li>
+          <li><a href="#results" class="hover:text-gray-300 transition-colors" id="footer-results">Results</a></li>
+          <li><a href="./recruitment.html" class="hover:text-gray-300 transition-colors" id="footer-recruitment">Recruitments</a></li>
+          <li><a href="#contact" class="hover:text-gray-300 transition-colors" id="footer-contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400" id="footer-rights">
+      © 2022 Railway Recruitment Board Chennai. All Rights Reserved.
     </div>
   </footer>
+
   <script>
-  // Select elements AFTER DOM is loaded
+  const englishData = [
+    ["04/2010","2","Accounts Clerk Cum Typist","Results"],
+    ["04/2010","3","Ticket Examiner","Results"],
+    ["03/2012","1-7","CA, TA, ECRC, Goods Guard, Junior Accountant Assistant, Senior Clerk & Assistant Senior Manager","Results"],
+    ["03/2012","4","Goods Guard","Induction / Diversion of standby/wait listed candidates for the post of Goods Guard"],
+    ["03/2012","7","Assistant Station Master","Induction / Diversion of standby/wait listed candidates for the post of Assistant Station Master"],
+    ["05/2012","5","ECG Technician","Results"],
+    ["01/2014","-","Assistant Loco Pilot & Technician Gr-III","List of Rejected candidates After Document Verification|Post-wise and Community-wise cut off marks"],
+    ["01/2014","-","Assistant Loco Pilot & Technician Gr-III Categories","Results"],
+    ["01/2014","16,18","Technicians","Induction / Diversion of standby candidates for the post of Technician Gr-III/Diesel Electrical and Electrical (Fitter) of CEN No. 01/2014 to various Railways"],
+    ["02/2014","36,37,38,43,50,53,56,57,58,71,76","Junior Engineer & DMS","Results|Cut off marks"],
+    ["02/2014","77","Chemical Metallurgical Assistant","Results|Community-wise cut off marks|List of Rejected candidates After Document Verification"],
+    ["02/2014","1-32","Senior Section Engineer","Results|Post-wise and Community-wise cut off marks"],
+    ["01/2015","27,29,40,41,43,47,50","Junior Engineer & DMS","Results|Cut off marks|Rejection"],
+    ["01/2015","4,7,9,10,11,14,15,16,19,20,23","Senior Section Engineer","Results|Cut off marks|Rejection"],
+    ["02/2015","-","Junior Clerk cum Typist (SR), Commercial Clerk (SR), Ticket Examiner (SR)","Results|Cut off marks|Rejection"],
+    ["03/2014","2","Junior Stenographer - English","Results|Cut off marks"],
+    ["03/2014","03","Chief Law Assistant","Results"],
+    ["03/2014","04","Junior Translator (Hindi)","Results"],
+    ["03/2014","5-ICF","Staff & Welfare Inspector","Results"],
+    ["03/2014","5-SR","Staff & Welfare Inspector","Results"],
+    ["03/2014","8","Catering Inspector Gr. II","Results"],
+    ["03/2014","9","Catering Supervisor Gr.III","Results"],
+    ["03/2014","13","Publicity Inspector","Results"],
+    ["03/2014","14","Senior Publicity Inspector","Results"],
+    ["03/2014","28","Teacher Gr.I (Biology)","Results"],
+    ["03/2014","31","Teacher Gr.II (Physical Training Instructor)","Results"],
+    ["03/2014","32","Teacher Gr.IV (English)","Results"],
+    ["03/2014","33","Teacher Gr.IV (Science)","Results"],
+    ["03/2014","34","Teacher Gr.IV (Mathematics)","Results"],
+    ["03/2014","35","Teacher Gr.IV (History)","Results"],
+    ["03/2014","36","Teacher Gr.IV (Economics)","Results"],
+    ["03/2014","37","Teacher Gr.IV (Commerce)","Results"],
+    ["03/2014","38","Teacher Gr.IV (Tamil)","Results"],
+    ["04/2014","0","Pharmacist Gr.III (SR) & (SWR)","Results"],
+    ["04/2014","1","Staff Nurse (SR)","Results"],
+    ["04/2014","2","Health & Malaria Inspector Gr.III (SR)","Results|Cut off marks"],
+    ["04/2014","5","Radiographer (SR)","Results"],
+    ["04/2014","6-7","Lab Assistant Gr-II (SR) & Lab Superintendent Gr-III (SR)","Results|Cutoff Marks|Rejection"],
+    ["01/2015","1,2,4,5,6,7","NTPC-Graduate Categories","Results|Cut-off Marks|Rejection|Standby List|Important Notice to Candidate"],
+    ["03/2015","4","Goods Guard","Induction / Diversion of standby candidates for the post of Goods Guard (Cat No. 04) of CEN No. 03/2015 to South Central Railways"],
+    ["GDCE","Southern Railway","Assistant Loco Pilot","Results"],
+    ["GDCE","Southern Railway","Assistant Station Master","Results"],
+    ["GDCE","Southern Railway","Commercial Clerk","Results"],
+    ["GDCE","Southern Railway","Ticket Examiner","Results"]
+  ];
+
+  const tamilData = [
+    ["04/2010","2","கணக்கியல் கிளர்க் cum டைப்பிஸ்ட்","விளைவுகள்"],
+    ["04/2010","3","டிக்கெட் பரிசோதகர்","விளைவுகள்"],
+    ["03/2012","1-7","CA, TA, ECRC, பொருள் பாதுகாவலர், ஜூனியர் கணக்காளர் உதவி, மூத்த கிளர்க் & உதவி மூத்த மேலாளர்","விளைவுகள்"],
+    ["03/2012","4","பொருள் பாதுகாவலர்","காத்திருக்கும்/மாறும் பட்டியலில் உள்ளவர்கள் பதவி அறிவிப்பு"],
+    ["03/2012","7","உதவி நிலைய மேலாளர்","காத்திருக்கும்/மாறும் பட்டியலில் உள்ளவர்கள் பதவி அறிவிப்பு"],
+    ["05/2012","5","ECG தொழில்நுட்ப நிபுணர்","விளைவுகள்"],
+    ["01/2014","-","உதவி லோகோ பைலட் & தொழில்நுட்ப நிபுணர் Gr-III","ஆவணத் தேர்வுக்குப் பின் நிராகரிக்கப்பட்டவர்களின் பட்டியல்|பதவி & சமூக வாரியான குறுக்குவடிவ மதிப்பெண்கள்"],
+    ["01/2014","-","உதவி லோகோ பைலட் & தொழில்நுட்ப நிபுணர் Gr-III வகைகள்","விளைவுகள்"],
+    ["01/2014","16,18","தொழில்நுட்ப நிபுணர்கள்","தொழில்நுட்ப நிபுணர் Gr-III/Diesel Electrical மற்றும் Electrical (Fitter) பதவிக்கு காத்திருக்கும் விண்ணப்பதாரர்களை சிக்கலின்றி நியமனம்"],
+    ["02/2014","36,37,38,43,50,53,56,57,58,71,76","ஜூனியர் எஞ்சினீயர் & DMS","விளைவுகள்|குறைந்த மதிப்பெண்கள்"],
+    ["02/2014","77","கெமிக்கல் மெட்டலர்ஜிகல் உதவி","விளைவுகள்|சமூக வாரியான குறைந்த மதிப்பெண்கள்|ஆவணத் தேர்வுக்குப் பின் நிராகரிக்கப்பட்டவர்கள்"],
+    ["02/2014","1-32","சீனியர் பிரிவு எஞ்சினீயர்","விளைவுகள்|பதவி & சமூக வாரியான குறைந்த மதிப்பெண்கள்"],
+    ["01/2015","27,29,40,41,43,47,50","ஜூனியர் எஞ்சினீயர் & DMS","விளைவுகள்|குறைந்த மதிப்பெண்கள்|நிராகரிப்பு"],
+    ["01/2015","4,7,9,10,11,14,15,16,19,20,23","சீனியர் பிரிவு எஞ்சினீயர்","விளைவுகள்|குறைந்த மதிப்பெண்கள்|நிராகரிப்பு"],
+    ["02/2015","-","ஜூனியர் கிளர்க் cum டைப்பிஸ்ட் (SR), வணிக கிளர்க் (SR), டிக்கெட் பரிசோதகர் (SR)","விளைவுகள்|குறைந்த மதிப்பெண்கள்|நிராகரிப்பு"],
+    ["03/2014","2","ஜூனியர் ஸ்டெனோகிராபர் - ஆங்கிலம்","விளைவுகள்|குறைந்த மதிப்பெண்கள்"],
+    ["03/2014","03","சீனியர் சட்ட உதவி","விளைவுகள்"],
+    ["03/2014","04","ஜூனியர் மொழிபெயர்ப்பாளர் (ஹிந்தி)","விளைவுகள்"],
+    ["03/2014","5-ICF","பணியாளர் & நல பார்வையாளர்","விளைவுகள்"],
+    ["03/2014","5-SR","பணியாளர் & நல பார்வையாளர்","விளைவுகள்"],
+    ["03/2014","8","உணவு பரிசோதகர் Gr. II","விளைவுகள்"],
+    ["03/2014","9","உணவு மேற்பார்வையாளர் Gr.III","விளைவுகள்"],
+    ["03/2014","13","பொதுமூலம் பரிசோதகர்","விளைவுகள்"],
+    ["03/2014","14","மூத்த பொதுமூலம் பரிசோதகர்","விளைவுகள்"],
+    ["03/2014","28","ஆசிரியர் Gr.I (உயிரியல்)","விளைவுகள்"],
+    ["03/2014","31","ஆசிரியர் Gr.II (உடற்பயிற்சி பயிற்சியாளர்)","விளைவுகள்"],
+    ["03/2014","32","ஆசிரியர் Gr.IV (ஆங்கிலம்)","விளைவுகள்"],
+    ["03/2014","33","ஆசிரியர் Gr.IV (அறிவியல்)","விளைவுகள்"],
+    ["03/2014","34","ஆசிரியர் Gr.IV (கணிதம்)","விளைவுகள்"],
+    ["03/2014","35","ஆசிரியர் Gr.IV (வரலாறு)","விளைவுகள்"],
+    ["03/2014","36","ஆசிரியர் Gr.IV (பொருளாதாரம்)","விளைவுகள்"],
+    ["03/2014","37","ஆசிரியர் Gr.IV (வணிகம்)","விளைவுகள்"],
+    ["03/2014","38","ஆசிரியர் Gr.IV (தமிழ்)","விளைவுகள்"],
+    ["04/2014","0","மருத்துவர் Gr.III (SR) & (SWR)","விளைவுகள்"],
+    ["04/2014","1","பணியாளர் நர்ஸ் (SR)","விளைவுகள்"],
+    ["04/2014","2","ஆரோக்கிய & மலேரியா இன்ஸ்பெக்டர் Gr.III (SR)","விளைவுகள்|குறைந்த மதிப்பெண்கள்"],
+    ["04/2014","5","ரேடியோ கிராஃபர் (SR)","விளைவுகள்"],
+    ["04/2014","6-7","லாப் உதவி Gr-II (SR) & லாப் சூப்பரிண்டெண்ட் Gr-III (SR)","விளைவுகள்|குறைந்த மதிப்பெண்கள்|நிராகரிப்பு"],
+    ["01/2015","1,2,4,5,6,7","NTPC-பிரைவேட் வகைகள்","விளைவுகள்|குறைந்த மதிப்பெண்கள்|நிராகரிப்பு|காத்திருக்கும் பட்டியல்|முக்கிய அறிவிப்பு"],
+    ["03/2015","4","பொருள் பாதுகாவலர்","காத்திருக்கும் விண்ணப்பதாரர்களை சிக்கலின்றி நியமனம் (பதவி எண் 04) - தென் மத்திய ரெயில்வேஸ்"],
+    ["GDCE","தென் ரெயில்வே","உதவி லோகோ பைலட்","விளைவுகள்"],
+    ["GDCE","தென் ரெயில்வே","உதவி நிலைய மேலாளர்","விளைவுகள்"],
+    ["GDCE","தென் ரெயில்வே","வணிக கிளர்க்","விளைவுகள்"],
+    ["GDCE","தென் ரெயில்வே","டிக்கெட் பரிசோதகர்","விளைவுகள்"]
+  ];
+
+  const lang = sessionStorage.getItem('lang') || 'en';
+  const data = lang === 'en' ? englishData : tamilData;
+
+  const tbody = document.getElementById('table-body');
+
+  data.forEach(row => {
+    const tr = document.createElement('tr');
+    row.forEach((cell, i) => {
+      const td = document.createElement('td');
+      if(i === 3) {
+        // handle multiple links separated by "|"
+        cell.split('|').forEach(text => {
+          const a = document.createElement('a');
+          a.href = "./resources/results.pdf";
+          a.target = "_blank";
+          a.className = "btn-link";
+          a.textContent = text;
+          td.appendChild(a);
+          td.appendChild(document.createElement('br'));
+        });
+      } else {
+        td.textContent = cell;
+      }
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+
+  // Table filtering logic (unchanged)
   const noticeInput = document.getElementById('searchNotice');
   const categoryInput = document.getElementById('searchCategory');
   const postInput = document.getElementById('searchPost');
-  const table = document.querySelector('.bulletin tbody');
-  const rows = Array.from(table.getElementsByTagName('tr'));
+  const rows = Array.from(tbody.getElementsByTagName('tr'));
 
   function matchesNotice(noticeText, filterText) {
     if (!filterText) return true;
@@ -230,7 +288,6 @@
   function matchesCategory(categoryText, filterText) {
     if (!filterText) return true;
     const filters = filterText.split(',').map(f => f.trim());
-
     for (let f of filters) {
       if (f.includes('-')) {
         const [start, end] = f.split('-').map(Number);
@@ -265,11 +322,36 @@
     });
   }
 
-  // Add event listeners
   noticeInput.addEventListener('input', filterTable);
   categoryInput.addEventListener('input', filterTable);
   postInput.addEventListener('input', filterTable);
-</script>
+
+  // Optional: translate headers/nav/footer if Tamil
+  if(lang !== 'en') {
+    document.getElementById('header-title').textContent = "ரயில்வே ஆட்சேர்ப்பு வாரியம்";
+    document.getElementById('header-location').textContent = "சென்னை";
+    document.getElementById('nav-home').textContent = "முகப்பு";
+    document.getElementById('nav-about').textContent = "எங்களைப் பற்றி";
+    document.getElementById('nav-results').textContent = "விளைவுகள்";
+    document.getElementById('nav-recruitment').textContent = "வேலைவாய்ப்புகள்";
+    document.getElementById('nav-contact').textContent = "தொடர்பு";
+    document.getElementById('section-title').textContent = "விளைவுகள் அறிவிப்புகள்";
+    document.getElementById('th-notice').textContent = "அறிவிப்பு எண்";
+    document.getElementById('th-category').textContent = "வகை எண்";
+    document.getElementById('th-post').textContent = "பதவியின் பெயர்";
+    document.getElementById('th-link').textContent = "இணைப்பு";
+    document.getElementById('footer-gov').textContent = "இந்திய அரசு";
+    document.getElementById('footer-ministry').textContent = "ரயில்வே அமைச்சகம்";
+    document.getElementById('footer-enquiry').textContent = "தொடர்பு எண்: 044 - 2827 5323";
+    document.getElementById('footer-links-title').textContent = "விரைவு இணைப்புகள்";
+    document.getElementById('footer-about').textContent = "எங்களைப் பற்றி";
+    document.getElementById('footer-results').textContent = "விளைவுகள்";
+    document.getElementById('footer-recruitment').textContent = "வேலைவாய்ப்புகள்";
+    document.getElementById('footer-contact').textContent = "தொடர்பு";
+    document.getElementById('footer-rights').textContent = "© 2022 ரயில்வே ரிக்ரூட்மென்ட் போர்டு சென்னை. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.";
+  }
+
+  </script>
 
 </body>
 </html>
