@@ -16,19 +16,18 @@
       <div class="flex items-center space-x-4">
         <img src="images/railways.png" alt="RRB Logo" class="h-28 w-auto" />
         <div class="leading-tight">
-          <h1 class="text-3xl font-bold">Railway Recruitment Board</h1>
-          <p class="text-xl ml-1">Chennai</p>
+          <h1 id="headerTitle" class="text-3xl font-bold">Railway Recruitment Board</h1>
+          <p id="headerSubtitle" class="text-xl ml-1">Chennai</p>
         </div>
       </div>
 
       <!-- Navigation Links for Desktop -->
       <nav class="hidden md:flex space-x-10 text-xl font-semibold">
-        <a id="toggleLangBtnMobile" href="#" class="nav-link">In Tamil</a>
-        <a href="home.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="results.html" class="nav-link">Results</a>
-        <a href="recruitment.html" class="nav-link">Recruitments</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a id="navHome" href="home.html" class="nav-link">Home</a>
+        <a id="navAbout" href="about.html" class="nav-link">About Us</a>
+        <a id="navResults" href="results.html" class="nav-link">Results</a>
+        <a id="navRecruitments" href="recruitment.html" class="nav-link">Recruitments</a>
+        <a id="navContact" href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <!-- Hamburger Menu for Mobile -->
@@ -44,117 +43,116 @@
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden bg-gray-800 md:hidden px-4 pt-2 pb-4 space-y-2">
-      <button id="toggleLangBtnMobile" class="block text-white font-semibold">In Tamil</button>
-      <a href="about.html" class="block text-white font-semibold">About Us</a>
-      <a href="results.html" class="block text-white font-semibold">Results</a>
-      <a href="recruitment.html" class="block text-white font-semibold">Recruitments</a>
-      <a href="contact.html" class="block text-white font-semibold">Contact</a>
+      <a id="mobAbout" href="about.html" class="block text-white font-semibold">About Us</a>
+      <a id="mobResults" href="results.html" class="block text-white font-semibold">Results</a>
+      <a id="mobRecruitments" href="recruitment.html" class="block text-white font-semibold">Recruitments</a>
+      <a id="mobContact" href="contact.html" class="block text-white font-semibold">Contact</a>
     </div>
   </header>
 
   <br>
 
   <!-- About Us Section -->
-  <section id="contentSection" class="max-w-5xl mx-auto my-12 px-4 text-justify text-lg text-gray-700">
-    <!-- Content will be filled dynamically -->
-  </section>
+  <section id="contentSection" class="max-w-5xl mx-auto my-12 px-4 text-justify text-lg text-gray-700"></section>
 
   <!-- Footer Section -->
   <footer class="bg-gray-900 text-white py-8 mt-12">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
-        <h4 class="text-xl font-semibold mb-2">Government of India</h4>
-        <p class="text-sm">Ministry of Railways</p>
-        <p class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+        <h4 id="footerGov" class="text-xl font-semibold mb-2">Government of India</h4>
+        <p id="footerMinistry" class="text-sm">Ministry of Railways</p>
+        <p id="footerEnquiry" class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
       </div>
       <div class="flex flex-col items-start md:items-end">
-        <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
+        <h4 id="footerQuick" class="text-xl font-semibold mb-2">Quick Links</h4>
         <ul class="space-y-1 text-sm text-right w-full md:w-auto">
-          <li><a href="about.html" class="hover:text-gray-300 transition-colors">About Us</a></li>
-          <li><a href="results.html" class="hover:text-gray-300 transition-colors">Results</a></li>
-          <li><a href="recruitment.html" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
-          <li><a href="contact.html" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
+          <li><a id="quickAbout" href="about.html" class="hover:text-gray-300 transition-colors">About Us</a></li>
+          <li><a id="quickResults" href="results.html" class="hover:text-gray-300 transition-colors">Results</a></li>
+          <li><a id="quickRecruitments" href="recruitment.html" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
+          <li><a id="quickContact" href="contact.html" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
         </ul>
       </div>
     </div>
-    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
+    <div id="footerCopy" class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
       © 2025 Railway Recruitment Board Chennai. All Rights Reserved.
     </div>
   </footer>
 
   <script>
-  // Check session storage for selected language
-  let isTamil = sessionStorage.getItem("lang") === "ta" ? true : false;
+  document.addEventListener("DOMContentLoaded", () => {
+    const lang = sessionStorage.getItem("lang") || "en";
+    const isTamil = lang === "ta";
 
-  const englishContent = `
+    // Header translations
+    if (isTamil) {
+      document.getElementById("headerTitle").textContent = "ரயில்வே ஆட்சேர்ப்பு வாரியம்";
+      document.getElementById("headerSubtitle").textContent = "சென்னை";
+      document.getElementById("navHome").textContent = "முகப்பு";
+      document.getElementById("navAbout").textContent = "எங்களை பற்றி";
+      document.getElementById("navResults").textContent = "தேர்வு முடிவுகள்";
+      document.getElementById("navRecruitments").textContent = "ஆட்சேர்ப்புகள்";
+      document.getElementById("navContact").textContent = "தொடர்பு";
+
+      document.getElementById("mobAbout").textContent = "எங்களை பற்றி";
+      document.getElementById("mobResults").textContent = "தேர்வு முடிவுகள்";
+      document.getElementById("mobRecruitments").textContent = "ஆட்சேர்ப்புகள்";
+      document.getElementById("mobContact").textContent = "தொடர்பு";
+
+      document.getElementById("footerGov").textContent = "இந்திய அரசு";
+      document.getElementById("footerMinistry").textContent = "ரயில்வே அமைச்சகம்";
+      document.getElementById("footerEnquiry").innerHTML = 'விசாரணைக்கு அழைக்கவும்: <span class="font-medium">044 - 2827 5323</span>';
+      document.getElementById("footerQuick").textContent = "விரைவு இணைப்புகள்";
+      document.getElementById("quickAbout").textContent = "எங்களை பற்றி";
+      document.getElementById("quickResults").textContent = "தேர்வு முடிவுகள்";
+      document.getElementById("quickRecruitments").textContent = "ஆட்சேர்ப்புகள்";
+      document.getElementById("quickContact").textContent = "தொடர்பு கொள்ள";
+      document.getElementById("footerCopy").textContent = "© 2025 ரயில்வே ஆட்சேர்ப்பு வாரியம் சென்னை. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.";
+    }
+
+    // About Us content
+    const englishContent = `
     <h2 class="text-3xl font-bold text-gray-800 mb-6">About Us</h2>
     <p><strong>Railway Recruitment Board (RRB), Madras (now Chennai)</strong> functions under the <strong>Ministry of Railways, Government of India</strong>. It is responsible for recruiting the working and supervisory staff (Group 'C') required for Chennai, Salem, and Tiruchirappalli Divisions, as well as the Head Quarters of Southern Railway (SR) and Integral Coach Factory (ICF), Chennai.</p>
-
     <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Selection Procedure</h3>
     <p>RRB calls for eligible applicants through <strong>"Employment News"</strong>. Applications are screened, and eligible candidates are called for written exams. Some categories have second-stage tests or psychological evaluations. Selected candidates undergo document verification and medical examination before appointment.</p>
-
     <p>The results are made available:</p>
     <ul class="list-disc list-inside mb-4">
-      <li>On the Notice Board of RRB/Chennai</li>
-      <li>Through the Internet website</li>
-      <li>In "The Employment News"</li>
-      <li>To successful candidates via post</li>
+        <li>On the Notice Board of RRB/Chennai</li>
+        <li>Through the Internet website</li>
+        <li>In "The Employment News"</li>
+        <li>To successful candidates via post</li>
     </ul>
-
     <p>The process is based on merit and follows reservation rules. Malpractices are strictly dealt with. Overall policy guidelines are set by the <strong>Railway Recruitment Control Board (RRCB), New Delhi</strong>.</p>
+    <p><br>For more information about the RRCB, <a href="rrcb.html" style="color: #0077c0; text-decoration: underline; font-weight: 600;">click here</a>.</p>
+    `;
 
-    <p class="mt-6">©2013 Railway Recruitment Board Chennai. All Rights Reserved.</p>
-  `;
-
-  const tamilContent = `
+    const tamilContent = `
     <h2 class="text-3xl font-bold text-gray-800 mb-6">எங்களை பற்றி</h2>
     <p><strong>ரெயில்வே ஆட்சேர்ப்பு வாரியம் (RRB), மதராஸ் (தற்போது சென்னை)</strong> இந்திய அரசின் <strong>ரெயில்வே அமைச்சகத்தின்</strong> கீழ் செயல்படுகிறது. இது சென்னை, சேலம், திருச்சி பிரிவுகள் மற்றும் தெற்கு ரெயில்வே தலைமையகம் (SR), இன்டிக்ரல் கோச் தொழிற்சாலை (ICF), சென்னை ஆகியவற்றிற்கு தேவைப்படும் குழு 'C' பணியாளர்களை ஆட்சேர்ப்பு செய்வதற்குப் பொறுப்பாக உள்ளது.</p>
-
     <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">தேர்வு செயல்முறை</h3>
     <p>RRB தகுதியான விண்ணப்பதாரர்களை <strong>"எம்ப்ளாய்மெண்ட் நியூஸ்"</strong> வழியாக அழைக்கிறது. தகுதி சரிபார்க்கப்பட்ட பின், எழுத்துத் தேர்வுக்கான அழைப்பிதழ்கள் அனுப்பப்படும். சில பிரிவுகளில் இரண்டாம் நிலை தேர்வுகள் அல்லது மனப்பரிசோதனைகள் நடைபெறும். தேர்ச்சி பெற்றவர்கள் ஆவணச் சரிபார்ப்பு மற்றும் மருத்துவ பரிசோதனையிற்குப் பின் நியமிக்கப்படுவர்.</p>
-
-    <p>விளைவுகள் கீழ்க்கண்ட வழிகளில் அறிவிக்கப்படுகின்றன:</p>
+    <p>தேர்வு முடிவுகள் கீழ்க்கண்ட வழிகளில் அறிவிக்கப்படுகின்றன:</p>
     <ul class="list-disc list-inside mb-4">
-      <li>RRB/சென்னை அறிவிப்புப் பலகையில்</li>
-      <li>இணையதளத்தின் மூலம்</li>
-      <li>"எம்ப்ளாய்மெண்ட் நியூஸ்" இதழில்</li>
-      <li>தேர்ச்சி பெற்றவர்களுக்கு அஞ்சல் மூலம்</li>
+        <li>RRB/சென்னை அறிவிப்புப் பலகையில்</li>
+        <li>இணையதளத்தின் மூலம்</li>
+        <li>"எம்ப்ளாய்மெண்ட் நியூஸ்" இதழில்</li>
+        <li>தேர்ச்சி பெற்றவர்களுக்கு அஞ்சல் மூலம்</li>
     </ul>
-
     <p>தேர்வு செயல்முறை திறமையின் அடிப்படையில் நடைபெறுகிறது மற்றும் ஒதுக்கீட்டு விதிமுறைகளைப் பின்பற்றுகிறது. தவறுகள் கடுமையாகக் கண்டிக்கப்படுகின்றன. மொத்த வழிகாட்டுதல்கள் <strong>ரெயில்வே ஆட்சேர்ப்பு கட்டுப்பாட்டு வாரியம் (RRCB), நியூ டெல்லி</strong> மூலம் வழங்கப்படுகின்றன.</p>
+    <p><br>RRCB பற்றி மேலும் தெரிந்து கொள்ள, <a href="rrcb.html" style="color: #0077c0; text-decoration: underline; font-weight: 600;">click here</a>.</p>
+    `;
 
-    <p class="mt-6">©2013 ரெயில்வே ஆட்சேர்ப்பு வாரியம் சென்னை. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
-  `;
 
-  const contentSection = document.getElementById("contentSection");
-  const toggleLangBtn = document.getElementById("toggleLangBtn");
-  const toggleLangBtnMobile = document.getElementById("toggleLangBtnMobile");
+    document.getElementById("contentSection").innerHTML = isTamil ? tamilContent : englishContent;
 
-  // Load content based on session storage
-  contentSection.innerHTML = isTamil ? tamilContent : englishContent;
-  toggleLangBtn.textContent = isTamil ? "In English" : "In Tamil";
-  toggleLangBtnMobile.textContent = isTamil ? "In English" : "In Tamil";
-
-  function toggleLanguage() {
-    isTamil = !isTamil;
-    contentSection.innerHTML = isTamil ? tamilContent : englishContent;
-    toggleLangBtn.textContent = isTamil ? "In English" : "In Tamil";
-    toggleLangBtnMobile.textContent = isTamil ? "In English" : "In Tamil";
-
-    // Save selection to session storage
-    sessionStorage.setItem("lang", isTamil ? "ta" : "en");
-  }
-
-  toggleLangBtn.addEventListener("click", toggleLanguage);
-  toggleLangBtnMobile.addEventListener("click", toggleLanguage);
-
-  // Mobile menu toggle
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
   });
-</script>
+  </script>
 
 </body>
 </html>

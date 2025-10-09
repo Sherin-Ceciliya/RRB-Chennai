@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="home.css" />
 </head>
-<body class="bg-gray-100">
+<body>
 
   <!-- Header Section -->
   <header class="custom-header text-white shadow-md">
@@ -16,112 +16,162 @@
       <div class="flex items-center space-x-4">
         <img src="images/railways.png" alt="RRB Logo" class="h-28 w-auto" />
         <div class="leading-tight">
-          <h1 class="text-3xl font-bold">Railway Recruitment Board</h1>
-          <p class="text-xl ml-1">Chennai</p>
+          <h1 id="title-main" class="text-3xl font-bold">Railway Recruitment Board</h1>
+          <p id="title-sub" class="text-xl ml-1">Chennai</p>
         </div>
       </div>
 
       <!-- Navigation Links -->
       <nav class="hidden md:flex space-x-10 text-xl font-semibold">
-        <a href="#" class="nav-link">In Hindi</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="results.html" class="nav-link">Results</a>
-        <a href="recruitment.html" class="nav-link">Recruitments</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a id="nav-home" href="home.html" class="nav-link">Home</a>
+        <a id="nav-about" href="about.html" class="nav-link">About Us</a>
+        <a id="nav-results" href="results.html" class="nav-link">Results</a>
+        <a id="nav-recruitment" href="recruitment.html" class="nav-link">Recruitments</a>
+        <a id="nav-contact" href="contact.html" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
-  
-  <main class="max-w-6xl mx-auto px-4 py-8">
-    <!-- Page Title -->
-    <h2 class="text-3xl font-bold mb-4">Railway Recruitment Control Board</h2>
 
-    <!-- Description -->
-    <p class="mb-4">
-      Railway Recruitment Control Board (RRCB) was set up in 1998 in the Ministry of Railways (Railway Board) with the objectives of:
-    </p>
-    <ul class="list-disc list-inside mb-6">
-      <li>Formulation of policy in regard to recruitment procedures</li>
-      <li>To monitor the activities of all Railway Recruitment Boards (RRBs) including expenditure incurred for recruitment</li>
-      <li>To evaluate the performance of RRBs and advise them on priorities as required</li>
-      <li>To organise a management information system for monitoring work done by RRBs</li>
-    </ul>
+  <main class="max-w-6xl mx-auto px-6 py-10">
+    <div class="section">
+      <h2 id="section-title" class="text-3xl font-bold text-gray-800 mb-10">Railway Recruitment Control Board (RRCB)</h2>
+      <p id="section-desc" class="mb-4 text-gray-700">
+        Railway Recruitment Control Board (RRCB) was set up in 1998 in the Ministry of Railways (Railway Board) with the objectives of:
+      </p>
+      <ul id="section-list" class="list-disc list-inside mb-8 text-gray-700">
+        <li>Formulation of policy in regard to recruitment procedures</li>
+        <li>Monitoring the activities of all Railway Recruitment Boards (RRBs) including recruitment expenditures</li>
+        <li>Evaluation of RRB performance and providing advice on priorities</li>
+        <li>Organising a management information system to monitor work by RRBs</li>
+      </ul>
 
-    <!-- Officials Table -->
-    <h3 class="text-2xl font-semibold mb-2">Officials in ex-officio capacity</h3>
-    <div class="overflow-x-auto mb-6">
-      <table class="min-w-full bg-white border border-gray-300">
-        <thead class="bg-gray-200">
-          <tr>
-            <th class="px-4 py-2 border">Sl. No</th>
-            <th class="px-4 py-2 border">Name</th>
-            <th class="px-4 py-2 border">Designation</th>
-            <th class="px-4 py-2 border">Post Held</th>
-          </tr>
-        </thead>
-        <tbody class="text-gray-700">
-          <tr class="border-t">
-            <td class="px-4 py-2 border">1</td>
-            <td class="px-4 py-2 border">Shri Naveen Gulati</td>
-            <td class="px-4 py-2 border">Director General (Human Resources), Railway Board</td>
-            <td class="px-4 py-2 border">Chairman</td>
-          </tr>
-          <tr class="border-t">
-            <td class="px-4 py-2 border">2</td>
-            <td class="px-4 py-2 border">Smt. Pramila H Bhargava</td>
-            <td class="px-4 py-2 border">Additional Member (Staff), Railway Board</td>
-            <td class="px-4 py-2 border">Member</td>
-          </tr>
-          <tr class="border-t">
-            <td class="px-4 py-2 border">3</td>
-            <td class="px-4 py-2 border">Shri D.K. Singh</td>
-            <td class="px-4 py-2 border">Principal ED (Vigilance), Railway Board</td>
-            <td class="px-4 py-2 border">Member</td>
-          </tr>
-          <tr class="border-t">
-            <td class="px-4 py-2 border">4</td>
-            <td class="px-4 py-2 border">Shri Rajiv Gandhi</td>
-            <td class="px-4 py-2 border">Executive Director Establishment (RRB), Railway Board</td>
-            <td class="px-4 py-2 border">Secretary</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Address -->
-    <div class="mb-6">
-      <h3 class="text-2xl font-semibold mb-2">Address of RRCB</h3>
-      <p>Room No. 457, Rail Bhawan,<br>
-      Raisina Road,<br>
-      New Delhi - 110 001.<br>
-      FAX - 011-3387529<br>
-      E-mail: <a href="mailto:rrcb@example.com" class="text-blue-600 underline">rrcb@example.com</a></p>
-      <p class="mt-2"><a href="https://www.rrbchennai.gov.in" target="_blank" class="text-blue-600 underline">Click here for RRCB website</a></p>
-    </div>
+      <h3 id="officials-title" class="text-2xl font-semibold mb-5">Officials in ex-officio capacity</h3>
+      <div class="overflow-x-auto">
+        <table id="officials-table" class="min-w-full border border-gray-300">
+          <thead style="background-color: #153865; color: white;">
+            <tr>
+              <th class="border border-gray-300 px-4 py-2 text-left">Sl. No</th>
+              <th class="border border-gray-300 px-4 py-2 text-left">Name</th>
+              <th class="border border-gray-300 px-4 py-2 text-left">Designation</th>
+              <th class="border border-gray-300 px-4 py-2 text-left">Post Held</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="even:bg-gray-100">
+              <td class="border border-gray-300 px-4 py-2">1</td>
+              <td class="border border-gray-300 px-4 py-2">Shri Naveen Gulati</td>
+              <td class="border border-gray-300 px-4 py-2">Director General (Human Resources), Railway Board</td>
+              <td class="border border-gray-300 px-4 py-2">Chairman</td>
+            </tr>
+            <tr class="even:bg-gray-100">
+              <td class="border border-gray-300 px-4 py-2">2</td>
+              <td class="border border-gray-300 px-4 py-2">Smt. Pramila H Bhargava</td>
+              <td class="border border-gray-300 px-4 py-2">Additional Member (Staff), Railway Board</td>
+              <td class="border border-gray-300 px-4 py-2">Member</td>
+            </tr>
+            <tr class="even:bg-gray-100">
+              <td class="border border-gray-300 px-4 py-2">3</td>
+              <td class="border border-gray-300 px-4 py-2">Shri D.K. Singh</td>
+              <td class="border border-gray-300 px-4 py-2">Principal ED (Vigilance), Railway Board</td>
+              <td class="border border-gray-300 px-4 py-2">Member</td>
+            </tr>
+            <tr class="even:bg-gray-100">
+              <td class="border border-gray-300 px-4 py-2">4</td>
+              <td class="border border-gray-300 px-4 py-2">Shri Rajiv Gandhi</td>
+              <td class="border border-gray-300 px-4 py-2">Executive Director Establishment (RRB), Railway Board</td>
+              <td class="border border-gray-300 px-4 py-2">Secretary</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
   </main>
 
-  <!-- Footer Section -->
   <footer class="bg-gray-900 text-white py-8 mt-12">
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
-        <h4 class="text-xl font-semibold mb-2">Government of India</h4>
-        <p class="text-sm">Ministry of Railways</p>
-        <p class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+        <h4 id="footer-govt" class="text-xl font-semibold mb-2">Government of India</h4>
+        <p id="footer-ministry" class="text-sm">Ministry of Railways</p>
+        <p id="footer-enquiry" class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
       </div>
       <div class="flex flex-col items-start md:items-end">
-        <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
+        <h4 id="footer-links-title" class="text-xl font-semibold mb-2">Quick Links</h4>
         <ul class="space-y-1 text-sm text-right w-full md:w-auto">
-          <li><a href="#about" class="hover:text-gray-300 transition-colors">About Us</a></li>
-          <li><a href="#results" class="hover:text-gray-300 transition-colors">Results</a></li>
-          <li><a href="#recruitments" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
-          <li><a href="#contact" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
+          <li><a href="#home" class="hover:text-gray-300" id="footer-home">Home</a></li>
+          <li><a href="#about" class="hover:text-gray-300" id="footer-about">About Us</a></li>
+          <li><a href="#results" class="hover:text-gray-300" id="footer-results">Results</a></li>
+          <li><a href="#recruitments" class="hover:text-gray-300" id="footer-recruitments">Recruitments</a></li>
+          <li><a href="#contact" class="hover:text-gray-300" id="footer-contact">Contact Us</a></li>
         </ul>
       </div>
     </div>
-    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
-      © 2023 Railway Recruitment Board Chennai. All Rights Reserved.
+    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400" id="footer-copy">
+      © 2025 Railway Recruitment Board Chennai. All Rights Reserved.
     </div>
   </footer>
+
+  <!-- Language Switch Script -->
+  <script>
+    const lang = sessionStorage.getItem('lang') || 'en';
+
+    if(lang === 'ta') {
+      // Header
+      document.getElementById('title-main').textContent = 'இரயில்வே ஆட்சேர்ப்பு வாரியம்';
+      document.getElementById('title-sub').textContent = 'சென்னை';
+      document.getElementById('nav-home').textContent = 'முகப்பு';
+      document.getElementById('nav-about').textContent = 'எங்களைப் பற்றி';
+      document.getElementById('nav-results').textContent = 'தேர்வு முடிவுகள்';
+      document.getElementById('nav-recruitment').textContent = 'ஆட்சேர்ப்புகள்';
+      document.getElementById('nav-contact').textContent = 'தொடர்பு';
+      
+      // Main content
+      document.getElementById('section-title').textContent = 'இரயில்வே ஆட்சேர்ப்பு கட்டுப்பாட்டு வாரியம் (RRCB)';
+      document.getElementById('section-desc').textContent = 'இரயில்வே ஆட்சேர்ப்பு கட்டுப்பாட்டு வாரியம் (RRCB) 1998 ஆம் ஆண்டு இரயில்வே வாரியத்தில் (Railway Board) நிறுவப்பட்டது, இதன் நோக்கங்கள்:';
+      document.getElementById('section-list').innerHTML = `
+        <li>ஆட்சேர்ப்பு செயல்முறைகள் தொடர்பான கொள்கையை உருவாக்குதல்</li>
+        <li>அனைத்து இரயில்வே ஆட்சேர்ப்பு வாரியங்களின் செயல்பாடுகளை கண்காணித்தல் மற்றும் செலவுகளை பரிசீலித்தல்</li>
+        <li>RRB செயல்திறனை மதிப்பீடு செய்து முன்னுரிமைகளை ஆலோசித்தல்</li>
+        <li>RRBகள் செய்யும் பணியை கண்காணிக்க மேலாண்மை தகவல் அமைப்பை ஏற்படுத்துதல்</li>
+      `;
+      document.getElementById('officials-title').textContent = 'பதவிகளில் அதிகாரப்பூர்வ அதிகாரிகள்';
+      
+      // Table headers & body
+      const table = document.getElementById('officials-table');
+      const headers = table.querySelectorAll('thead th');
+      headers[0].textContent = 'வரிசை எண்';
+      headers[1].textContent = 'பெயர்';
+      headers[2].textContent = 'பதவி';
+      headers[3].textContent = 'பதவி வகை';
+
+      const rows = table.querySelectorAll('tbody tr');
+      rows[0].cells[1].textContent = 'ஸ்ரீ நவீன் குலாதி';
+      rows[0].cells[2].textContent = 'முதன்மை இயக்குநர் (மனித வளம்), இரயில்வே வாரியம்';
+      rows[0].cells[3].textContent = 'தலைவர்';
+
+      rows[1].cells[1].textContent = 'ஸ்ம்ட். பிரமிலா ஹெச் பார்கவா';
+      rows[1].cells[2].textContent = 'கூடுதல் உறுப்பினர் (சட்டம்), இரயில்வே வாரியம்';
+      rows[1].cells[3].textContent = 'உறுப்பினர்';
+
+      rows[2].cells[1].textContent = 'ஸ்ரீ டி. கே. சிங்';
+      rows[2].cells[2].textContent = 'முதன்மை ED (விபரம்), இரயில்வே வாரியம்';
+      rows[2].cells[3].textContent = 'உறுப்பினர்';
+
+      rows[3].cells[1].textContent = 'ஸ்ரீ ராஜீவ் காந்தி';
+      rows[3].cells[2].textContent = 'நிர்வாக இயக்குனர் (RRB), இரயில்வே வாரியம்';
+      rows[3].cells[3].textContent = 'செயலாளர்';
+
+      // Footer
+      document.getElementById('footer-govt').textContent = 'இந்திய அரசு';
+      document.getElementById('footer-ministry').textContent = 'இரயில்வே அமைச்சகம்';
+      document.getElementById('footer-enquiry').innerHTML = 'தகவல் கேட்க: <span class="font-medium">044 - 2827 5323</span>';
+      document.getElementById('footer-links-title').textContent = 'விரைவான இணைப்புகள்';
+      document.getElementById('footer-home').textContent = 'முகப்பு';
+      document.getElementById('footer-about').textContent = 'எங்களைப் பற்றி';
+      document.getElementById('footer-results').textContent = 'தேர்வு முடிவுகள்';
+      document.getElementById('footer-recruitments').textContent = 'ஆட்சேர்ப்புகள்';
+      document.getElementById('footer-contact').textContent = 'தொடர்பு';
+      document.getElementById('footer-copy').textContent = '© 2025 சென்னை இரயில்வே ஆட்சேர்ப்பு வாரியம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.';
+    }
+  </script>
 
 </body>
 </html>

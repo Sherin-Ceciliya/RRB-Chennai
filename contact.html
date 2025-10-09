@@ -21,9 +21,8 @@
         </div>
       </div>
 
-      <!-- Navigation Links for Desktop -->
+      <!-- Navigation Links -->
       <nav id="navbar" class="hidden md:flex space-x-10 text-xl font-semibold">
-        <a href="#" id="tamilBtn" class="nav-link">In Tamil</a>
         <a href="home.html" class="nav-link" id="homeLink">Home</a>
         <a href="about.html" class="nav-link" id="aboutLink">About Us</a>
         <a href="results.html" class="nav-link" id="resultsLink">Results</a>
@@ -44,7 +43,6 @@
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden bg-gray-800 md:hidden px-4 pt-2 pb-4 space-y-2">
-      <a href="#" class="block text-white font-semibold">In Hindi</a>
       <a href="about.html" class="block text-white font-semibold">About Us</a>
       <a href="results.html" class="block text-white font-semibold">Results</a>
       <a href="recruitment.html" class="block text-white font-semibold">Recruitments</a>
@@ -61,7 +59,6 @@
     <!-- Authorities Section -->
     <div class="flex flex-col md:flex-row md:justify-between gap-6 mb-6">
 
-      <!-- Chairman -->
       <div class="flex-1 bg-gray-50 rounded-lg shadow-md p-6 text-center">
           <h3 class="text-xl font-bold mb-1">Ms. Pratibha Devendra Yadav</h3>
           <p class="text-sm text-gray-700 mb-1">अध्यक्ष | தலைவர்</p>
@@ -69,7 +66,6 @@
           <p class="mt-2 text-gray-700 text-sm">Appellate Authority under RTI ACT</p>
       </div>
 
-      <!-- Member Secretary -->
       <div class="flex-1 bg-gray-50 rounded-lg shadow-md p-6 text-center">
           <h3 class="text-xl font-bold mb-1">Shri Keshappa N Negalur</h3>
           <p class="text-sm text-gray-700 mb-1">सदस्य सचिव | உறுப்பினர் செயலாளர்</p>
@@ -77,7 +73,6 @@
           <p class="mt-2 text-gray-700 text-sm">PIO - Public Information Officer under RTI ACT</p>
       </div>
 
-      <!-- Assistant Secretary -->
       <div class="flex-1 bg-gray-50 rounded-lg shadow-md p-6 text-center">
           <h3 class="text-xl font-bold mb-1">Smt. Roja Murali</h3>
           <p class="text-sm text-gray-700 mb-1">सहायक सचिव | உதவி செயலாளர்</p>
@@ -108,40 +103,20 @@
 
     <!-- Address Section -->
     <div class="bg-blue-200 rounded-lg shadow-md p-6 flex flex-col md:flex-row md:justify-between gap-6 text-center md:text-left">
-
-      <!-- Hindi Address -->
       <div class="flex-1">
           <h3 class="bg-blue-900 text-white text-center px-2 py-1 rounded font-semibold mb-2">पता हिंदी में</h3>
-          <p class="text-center md:text-left">
-          रेल भर्ती बोर्ड,<br />
-          5, डॉ.पी.वी. चेरियन क्रसेंट रोड,<br />
-          एग्मोर, चेन्नई - 600 008.<br />
-          भारत
-          </p>
+          <p>रेल भर्ती बोर्ड,<br>5, डॉ.पी.वी. चेरियन क्रसेंट रोड,<br>एग்மோர், चेन्नई - 600 008.<br>भारत</p>
       </div>
 
-      <!-- English Address -->
       <div class="flex-1">
           <h3 class="bg-blue-900 text-white text-center px-2 py-1 rounded font-semibold mb-2">Address in English</h3>
-          <p class="text-center md:text-left">
-          RAILWAY RECRUITMENT BOARD<br />
-          5, Dr. P.V. Cherian Crescent Road,<br />
-          Egmore, CHENNAI - 600 008<br />
-          INDIA
-          </p>
+          <p>RAILWAY RECRUITMENT BOARD<br>5, Dr. P.V. Cherian Crescent Road,<br>Egmore, CHENNAI - 600 008<br>INDIA</p>
       </div>
 
-      <!-- Tamil Address -->
       <div class="flex-1">
           <h3 class="bg-blue-900 text-white text-center px-2 py-1 rounded font-semibold mb-2">முகவரி தமிழில்</h3>
-          <p class="text-center md:text-left">
-          ரயில்வே நியமன வாரியம்,<br />
-          5, டாக்டர் பி.வி. சேரியன் கிரெசன்ட் ரோடு,<br />
-          எக்மோர், சென்னை - 600 008.<br />
-          இந்தியா
-          </p>
+          <p>ரயில்வே நியமன வாரியம்,<br>5, டாக்டர் பி.வி. சேரியன் கிரெசன்ட் ரோடு,<br>எக்மோர், சென்னை - 600 008.<br>இந்தியா</p>
       </div>
-
     </div>
   </section>
 
@@ -168,44 +143,38 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Language Script -->
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    const tamilBtn = document.getElementById('tamilBtn');
 
-    // Mobile menu toggle
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Tamil translation toggle
-    tamilBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-
-      // Change nav items to Tamil
-      document.getElementById('homeLink').textContent = 'முகப்பு';
-      document.getElementById('aboutLink').textContent = 'எங்களை பற்றி';
-      document.getElementById('resultsLink').textContent = 'விளைவுகள்';
-      document.getElementById('recruitLink').textContent = 'பணியமர்த்தல்கள்';
-      document.getElementById('contactLink').textContent = 'தொடர்பு கொள்ள';
-      document.getElementById('contactTitle').textContent = 'எங்களை தொடர்பு கொள்ள';
-      
-      // Change button text back to English
-      tamilBtn.textContent = 'In English';
-
-      // Switch back to English on next click
-      tamilBtn.onclick = (e2) => {
-        e2.preventDefault();
+    function switchLanguage(lang) {
+      if (lang === "ta") {
+        document.getElementById('homeLink').textContent = 'முகப்பு';
+        document.getElementById('aboutLink').textContent = 'எங்களை பற்றி';
+        document.getElementById('resultsLink').textContent = 'விளைவுகள்';
+        document.getElementById('recruitLink').textContent = 'ஆட்சேர்ப்புகள்';
+        document.getElementById('contactLink').textContent = 'தொடர்பு';
+        document.getElementById('contactTitle').textContent = 'தொடர்பு';
+      } else {
         document.getElementById('homeLink').textContent = 'Home';
         document.getElementById('aboutLink').textContent = 'About Us';
         document.getElementById('resultsLink').textContent = 'Results';
         document.getElementById('recruitLink').textContent = 'Recruitments';
         document.getElementById('contactLink').textContent = 'Contact';
         document.getElementById('contactTitle').textContent = 'Contact Us';
-        tamilBtn.textContent = 'In Tamil';
-      };
-    });
+      }
+    }
+
+    // Load and apply language from localStorage
+    window.onload = function() {
+      const lang = sessionStorage.getItem("lang") || "en";
+      switchLanguage(lang);
+    };
   </script>
 
 </body>

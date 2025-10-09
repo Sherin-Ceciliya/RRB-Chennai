@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Written Results — RRB Chennai</title>
+  <title id="page-title">Written Results — RRB Chennai</title>
 
   <!-- Tailwind v2 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
@@ -26,13 +26,10 @@
       line-height: 1.45;
       color: #1f2937;
     }
-
-    /* Header */
     .custom-header { background-color: #003366; }
     .nav-link { color: #fff; }
     .nav-link:hover { color: #a8d0ff; }
 
-    /* Table container */
     .table-container {
       background: white;
       border-radius: 0.5rem;
@@ -40,72 +37,21 @@
       overflow-x: auto;
       border: 1px solid var(--light-border);
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 720px;
-    }
-
+    table { width: 100%; border-collapse: collapse; min-width: 720px; }
     .table-head { background-color: var(--accent); color: white; }
     .table-head th { font-weight: 700; padding: 12px 14px; text-align: left; font-size: 0.95rem; }
-
-    th, td {
-      border-bottom: 1px solid var(--light-border);
-      padding: 12px 14px;
-      vertical-align: top;
-      font-size: 0.95rem;
-    }
+    th, td { border-bottom: 1px solid var(--light-border); padding: 12px 14px; vertical-align: top; font-size: 0.95rem; }
     th:not(:last-child), td:not(:last-child) { border-right: 1px solid #f3f7fb; }
-
     td:first-child { color: #0f172a; font-weight: 600; width: 160px; }
-
     .post-title { font-weight: 600; color: #0f172a; margin-bottom: 6px; font-size: 0.98rem; }
-    .post-desc {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-      line-height: 1.35;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    /* Links column as bullets */
-    .links-wrapper {
-      display: block;
-      padding-left: 18px;
-    }
-    .links-wrapper li {
-      list-style-type: disc;
-      margin-bottom: 4px;
-    }
-    .link-inline {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.9rem;
-      padding: 2px 0;
-    }
-    .link-inline:hover {
-      background: rgba(11,99,167,0.06);
-      transform: translateY(-1px);
-    }
-    .link-icon {
-      width: 14px;
-      height: 14px;
-      display: inline-block;
-      vertical-align: middle;
-    }
-
+    .post-desc { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
+    .links-wrapper { display: block; padding-left: 18px; }
+    .links-wrapper li { list-style-type: disc; margin-bottom: 4px; }
+    .link-inline { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: var(--accent); font-weight: 600; font-size: 0.9rem; padding: 2px 0; }
+    .link-inline:hover { background: rgba(11,99,167,0.06); transform: translateY(-1px); }
+    .link-icon { width: 14px; height: 14px; display: inline-block; vertical-align: middle; }
     tbody tr:hover { background: rgba(13,66,110,0.02); }
-
     #page-description { font-size: 0.95rem; }
-
     @media (max-width: 768px) {
       :root { --body-font-size: 14px; }
       .table-head th, th, td { font-size: 0.85rem; padding: 10px 12px; }
@@ -113,7 +59,6 @@
       td:first-child { width: 120px; }
       .post-desc { -webkit-line-clamp: 2; }
     }
-
     footer { margin-top: auto; }
   </style>
 </head>
@@ -125,17 +70,16 @@
       <div class="flex items-center space-x-4">
         <img src="images/railways.png" alt="RRB Logo" class="h-20 w-auto" />
         <div>
-          <h1 class="text-2xl font-bold">Railway Recruitment Board</h1>
-          <p class="text-lg">Chennai</p>
+          <h1 id="header-title" class="text-2xl font-bold">Railway Recruitment Board</h1>
+          <p id="header-subtitle" class="text-lg">Chennai</p>
         </div>
       </div>
-
       <nav class="hidden md:flex space-x-8 text-lg font-semibold">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="results.html" class="nav-link">Results</a>
-        <a href="recruitment.html" class="nav-link">Recruitments</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="home.html" id="nav-home" class="nav-link">Home</a>
+        <a href="about.html" id="nav-about" class="nav-link">About Us</a>
+        <a href="results.html" id="nav-results" class="nav-link">Results</a>
+        <a href="recruitment.html" id="nav-recruitment" class="nav-link">Recruitments</a>
+        <a href="contact.html" id="nav-contact" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
@@ -144,13 +88,12 @@
     <div class="max-w-7xl mx-auto px-6 py-8">
 
       <div class="mb-4">
-        <h2 class="text-3xl font-extrabold text-blue-800">Written Examination Notices & Results</h2>
+        <h2 id="main-title" class="text-3xl font-extrabold text-blue-800">Written Examination Notices & Results</h2>
         <div class="mt-2 h-0.5 w-full bg-gray-200"></div>
       </div>
 
-      <!-- Description box -->
       <div id="page-description" class="mb-6 bg-white border border-gray-200 rounded-lg shadow-sm p-5 text-gray-700">
-        <p class="italic text-sm text-gray-600">
+        <p class="italic text-sm text-gray-600" id="description-text">
           This page provides the results for various examinations conducted by the board, including both the written examinations and the Computer Based Tests (CBT). Here, candidates can view their scores, check their performance, and analyze their results in a structured and easy-to-read format.
         </p>
       </div>
@@ -159,17 +102,17 @@
       <section class="mb-4 bg-white border border-gray-200 rounded-lg shadow-sm p-4">
         <div class="flex flex-col md:flex-row md:items-end md:space-x-4 space-y-4 md:space-y-0">
           <div class="flex-1">
-            <label class="block text-sm font-medium text-gray-700 mb-1">Filter by CEN No.</label>
+            <label id="label-cen" class="block text-sm font-medium text-gray-700 mb-1">Filter by CEN No.</label>
             <input id="filter-cen" type="text" placeholder="e.g. 01/2018 or CEN_01_2025" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" />
           </div>
 
           <div class="flex-1">
-            <label class="block text-sm font-medium text-gray-700 mb-1">Filter by Category</label>
+            <label id="label-category" class="block text-sm font-medium text-gray-700 mb-1">Filter by Category</label>
             <input id="filter-category" type="text" placeholder='e.g. "1-156" or "01" or "1,2,3"' class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" />
           </div>
 
           <div class="flex-1">
-            <label class="block text-sm font-medium text-gray-700 mb-1">Filter by Post</label>
+            <label id="label-post" class="block text-sm font-medium text-gray-700 mb-1">Filter by Post</label>
             <input id="filter-post" type="text" placeholder="e.g. 'NTPC' or 'Staff Nurse'" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" />
           </div>
 
@@ -179,33 +122,30 @@
         </div>
       </section>
 
-      <!-- Table container -->
+      <!-- Table -->
       <div class="table-container">
         <table id="results-table" class="min-w-full">
           <thead class="table-head">
             <tr>
               <th data-column="cenNo" style="width:160px; cursor:pointer">
                 <div class="flex items-center justify-start">
-                  <span>CEN No.</span>
+                  <span id="th-cen">CEN No.</span>
                   <span class="ml-2 caret" id="caret-cen"></span>
                 </div>
               </th>
-
               <th data-column="category" style="width:180px; cursor:pointer">
                 <div class="flex items-center">
-                  <span>Category</span>
+                  <span id="th-category">Category</span>
                   <span class="ml-2 caret" id="caret-category"></span>
                 </div>
               </th>
-
               <th data-column="post" style="min-width:420px; cursor:pointer">
                 <div class="flex items-center">
-                  <span>Recruitment Role / Description</span>
+                  <span id="th-post">Recruitment Role / Description</span>
                   <span class="ml-2 caret" id="caret-post"></span>
                 </div>
               </th>
-
-              <th style="width:220px; text-align:left">Details</th>
+              <th style="width:220px; text-align:left" id="th-details">Details</th>
             </tr>
           </thead>
 
@@ -223,23 +163,23 @@
   <footer class="bg-gray-900 text-white py-8">
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
-        <h4 class="text-xl font-semibold mb-2">Government of India</h4>
-        <p class="text-sm">Ministry of Railways</p>
-        <p class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+        <h4 id="footer-gov" class="text-xl font-semibold mb-2">Government of India</h4>
+        <p id="footer-ministry" class="text-sm">Ministry of Railways</p>
+        <p class="text-sm mt-1" id="footer-enquiry">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
       </div>
 
       <div class="flex flex-col items-start md:items-end">
-        <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
+        <h4 id="footer-links-title" class="text-xl font-semibold mb-2">Quick Links</h4>
         <ul class="space-y-1 text-sm">
-          <li><a href="about.html" class="hover:text-gray-300 transition-colors">About Us</a></li>
-          <li><a href="results.html" class="hover:text-gray-300 transition-colors">Results</a></li>
-          <li><a href="recruitment.html" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
-          <li><a href="contact.html" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
+          <li><a href="about.html" id="footer-about" class="hover:text-gray-300 transition-colors">About Us</a></li>
+          <li><a href="results.html" id="footer-results" class="hover:text-gray-300 transition-colors">Results</a></li>
+          <li><a href="recruitment.html" id="footer-recruitment" class="hover:text-gray-300 transition-colors">Recruitments</a></li>
+          <li><a href="contact.html" id="footer-contact" class="hover:text-gray-300 transition-colors">Contact Us</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
+    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400" id="footer-copy">
       © 2025 Railway Recruitment Board Chennai. All Rights Reserved.
     </div>
   </footer>
@@ -254,193 +194,210 @@
   let currentSort = { column: 'cenNo', dir: 'asc' };
   let allEntries = [];
 
-  async function fetchJson() {
-    const candidates = ['writtenExam.json', 'written_results.json'];
-    for (let url of candidates) {
-      try {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error('Not found');
-        return await res.json();
-      } catch (e) {}
+  const lang = sessionStorage.getItem('lang') || 'en'; // check session storage
+
+  // Translations
+  const translations = {
+    en: {
+      pageTitle: "Written Results — RRB Chennai",
+      headerTitle: "Railway Recruitment Board",
+      headerSubtitle: "Chennai",
+      navHome: "Home",
+      navAbout: "About Us",
+      navResults: "Results",
+      navRecruitment: "Recruitments",
+      navContact: "Contact",
+      mainTitle: "Written Examination Notices & Results",
+      description: "This page provides the results for various examinations conducted by the board, including both the written examinations and the Computer Based Tests (CBT). Here, candidates can view their scores, check their performance, and analyze their results in a structured and easy-to-read format.",
+      labelCen: "Filter by CEN No.",
+      labelCategory: "Filter by Category",
+      labelPost: "Filter by Post",
+      clearButton: "Clear",
+      thCen: "CEN No.",
+      thCategory: "Category",
+      thPost: "Recruitment Role / Description",
+      thDetails: "Details",
+      footerGov: "Government of India",
+      footerMinistry: "Ministry of Railways",
+      footerEnquiry: "For Enquiry call:",
+      footerLinksTitle: "Quick Links",
+      footerAbout: "About Us",
+      footerResults: "Results",
+      footerRecruitment: "Recruitments",
+      footerContact: "Contact Us",
+      loading: "Loading data…",
+      noRecords: "No records match your filters.",
+      placeholderCen: "e.g. 01/2018 or CEN_01_2025",
+      placeholderCategory: 'e.g. "1-156" or "01" or "1,2,3"',
+      placeholderPost: "e.g. 'NTPC' or 'Staff Nurse'"
+    },
+    ta: {
+      pageTitle: "எழுத்துத்தேர்வு தேர்வு முடிவுகள் — RRB சென்னை",
+      headerTitle: "ரயில்வே தேர்வு வாரியம்",
+      headerSubtitle: "சென்னை",
+      navHome: "முகப்பு",
+      navAbout: "எங்களை பற்றி",
+      navResults: "தேர்வு முடிவுகள்",
+      navRecruitment: "ஆட்சேர்ப்புகள்",
+      navContact: "தொடர்பு",
+      mainTitle: "எழுத்துத்தேர்வு அறிவிப்புகள் மற்றும் தேர்வு முடிவுகள்",
+      description: "இந்தப் பக்கம் வாரியத்தின் நடத்தும் பல தேர்வுகளின் முடிவுகளை வழங்குகிறது, எழுத்துத் தேர்வுகள் மற்றும் கணினி அடிப்படையிலான தேர்வுகள் (CBT) உட்பட. இங்கு விண்ணப்பதாரர்கள் தங்கள் மதிப்பெண்களை பார்க்க, செயல்திறனை சரிபார்க்க மற்றும் முடிவுகளை ஒழுங்குபடுத்தப்பட்ட மற்றும் படிக்க எளிதான வடிவில் பகுப்பாய்வு செய்ய முடியும்.",
+      labelCen: "CEN எண் மூலம் வடிகட்டவும்",
+      labelCategory: "வகை மூலம் வடிகட்டவும்",
+      labelPost: "பணியிடம் மூலம் வடிகட்டவும்",
+      clearButton: "அழி",
+      thCen: "CEN எண்",
+      thCategory: "வகை",
+      thPost: "பணியிடம் / விளக்கம்",
+      thDetails: "விவரங்கள்",
+      footerGov: "இந்திய அரசு",
+      footerMinistry: "ரயில்வே அமைச்சகம்",
+      footerEnquiry: "விசாரணைக்காக அழைக்கவும்:",
+      footerLinksTitle: "வேகமான இணைப்புகள்",
+      footerAbout: "எங்களை பற்றி",
+      footerResults: "தேர்வு முடிவுகள்",
+      footerRecruitment: "ஆட்சேர்ப்புகள்",
+      footerContact: "தொடர்பு",
+      loading: "தரவு ஏற்றுகிறது…",
+      noRecords: "உங்கள் வடிகட்டலுடன் பொருந்தும் பதிவுகள் இல்லை.",
+      placeholderCen: "உதா. 01/2018 அல்லது CEN_01_2025",
+      placeholderCategory: 'உதா. "1-156" அல்லது "01" அல்லது "1,2,3"',
+      placeholderPost: "உதா. 'NTPC' அல்லது 'ஸ்டாஃப் நர்ஸ்'"
     }
-    throw new Error('Could not find JSON file.');
+  };
+
+  function translatePage() {
+    const t = translations[lang];
+
+    document.getElementById('page-title').textContent = t.pageTitle;
+    document.getElementById('header-title').textContent = t.headerTitle;
+    document.getElementById('header-subtitle').textContent = t.headerSubtitle;
+    document.getElementById('nav-home').textContent = t.navHome;
+    document.getElementById('nav-about').textContent = t.navAbout;
+    document.getElementById('nav-results').textContent = t.navResults;
+    document.getElementById('nav-recruitment').textContent = t.navRecruitment;
+    document.getElementById('nav-contact').textContent = t.navContact;
+    document.getElementById('main-title').textContent = t.mainTitle;
+    document.getElementById('description-text').textContent = t.description;
+    document.getElementById('label-cen').textContent = t.labelCen;
+    document.getElementById('label-category').textContent = t.labelCategory;
+    document.getElementById('label-post').textContent = t.labelPost;
+    clearFiltersBtn.textContent = t.clearButton;
+    document.getElementById('th-cen').textContent = t.thCen;
+    document.getElementById('th-category').textContent = t.thCategory;
+    document.getElementById('th-post').textContent = t.thPost;
+    document.getElementById('th-details').textContent = t.thDetails;
+    document.getElementById('footer-gov').textContent = t.footerGov;
+    document.getElementById('footer-ministry').textContent = t.footerMinistry;
+    document.getElementById('footer-enquiry').childNodes[0].textContent = t.footerEnquiry + " ";
+    document.getElementById('footer-links-title').textContent = t.footerLinksTitle;
+    document.getElementById('footer-about').textContent = t.footerAbout;
+    document.getElementById('footer-results').textContent = t.footerResults;
+    document.getElementById('footer-recruitment').textContent = t.footerRecruitment;
+    document.getElementById('footer-contact').textContent = t.footerContact;
+    document.getElementById('filter-cen').placeholder = t.placeholderCen;
+    document.getElementById('filter-category').placeholder = t.placeholderCategory;
+    document.getElementById('filter-post').placeholder = t.placeholderPost;
   }
 
-  function normalizeCell(value) {
-    if (Array.isArray(value)) return value.join(', ');
-    if (!value) return '';
-    return String(value);
+  async function fetchJson() {
+    const fileName = lang === 'en' ? 'writtenExam.json' : 'writtenExam_ta.json';
+    const res = await fetch(fileName);
+    if (!res.ok) throw new Error('Could not load JSON');
+    return await res.json();
   }
 
-  function cmpStr(a, b) {
-    a = a ? a.toLowerCase() : '';
-    b = b ? b.toLowerCase() : '';
-    return a < b ? -1 : a > b ? 1 : 0;
-  }
-
+  function normalizeCell(value) { if (Array.isArray(value)) return value.join(', '); if (!value) return ''; return String(value); }
+  function cmpStr(a, b) { a = a ? a.toLowerCase() : ''; b = b ? b.toLowerCase() : ''; return a < b ? -1 : a > b ? 1 : 0; }
   function sortEntries(entries, column, dir) {
     const d = dir === 'asc' ? 1 : -1;
     return entries.sort((x, y) => {
-      if (column === 'cenNo') {
-        const r = cmpStr(normalizeCell(x.cenNo), normalizeCell(y.cenNo));
-        return r !== 0 ? r * d : cmpStr(normalizeCell(x.category), normalizeCell(y.category)) * d;
-      }
-      if (column === 'category') {
-        const r = cmpStr(normalizeCell(x.category), normalizeCell(y.category));
-        return r !== 0 ? r * d : cmpStr(normalizeCell(x.cenNo), normalizeCell(y.cenNo)) * d;
-      }
-      return cmpStr(normalizeCell(x.post), normalizeCell(y.post)) * d;
+      if (column === 'cenNo') { const r = cmpStr(normalizeCell(x.cenNo), normalizeCell(y.cenNo)); return r!==0?r*d:cmpStr(normalizeCell(x.category), normalizeCell(y.category))*d; }
+      if (column === 'category') { const r = cmpStr(normalizeCell(x.category), normalizeCell(y.category)); return r!==0?r*d:cmpStr(normalizeCell(x.cenNo), normalizeCell(y.cenNo))*d; }
+      return cmpStr(normalizeCell(x.post), normalizeCell(y.post))*d;
     });
   }
 
   function externalIcon() {
-    const ns = 'http://www.w3.org/2000/svg';
-    const svg = document.createElementNS(ns, 'svg');
-    svg.setAttribute('viewBox', '0 0 24 24');
-    svg.setAttribute('class', 'link-icon');
-    svg.setAttribute('aria-hidden', 'true');
-    svg.innerHTML = '<path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h5V3H3v7h2V5zm0 14v-5H3v7a1 1 0 0 0 1 1h7v-2H5z"/>';
+    const ns='http://www.w3.org/2000/svg';
+    const svg=document.createElementNS(ns,'svg');
+    svg.setAttribute('viewBox','0 0 24 24'); svg.setAttribute('class','link-icon'); svg.setAttribute('aria-hidden','true');
+    svg.innerHTML='<path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h5V3H3v7h2V5zm0 14v-5H3v7a1 1 0 0 0 1 1h7v-2H5z"/>';
     return svg;
   }
 
   function makeRow(item) {
-    const tr = document.createElement('tr');
-
-    const tdCen = document.createElement('td');
-    tdCen.className = 'px-6 py-4 text-gray-800';
-    tdCen.textContent = normalizeCell(item.cenNo);
-    tr.appendChild(tdCen);
-
-    const tdCat = document.createElement('td');
-    tdCat.className = 'px-6 py-4 text-gray-700';
-    tdCat.textContent = normalizeCell(item.category);
-    tr.appendChild(tdCat);
-
-    const tdPost = document.createElement('td');
-    tdPost.className = 'px-6 py-4 text-gray-700';
-    tdPost.textContent = item.postTitle || item.post || '';
-    tr.appendChild(tdPost);
-
-    const tdLinks = document.createElement('td');
-    tdLinks.className = 'px-6 py-4 text-left';
-    if (Array.isArray(item.links) && item.links.length > 0) {
-      if (item.links.length > 1) {
-        // Multiple links → bullets
-        const ul = document.createElement('ul');
-        ul.className = 'links-wrapper';
-        item.links.forEach(linkObj => {
-          const li = document.createElement('li');
-          const a = document.createElement('a');
-          a.href = linkObj.url || '#';
-          a.target = '_blank';
-          a.rel = 'noopener noreferrer';
-          a.className = 'link-inline';
-          a.textContent = linkObj.name || 'View';
-          a.appendChild(externalIcon());
-          li.appendChild(a);
-          ul.appendChild(li);
-        });
-        tdLinks.appendChild(ul);
-      } else {
-        // Single link → inline
-        const a = document.createElement('a');
-        const linkObj = item.links[0];
-        a.href = linkObj.url || '#';
-        a.target = '_blank';
-        a.rel = 'noopener noreferrer';
-        a.className = 'link-inline';
-        a.textContent = linkObj.name || 'View';
-        a.appendChild(externalIcon());
-        tdLinks.appendChild(a);
-      }
-    } else {
-      tdLinks.innerHTML = '<span class="text-sm text-gray-400">—</span>';
-    }
-    tr.appendChild(tdLinks);
-
-
-    return tr;
+    const tr=document.createElement('tr');
+    const tdCen=document.createElement('td'); tdCen.className='px-6 py-4 text-gray-800'; tdCen.textContent=normalizeCell(item.cenNo); tr.appendChild(tdCen);
+    const tdCat=document.createElement('td'); tdCat.className='px-6 py-4 text-gray-700'; tdCat.textContent=normalizeCell(item.category); tr.appendChild(tdCat);
+    const tdPost=document.createElement('td'); tdPost.className='px-6 py-4 text-gray-700'; tdPost.textContent=item.postTitle || item.post || ''; tr.appendChild(tdPost);
+    const tdLinks=document.createElement('td'); tdLinks.className='px-6 py-4 text-left';
+    if(Array.isArray(item.links)&&item.links.length>0){
+      if(item.links.length>1){const ul=document.createElement('ul'); ul.className='links-wrapper';
+      item.links.forEach(linkObj=>{const li=document.createElement('li'); const a=document.createElement('a'); a.href=linkObj.url||'#'; a.target='_blank'; a.rel='noopener noreferrer'; a.className='link-inline'; a.textContent=linkObj.name||'View'; a.appendChild(externalIcon()); li.appendChild(a); ul.appendChild(li);}); tdLinks.appendChild(ul);}
+      else {const a=document.createElement('a'); const linkObj=item.links[0]; a.href=linkObj.url||'#'; a.target='_blank'; a.rel='noopener noreferrer'; a.className='link-inline'; a.textContent=linkObj.name||'View'; a.appendChild(externalIcon()); tdLinks.appendChild(a);}
+    } else { tdLinks.innerHTML='<span class="text-sm text-gray-400">—</span>'; }
+    tr.appendChild(tdLinks); return tr;
   }
 
   function renderTable() {
-    const cenFilter = filterCen.value.trim().toLowerCase();
-    const catFilter = filterCategory.value.trim().toLowerCase();
-    const postFilter = filterPost.value.trim().toLowerCase();
-
-    let filtered = allEntries.filter(item => {
-      const cen = normalizeCell(item.cenNo).toLowerCase();
-      const cat = normalizeCell(item.category).toLowerCase();
-      const post = normalizeCell(item.post || item.postTitle).toLowerCase();
-
-      if (cenFilter && !cen.includes(cenFilter)) return false;
-      if (catFilter && !cat.includes(catFilter)) return false;
-      if (postFilter && !post.includes(postFilter)) return false;
+    const cenFilter=filterCen.value.trim().toLowerCase();
+    const catFilter=filterCategory.value.trim().toLowerCase();
+    const postFilter=filterPost.value.trim().toLowerCase();
+    let filtered=allEntries.filter(item=>{
+      const cen=normalizeCell(item.cenNo).toLowerCase();
+      const cat=normalizeCell(item.category).toLowerCase();
+      const post=normalizeCell(item.post || item.postTitle).toLowerCase();
+      if(cenFilter&&!cen.includes(cenFilter))return false;
+      if(catFilter&&!cat.includes(catFilter))return false;
+      if(postFilter&&!post.includes(postFilter))return false;
       return true;
     });
-
-    filtered = sortEntries(filtered, currentSort.column, currentSort.dir);
-    tbody.innerHTML = '';
-    if (!filtered.length) {
-      tbody.innerHTML = '<tr><td colspan="4" class="px-6 py-6 text-center text-gray-500">No records match your filters.</td></tr>';
+    filtered=sortEntries(filtered,currentSort.column,currentSort.dir);
+    tbody.innerHTML='';
+    if(!filtered.length){
+      tbody.innerHTML=`<tr><td colspan="4" class="px-6 py-6 text-center text-gray-500">${translations[lang].noRecords}</td></tr>`;
       return;
     }
-    filtered.forEach(item => tbody.appendChild(makeRow(item)));
+    filtered.forEach(item=>tbody.appendChild(makeRow(item)));
   }
 
-  function updateCarets() {
-    const map = { cenNo: 'caret-cen', category: 'caret-category', post: 'caret-post' };
-    for (const col of ['cenNo', 'category', 'post']) {
-      const el = document.getElementById(map[col]);
-      if (!el) continue;
-      el.textContent = (currentSort.column === col) ? (currentSort.dir === 'asc' ? '▲' : '▼') : '';
+  function updateCarets(){
+    const map={cenNo:'caret-cen', category:'caret-category', post:'caret-post'};
+    for(const col of ['cenNo','category','post']){
+      const el=document.getElementById(map[col]);
+      if(!el)continue;
+      el.textContent=(currentSort.column===col)?(currentSort.dir==='asc'?'▲':'▼'):'';
     }
   }
 
-  function initSorting() {
-    const ths = document.querySelectorAll('thead th[data-column]');
-    ths.forEach(th => {
-      th.addEventListener('click', () => {
-        const col = th.getAttribute('data-column');
-        if (currentSort.column === col) {
-          currentSort.dir = currentSort.dir === 'asc' ? 'desc' : 'asc';
-        } else {
-          currentSort.column = col;
-          currentSort.dir = 'asc';
-        }
-        updateCarets();
-        renderTable();
+  function initSorting(){
+    const ths=document.querySelectorAll('thead th[data-column]');
+    ths.forEach(th=>{
+      th.addEventListener('click',()=>{
+        const col=th.getAttribute('data-column');
+        if(currentSort.column===col){currentSort.dir=currentSort.dir==='asc'?'desc':'asc';}
+        else{currentSort.column=col; currentSort.dir='asc';}
+        updateCarets(); renderTable();
       });
     });
   }
 
-  function initFilters() {
-    [filterCen, filterCategory, filterPost].forEach(inp => inp.addEventListener('input', renderTable));
-    clearFiltersBtn.addEventListener('click', () => {
-      filterCen.value = '';
-      filterCategory.value = '';
-      filterPost.value = '';
-      renderTable();
-    });
+  function initFilters(){
+    [filterCen,filterCategory,filterPost].forEach(inp=>inp.addEventListener('input',renderTable));
+    clearFiltersBtn.addEventListener('click',()=>{filterCen.value='';filterCategory.value='';filterPost.value='';renderTable();});
   }
 
-  async function bootstrap() {
+  async function bootstrap(){
     try {
-      const json = await fetchJson();
-      allEntries = Array.isArray(json) ? json : (json.entries || []);
-      allEntries = allEntries.map(e => ({
-        cenNo: e.cenNo || '',
-        category: e.category || '',
-        post: e.post || e.postTitle || '',
-        postTitle: e.postTitle || '',
-        links: e.links || []
-      }));
-      currentSort = { column: 'cenNo', dir: 'asc' };
-      updateCarets();
-      initSorting();
-      initFilters();
-      renderTable();
-    } catch (err) {
-      tbody.innerHTML = `<tr><td colspan="4" class="px-6 py-8 text-center text-gray-400">Failed to load data: ${err.message}</td></tr>`;
+      translatePage();
+      const json=await fetchJson();
+      allEntries=Array.isArray(json)?json:(json.entries||[]);
+      allEntries=allEntries.map(e=>({cenNo:e.cenNo||'', category:e.category||'', post:e.post||e.postTitle||'', postTitle:e.postTitle||'', links:e.links||[]}));
+      currentSort={column:'cenNo', dir:'asc'};
+      updateCarets(); initSorting(); initFilters(); renderTable();
+    } catch(err){
+      tbody.innerHTML=`<tr><td colspan="4" class="px-6 py-8 text-center text-gray-400">Failed to load data: ${err.message}</td></tr>`;
     }
   }
 

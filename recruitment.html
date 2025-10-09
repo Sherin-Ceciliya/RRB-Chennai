@@ -44,68 +44,13 @@
         <p class="text-xl ml-1" id="headerSubtitle">Chennai</p>
       </div>
     </div>
-<<<<<<< HEAD
     <nav class="hidden md:flex space-x-10 text-xl font-semibold">
-      <a href="#" id="langToggle" class="nav-link">In Tamil</a>
       <a href="home.html" class="nav-link" id="navHome">Home</a>
       <a href="about.html" class="nav-link" id="navAbout">About Us</a>
       <a href="results.html" class="nav-link" id="navResults">Results</a>
       <a href="recruitment.html" class="nav-link" id="navRecruitments">Recruitments</a>
       <a href="contact.html" class="nav-link" id="navContact">Contact</a>
     </nav>
-=======
-  </header>
-
-  <div class="container">
-    <section class="section">
-      <h2>Welcome to the Recruitment Portal</h2>
-      <p>
-        This portal provides all the latest updates regarding recruitments conducted by the Railway Recruitment Board (RRB), Chennai.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>Recruitment Rules</h2>
-      <div class="rules-box">
-        All appointments made through this board will strictly adhere to the guidelines laid down by the Ministry of Railways.
-      </div>
-      <div class="rules-grid">
-        <a href="./resources/results.pdf">General Instructions</a>
-        <a href="./resources/results.pdf">Serving Employees</a>
-        <a href="./resources/results.pdf">Age Relaxation</a>
-        <a href="./resources/results.pdf">Miscellaneous</a>
-        <a href="./resources/results.pdf">Examination Fees</a>
-        <a href="./resources/results.pdf">Impersonation Supression of Facts</a>
-        <a href="./resources/results.pdf">Community Reservation</a>
-        <a href="./resources/results.pdf">Facilities for SC / ST Candidates</a>
-        <a href="./resources/results.pdf">Recruitment Process</a>
-        <a href="./resources/results.pdf">Warning</a>
-        <a href="./resources/results.pdf">Medical Standard</a>
-        <a href="./resources/results.pdf">Frequently Committed Mistakes</a>
-        <a href="./resources/results.pdf">Ex-serviceman & Persons With Disabilities</a>
-        <a href="archives.html">Archives</a>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Current Openings</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>CEN No.</th>
-            <th>Recruitment Role</th>
-            <th>Opening Date</th>
-            <th>Closing Date</th>
-            <th>Status</th>
-            <th>Details</th>
-          </tr>
-        </thead>
-        <tbody id="recruitment-body">
-          <!-- Rows will be populated dynamically -->
-        </tbody>
-      </table>
-    </section>
->>>>>>> 0cdbab0736ffcdca5d38740c4d467f682f79e29f
   </div>
 </header>
 
@@ -132,6 +77,7 @@
       <a href="./resources/results.pdf">Medical Standard</a>
       <a href="./resources/results.pdf">Frequently Committed Mistakes</a>
       <a href="./resources/results.pdf">Ex-serviceman & Persons With Disabilities</a>
+      <a href="./archives.html">Archives</a>
     </div>
   </section>
 
@@ -174,12 +120,11 @@
 </footer>
 
 <script>
-let tamilMode = false;
-
+// 🔹 Static texts for English and Tamil
 const staticText = {
   en: {
     headerTitle:"Railway Recruitment Board",headerSubtitle:"Chennai",navHome:"Home",navAbout:"About Us",
-    navResults:"Results",navRecruitments:"Recruitments",navContact:"Contact",langToggle:"In Tamil",
+    navResults:"Results",navRecruitments:"Recruitments",navContact:"Contact",
     welcomeTitle:"Welcome to the Recruitment Portal",welcomeText:"This portal provides all the latest updates regarding recruitments conducted by the Railway Recruitment Board (RRB), Chennai.",
     rulesTitle:"Recruitment Rules",rulesBox:"All appointments made through this board will strictly adhere to the guidelines laid down by the Ministry of Railways.",
     openingsTitle:"Current Openings",colCEN:"CEN No.",colRole:"Recruitment Role",colOpenDate:"Opening Date",
@@ -190,23 +135,32 @@ const staticText = {
   },
   ta: {
     headerTitle:"ரயில்வே ஆட்சேர்ப்பு வாரியம்",headerSubtitle:"சென்னை",navHome:"முகப்பு",navAbout:"எங்களை பற்றி",
-    navResults:"விளைவுகள்",navRecruitments:"ஆட்சேர்ப்புகள்",navContact:"தொடர்பு கொள்ள",langToggle:"In English",
+    navResults:"தேர்வு முடிவுகள்",navRecruitments:"ஆட்சேர்ப்புகள்",navContact:"தொடர்பு",
     welcomeTitle:"ஆட்சேர்ப்பு தளத்திற்கு வரவேற்கிறோம்",welcomeText:"இந்த தளம் சென்னை ரயில்வே ஆட்சேர்ப்பு வாரியத்தால் நடத்தப்படும் அனைத்து ஆட்சேர்ப்புகளின் சமீபத்திய தகவல்களையும் வழங்குகிறது.",
     rulesTitle:"ஆட்சேர்ப்பு விதிகள்",rulesBox:"இந்த வாரியத்தின் மூலம் செய்யப்பட்ட அனைத்து நியமனங்களும் ரயில்வே அமைச்சகம் வகுத்த வழிகாட்டுதல்களைக் கடைப்பிடிக்கும்.",
     openingsTitle:"தற்போதைய திறந்த பணியிடங்கள்",colCEN:"CEN எண்",colRole:"ஆட்சேர்ப்பு பணி",colOpenDate:"திறப்பு தேதி",
     colCloseDate:"மூடும் தேதி",colStatus:"நிலை",colDetails:"விவரங்கள்",footerGov:"இந்திய அரசு",footerMinistry:"ரயில்வே அமைச்சகம்",
     footerEnquiry:"விசாரணைக்கு அழைக்கவும்: 044 - 2827 5323",footerQuick:"விரைவு இணைப்புகள்",quickAbout:"எங்களை பற்றி",
-    quickResults:"விளைவுகள்",quickRecruitments:"ஆட்சேர்ப்புகள்",quickContact:"தொடர்பு கொள்ள",
+    quickResults:"தேர்வு முடிவுகள்",quickRecruitments:"ஆட்சேர்ப்புகள்",quickContact:"தொடர்பு",
     footerCopy:"© 2022 ரயில்வே ஆட்சேர்ப்பு வாரியம் சென்னை. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
-    open:"திறந்தது",closed:"மூடப்பட்டது",upcoming:"வரவிருக்கும்",view:"பார்வையிடு"
+    open:"திறந்துள்ளது",closed:"மூடப்பட்டுவிட்டது",upcoming:"விரைவில்",view:"பார்வையிடு"
   }
 };
 
+// 🔹 Rule links for both languages
 const ruleLinks = {
-  en:["General Instructions","Serving Employees","Age Relaxation","Miscellaneous","Examination Fees","Impersonation Supression of Facts","Community Reservation","Facilities for SC / ST Candidates","Recruitment Process","Warning","Medical Standard","Frequently Committed Mistakes","Ex-serviceman & Persons With Disabilities"],
-  ta:["பொது வழிமுறைகள்","பணியாற்றும் ஊழியர்கள்","வயது தளர்வு","பலவகை","தேர்வு கட்டணம்","நபர் பெயர் மோசடி","சமூக ஒதுக்கீடு","SC / ST வேட்பாளர்களுக்கான வசதிகள்","ஆட்சேர்ப்பு செயல்முறை","எச்சரிக்கை","மருத்துவ தரம்","அடிக்கடி ஏற்படும் பிழைகள்","முன்னாள் வீரர்கள் & மாற்றுத்திறனாளிகள்"]
+  en:["General Instructions","Serving Employees","Age Relaxation","Miscellaneous","Examination Fees","Impersonation Supression of Facts","Community Reservation","Facilities for SC / ST Candidates","Recruitment Process","Warning","Medical Standard","Frequently Committed Mistakes","Ex-serviceman & Persons With Disabilities","Archives"],
+  ta:["பொது வழிமுறைகள்","பணியாற்றும் ஊழியர்கள்","வயது தளர்வு","பலவகை","தேர்வு கட்டணம்","நபர் பெயர் மோசடி","சமூக ஒதுக்கீடு","SC / ST வேட்பாளர்களுக்கான வசதிகள்","ஆட்சேர்ப்பு செயல்முறை","எச்சரிக்கை","மருத்துவ தரம்","அடிக்கடி ஏற்படும் பிழைகள்","முன்னாள் வீரர்கள் & மாற்றுத்திறனாளிகள்","ஆவணக் காப்பகம்"]
 };
 
+// 🔹 Tamil & English month mapping
+const monthMap = {
+  jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11,
+  "ஜனவரி":0,"பிப்ரவரி":1,"மார்ச்":2,"ஏப்ரல்":3,"மே":4,"ஜூன்":5,"ஜூலை":6,"ஆகஸ்ட்":7,
+  "செப்டம்பர்":8,"அக்டோபர்":9,"நவம்பர்":10,"டிசம்பர்":11
+};
+
+// 🔹 Apply static texts to page
 function applyStaticTexts(lang) {
   const map = staticText[lang];
   for (const id in map) {
@@ -217,53 +171,99 @@ function applyStaticTexts(lang) {
   anchors.forEach((a,i)=>{ if(ruleLinks[lang]&&ruleLinks[lang][i]) a.innerText=ruleLinks[lang][i]; });
 }
 
+// 🔹 Parse date strings including Tamil months
 function parseDateString(str) {
-  if(!str || typeof str!=="string") return null;
-  const parts = str.split("-");
-  if(parts.length!==3){ const d=new Date(str); return isNaN(d)?null:new Date(d.getFullYear(),d.getMonth(),d.getDate()); }
-  const day=parseInt(parts[0],10); const monthRaw=parts[1].trim(); const year=parseInt(parts[2],10);
-  const mKey=monthRaw.toLowerCase().slice(0,3); const months={jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
-  const mIndex=months[mKey]; if(typeof mIndex==="undefined" || isNaN(day) || isNaN(year)) return null;
-  return new Date(year,mIndex,day);
+  if(!str || typeof str !== "string") return null;
+  str = str.trim();
+  const match = str.match(/^(\d{1,2})[-\/ ](.+)[-\/ ](\d{4})$/);
+  if(match) {
+    const day = parseInt(match[1],10);
+    const monthRaw = match[2].trim();
+    const year = parseInt(match[3],10);
+    const month = monthMap[monthRaw];
+    if(!isNaN(day) && !isNaN(year) && month !== undefined){
+      return new Date(year, month, day);
+    }
+  }
+  const d = new Date(str);
+  return isNaN(d)?null:new Date(d.getFullYear(), d.getMonth(), d.getDate());
 }
 
-function normalizeToDateOnly(d){ if(!d||!(d instanceof Date)||isNaN(d)) return null; return new Date(d.getFullYear(),d.getMonth(),d.getDate()); }
+// 🔹 Normalize date to YYYY-MM-DD
+function normalizeDate(d) {
+  return d instanceof Date && !isNaN(d) ? new Date(d.getFullYear(), d.getMonth(), d.getDate()) : null;
+}
 
-async function loadRecruitmentData(file){
-  const tbody=document.getElementById("recruitment-body"); tbody.innerHTML="";
-  const today=normalizeToDateOnly(new Date());
-  try{
-    const response=await fetch(file,{cache:"no-store"}); if(!response.ok) throw new Error("HTTP "+response.status);
-    const data=await response.json(); const keys=Object.keys(data);
-    if(keys.length===0){ tbody.innerHTML=`<tr><td colspan="6">No recruitment data available.</td></tr>`; return; }
+// 🔹 Determine recruitment status
+function getStatus(opening, closing) {
+  const today = normalizeDate(new Date());
+  const openDate = normalizeDate(opening);
+  const closeDate = normalizeDate(closing);
+
+  if (openDate && closeDate) {
+    if (today < openDate) return "upcoming";
+    if (today > closeDate) return "closed";
+    return "open";
+  } else if (openDate && !closeDate) {
+    return today < openDate ? "upcoming" : "open";
+  } else if (!openDate && closeDate) {
+    return today > closeDate ? "closed" : "open";
+  } else {
+    return "closed";
+  }
+}
+
+// 🔹 Escape HTML for safe rendering
+function escapeHtml(str){ 
+  if(typeof str!=="string") return str===null||str===undefined?"":str.toString(); 
+  return str.replace(/[&<>"']/g,function(m){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]);}); 
+}
+
+// 🔹 Load recruitment data and render table
+async function loadRecruitmentData(file, lang){
+  const tbody = document.getElementById("recruitment-body");
+  tbody.innerHTML = "";
+  try {
+    const response = await fetch(file,{cache:"no-store"});
+    if(!response.ok) throw new Error("HTTP "+response.status);
+    const data = await response.json();
+    const keys = Object.keys(data);
+    if(keys.length === 0){ tbody.innerHTML=`<tr><td colspan="6">No recruitment data available.</td></tr>`; return; }
+
     keys.forEach(key=>{
-      const record=data[key]; const openDate=parseDateString(record.opening_date); const closeDate=parseDateString(record.closing_date);
-      let statusKey="closed";
-      if(openDate && closeDate){
-        const nOpen=normalizeToDateOnly(openDate); const nClose=normalizeToDateOnly(closeDate);
-        if(today<nOpen) statusKey="upcoming"; else if(today>nClose) statusKey="closed"; else statusKey="open";
-      } else if(openDate && !closeDate){ const nOpen=normalizeToDateOnly(openDate); statusKey=(today<nOpen)?"upcoming":"open"; }
-      else if(!openDate && closeDate){ const nClose=normalizeToDateOnly(closeDate); statusKey=(today>nClose)?"closed":"open"; }
-      else{ const r=(record.status||"").toString().toLowerCase(); if(r.includes("open")) statusKey="open"; else if(r.includes("upcom")) statusKey="upcoming"; else statusKey="closed"; }
-      const displayStatus=tamilMode?staticText.ta[statusKey]:staticText.en[statusKey];
-      let statusClass="status-closed"; if(statusKey==="open") statusClass="status-open"; else if(statusKey==="upcoming") statusClass="status-upcoming";
-      const titleText=record.title||""; const viewLabel=tamilMode?staticText.ta.view:staticText.en.view;
-      const tr=document.createElement("tr");
-      tr.innerHTML=`<td>${key}</td><td>${escapeHtml(titleText)}</td><td>${escapeHtml(record.opening_date||"")}</td><td>${escapeHtml(record.closing_date||"")}</td><td class="${statusClass}">${escapeHtml(displayStatus)}</td><td><a class="btn" href="recruitment_details.html?cen=${encodeURIComponent(key)}">${escapeHtml(viewLabel)}</a></td>`;
+      const record = data[key];
+      const openDate = parseDateString(record.opening_date);
+      const closeDate = parseDateString(record.closing_date);
+      const statusKey = getStatus(openDate, closeDate);
+      const displayStatus = staticText[lang][statusKey];
+      let statusClass="status-closed"; 
+      if(statusKey==="open") statusClass="status-open"; 
+      else if(statusKey==="upcoming") statusClass="status-upcoming";
+
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td>${key}</td>
+                      <td>${escapeHtml(record.title||"")}</td>
+                      <td>${escapeHtml(record.opening_date||"")}</td>
+                      <td>${escapeHtml(record.closing_date||"")}</td>
+                      <td class="${statusClass}">${escapeHtml(displayStatus)}</td>
+                      <td><a class="btn" href="recruitment_details.html?cen=${encodeURIComponent(key)}">${escapeHtml(staticText[lang].view)}</a></td>`;
       tbody.appendChild(tr);
     });
-  }catch(err){ console.error("Error loading recruitment data:",err); tbody.innerHTML=`<tr><td colspan="6">Failed to load recruitment data.</td></tr>`; }
+
+  } catch(err){
+    console.error("Error loading recruitment data:",err);
+    tbody.innerHTML=`<tr><td colspan="6">Failed to load recruitment data.</td></tr>`;
+  }
 }
 
-function escapeHtml(str){ if(typeof str!=="string") return str===null||str===undefined?"":str.toString(); return str.replace(/[&<>"']/g,function(m){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]);}); }
-
-document.getElementById("langToggle").addEventListener("click",(e)=>{
-  e.preventDefault(); tamilMode=!tamilMode; if(tamilMode){ applyStaticTexts('ta'); loadRecruitmentData("./database_ta.json"); }
-  else{ applyStaticTexts('en'); loadRecruitmentData("./database.json"); }
+// 🔹 Initialize page
+document.addEventListener("DOMContentLoaded",()=>{
+  const lang = sessionStorage.getItem("lang") || "en";
+  applyStaticTexts(lang);
+  loadRecruitmentData(lang==="ta"?"./database_ta.json":"./database.json", lang);
 });
-
-document.addEventListener("DOMContentLoaded",()=>{ applyStaticTexts('en'); loadRecruitmentData("./database.json"); });
 </script>
+
 
 </body>
 </html>

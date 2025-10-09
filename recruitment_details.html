@@ -20,6 +20,18 @@
     .btn-link { color: #0077c0; font-weight: bold; }
     .btn-link:hover { text-decoration: underline; }
     .custom-header { background-color: #153865; }
+      .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 16px;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 640px) {
+    .info-grid {
+      grid-template-columns: 1fr; /* stack on small screens */
+    }
+  }
   </style>
 </head>
 <body class="bg-gray-100">
@@ -30,16 +42,16 @@
       <div class="flex items-center space-x-4">
         <img src="images/railways.png" alt="RRB Logo" class="h-28 w-auto" />
         <div class="leading-tight">
-          <h1 class="text-3xl font-bold">Railway Recruitment Board</h1>
-          <p class="text-xl ml-1">Chennai</p>
+          <h1 id="header-title" class="text-3xl font-bold"></h1>
+          <p id="header-subtitle" class="text-xl ml-1"></p>
         </div>
       </div>
       <nav class="hidden md:flex space-x-10 text-xl font-semibold">
-        <a href="home.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="results.html" class="nav-link">Results</a>
-        <a href="recruitment.html" class="nav-link">Recruitments</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a id="nav-home" href="home.html" class="nav-link"></a>
+        <a id="nav-about" href="about.html" class="nav-link"></a>
+        <a id="nav-results" href="results.html" class="nav-link"></a>
+        <a id="nav-recruitments" href="recruitment.html" class="nav-link"></a>
+        <a id="nav-contact" href="contact.html" class="nav-link"></a>
       </nav>
     </div>
   </header>
@@ -47,53 +59,24 @@
   <!-- Main -->
   <div class="container">
     <div class="section" id="recruitment-info">
-      <h2 id="rec-title"></h2>
+      <h2 id="rec-title" class="text-xl mb-7 font-semibold"></h2>
       <div class="info-grid">
-        <div class="info-item"><strong>Opening Date</strong><span id="opening-date"></span></div>
-        <div class="info-item"><strong>Closing Date</strong><span id="closing-date"></span></div>
-        <div class="info-item"><strong>Last Updated</strong><span id="last-updated"></span></div>
-        <div class="info-item"><strong>Status</strong><span id="status" style="font-weight:bold;"></span></div>
+        <div class="info-item"><strong id="label-opening-date"></strong><span id="opening-date"></span></div>
+        <div class="info-item"><strong id="label-closing-date"></strong><span id="closing-date"></span></div>
+        <div class="info-item"><strong id="label-last-updated"></strong><span id="last-updated"></span></div>
+        <div class="info-item"><strong id="label-status"></strong><span id="status" style="font-weight:bold;"></span></div>
       </div>
 
-      <style>
-        .info-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr); /* 2 columns */
-          gap: 16px;
-          margin-top: 10px;
-        }
-
-        @media (max-width: 640px) {
-          .info-grid {
-            grid-template-columns: 1fr; /* stack on small screens */
-          }
-        }
-
-        .info-item {
-          background: #eef5fb;
-          padding: 12px 16px;
-          border-radius: 4px;
-          font-size: 0.95rem;
-        }
-
-        .info-item strong {
-          display: block;
-          font-size: 0.85rem;
-          color: #444;
-          margin-bottom: 4px;
-        }
-      </style>
-
-      <div class="description mt-4">
+      <div class="description mt-8">
         <p id="description"></p>
       </div>
     </div>
 
     <div class="section">
-      <h2>Bulletin Board</h2>
+      <h2 id="bulletin-title"></h2>
       <table class="bulletin">
         <thead>
-          <tr><th>Title</th><th>Uploaded On</th><th>Link</th></tr>
+          <tr><th id="bulletin-th-title"></th><th id="bulletin-th-date"></th><th id="bulletin-th-link"></th></tr>
         </thead>
         <tbody id="bulletin-body"></tbody>
       </table>
@@ -103,100 +86,153 @@
   <footer class="bg-gray-900 text-white py-8 mt-12">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
-        <h4 class="text-xl font-semibold mb-2">Government of India</h4>
-        <p class="text-sm">Ministry of Railways</p>
-        <p class="text-sm mt-1">For Enquiry call: <span class="font-medium">044 - 2827 5323</span></p>
+        <h4 id="footer-gov" class="text-xl font-semibold mb-2"></h4>
+        <p id="footer-ministry" class="text-sm"></p>
+        <p id="footer-enquiry" class="text-sm mt-1"></p>
       </div>
       <div class="flex flex-col items-start md:items-end">
-        <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
+        <h4 id="footer-quick" class="text-xl font-semibold mb-2"></h4>
         <ul class="space-y-1 text-sm text-right w-full md:w-auto">
-          <li><a href="#about" class="hover:text-gray-300">About Us</a></li>
-          <li><a href="#results" class="hover:text-gray-300">Results</a></li>
-          <li><a href="#recruitments" class="hover:text-gray-300">Recruitments</a></li>
-          <li><a href="#contact" class="hover:text-gray-300">Contact Us</a></li>
+          <li><a id="quick-about" href="#about" class="hover:text-gray-300"></a></li>
+          <li><a id="quick-results" href="#results" class="hover:text-gray-300"></a></li>
+          <li><a id="quick-recruitments" href="#recruitments" class="hover:text-gray-300"></a></li>
+          <li><a id="quick-contact" href="#contact" class="hover:text-gray-300"></a></li>
         </ul>
       </div>
     </div>
-    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
-      © 2025 Railway Recruitment Board Chennai. All Rights Reserved.
-    </div>
+    <div id="footer-copy" class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400"></div>
   </footer>
 
-  <!-- Script to Load JSON -->
+  <!-- Script to Load JSON and Handle Multi-language -->
   <script>
-    // Get the CEN number from URL, e.g., ?cen=CEN_02_2025
+    const texts = {
+      en: {
+        headerTitle:"Railway Recruitment Board", headerSubtitle:"Chennai",
+        navHome:"Home", navAbout:"About Us", navResults:"Results", navRecruitments:"Recruitments", navContact:"Contact",
+        labelOpeningDate:"Opening Date", labelClosingDate:"Closing Date", labelLastUpdated:"Last Updated", labelStatus:"Status",
+        bulletinTitle:"Bulletin Board", thTitle:"Title", thDate:"Uploaded On", thLink:"Link",
+        footerGov:"Government of India", footerMinistry:"Ministry of Railways", footerEnquiry:"For Enquiry call: 044 - 2827 5323",
+        footerQuick:"Quick Links", quickAbout:"About Us", quickResults:"Results", quickRecruitments:"Recruitments", quickContact:"Contact Us",
+        statusOpen:"Open", statusClosed:"Closed", statusUpcoming:"Upcoming", view:"View"
+      },
+      ta: {
+        headerTitle:"ரயில்வே ஆட்சேர்ப்பு வாரியம்", headerSubtitle:"சென்னை",
+        navHome:"முகப்பு", navAbout:"எங்களை பற்றி", navResults:"தேர்வு முடிவுகள்", navRecruitments:"ஆட்சேர்ப்புகள்", navContact:"தொடர்பு",
+        labelOpeningDate:"திறப்பு தேதி", labelClosingDate:"மூடும் தேதி", labelLastUpdated:"சமீபத்திய புதுப்பிப்பு", labelStatus:"நிலை",
+        bulletinTitle:"அறிவிப்பு பலகை", thTitle:"தலைப்பு", thDate:"பதிவேற்றிய தேதி", thLink:"இணைப்பு",
+        footerGov:"இந்திய அரசு", footerMinistry:"ரயில்வே அமைச்சகம்", footerEnquiry:"விசாரணைக்கு அழைக்கவும்: 044 - 2827 5323",
+        footerQuick:"விரைவு இணைப்புகள்", quickAbout:"எங்களை பற்றி", quickResults:"தேர்வு முடிவுகள்", quickRecruitments:"ஆட்சேர்ப்புகள்", quickContact:"தொடர்பு",
+        statusOpen:"திறந்தது", statusClosed:"மூடப்பட்டது", statusUpcoming:"வரவிருக்கும்", view:"பார்வையிடு"
+      }
+    };
+
+    function applyTexts(lang) {
+      const t = texts[lang] || texts.en;
+      document.getElementById("header-title").textContent = t.headerTitle;
+      document.getElementById("header-subtitle").textContent = t.headerSubtitle;
+      document.getElementById("nav-home").textContent = t.navHome;
+      document.getElementById("nav-about").textContent = t.navAbout;
+      document.getElementById("nav-results").textContent = t.navResults;
+      document.getElementById("nav-recruitments").textContent = t.navRecruitments;
+      document.getElementById("nav-contact").textContent = t.navContact;
+
+      document.getElementById("label-opening-date").textContent = t.labelOpeningDate;
+      document.getElementById("label-closing-date").textContent = t.labelClosingDate;
+      document.getElementById("label-last-updated").textContent = t.labelLastUpdated;
+      document.getElementById("label-status").textContent = t.labelStatus;
+
+      document.getElementById("bulletin-title").textContent = t.bulletinTitle;
+      document.getElementById("bulletin-th-title").textContent = t.thTitle;
+      document.getElementById("bulletin-th-date").textContent = t.thDate;
+      document.getElementById("bulletin-th-link").textContent = t.thLink;
+
+      document.getElementById("footer-gov").textContent = t.footerGov;
+      document.getElementById("footer-ministry").textContent = t.footerMinistry;
+      document.getElementById("footer-enquiry").textContent = t.footerEnquiry;
+      document.getElementById("footer-quick").textContent = t.footerQuick;
+      document.getElementById("quick-about").textContent = t.quickAbout;
+      document.getElementById("quick-results").textContent = t.quickResults;
+      document.getElementById("quick-recruitments").textContent = t.quickRecruitments;
+      document.getElementById("quick-contact").textContent = t.quickContact;
+      document.getElementById("footer-copy").textContent = "© 2025 Railway Recruitment Board Chennai. All Rights Reserved.";
+    }
+
+    function parseDateString(str, lang){
+      if(!str) return null;
+      const monthMap = {
+        en: { Jan:0, Feb:1, Mar:2, Apr:3, May:4, Jun:5, Jul:6, Aug:7, Sep:8, Sept:8, Oct:9, Nov:10, Dec:11 },
+        ta: { "ஜனவரி":0,"பிப்ரவரி":1,"மார்ச்":2,"ஏப்ரல்":3,"மே":4,"ஜூன்":5,"ஜூலை":6,"ஆகஸ்ட்":7,"செப்டம்பர்":8,"அக்டோபர்":9,"நவம்பர்":10,"டிசம்பர்":11 }
+      };
+      const parts = str.split('-');
+      if(parts.length!==3) return new Date(str);
+      const day = parseInt(parts[0],10);
+      const month = monthMap[lang][parts[1]] !== undefined ? monthMap[lang][parts[1]] : 0;
+      const year = parseInt(parts[2],10);
+      return new Date(year, month, day);
+    }
+
+    function getStatus(opening, closing, lang) {
+      const today = new Date();
+      const tOpen = parseDateString(opening, lang);
+      const tClose = parseDateString(closing, lang);
+      if(tOpen && tClose){
+        if(today < tOpen) return texts[lang].statusUpcoming;
+        if(today > tClose) return texts[lang].statusClosed;
+        return texts[lang].statusOpen;
+      } else if(tOpen){ return today<tOpen ? texts[lang].statusUpcoming : texts[lang].statusOpen; }
+      else if(tClose){ return today>tClose ? texts[lang].statusClosed : texts[lang].statusOpen; }
+      return texts[lang].statusClosed;
+    }
+
     function getCENFromURL() {
       const params = new URLSearchParams(window.location.search);
       return params.get("cen");
     }
 
     async function loadRecruitment() {
+      const lang = sessionStorage.getItem("lang") || "en";
+      applyTexts(lang);
+      const file = lang==="ta" ? "database_ta.json" : "database.json";
       const cenNumber = getCENFromURL();
       if (!cenNumber) return;
 
       try {
-        const response = await fetch("database.json");
+        const response = await fetch(file);
         const data = await response.json();
         const rec = data[cenNumber];
-
-        if (!rec) {
+        if(!rec){
           document.getElementById("recruitment-info").innerHTML = "<p class='text-red-500'>No data found for this CEN.</p>";
           return;
         }
 
-        // Populate main info
+        // Populate info
         document.getElementById("rec-title").textContent = rec.title;
         document.getElementById("opening-date").textContent = rec.opening_date;
         document.getElementById("closing-date").textContent = rec.closing_date;
         document.getElementById("last-updated").textContent = rec.last_updated;
-        document.getElementById("status").textContent = rec.status;
-        document.getElementById("status").style.color = rec.status === "Open" ? "green" : rec.status === "Upcoming" ? "orange" : "red";
         document.getElementById("description").textContent = rec.description;
 
-        // Determine dynamic status based on closing date
-        const closingDateParts = rec.closing_date.split('-'); // e.g., ["30", "June", "2025"]
-        const months = { Jan:0, Feb:1, Mar:2, Apr:3, May:4, Jun:5, Jul:6, Aug:7, Sep:8, Sept:8, Oct:9, Nov:10, Dec:11 };
-        const closingDate = new Date(
-          parseInt(closingDateParts[2]), 
-          months[closingDateParts[1].slice(0,3)], 
-          parseInt(closingDateParts[0])
-        );
+        const statusText = getStatus(rec.opening_date, rec.closing_date, lang);
+        const statusEl = document.getElementById("status");
+        statusEl.textContent = statusText;
+        statusEl.style.color = statusText===texts[lang].statusOpen?"green":statusText===texts[lang].statusUpcoming?"orange":"red";
 
-        const today = new Date();
-        let statusText, statusColor;
-
-        if (closingDate < today) {
-          statusText = "Closed";
-          statusColor = "red";
-        } else {
-          statusText = "Open";
-          statusColor = "green";
-        }
-
-        document.getElementById("status").textContent = statusText;
-        document.getElementById("status").style.color = statusColor;
-
-
-        // Populate bulletin table
+        // Populate bulletin
         const tbody = document.getElementById("bulletin-body");
-        tbody.innerHTML = ""; // clear existing rows
-        rec.bulletin.forEach(item => {
+        tbody.innerHTML = "";
+        rec.bulletin.forEach(item=>{
           const row = document.createElement("tr");
-          row.innerHTML = `
-            <td>${item.title}</td>
-            <td>${item.uploaded_on}</td>
-            <td><a href="${item.link}" class="btn-link" target="_blank">View</a></td>
-          `;
+          row.innerHTML = `<td>${item.title}</td><td>${item.uploaded_on}</td><td><a href="${item.link}" class="btn-link" target="_blank">${texts[lang].view}</a></td>`;
           tbody.appendChild(row);
         });
 
-      } catch (err) {
+      } catch(err){
         console.error(err);
         document.getElementById("recruitment-info").innerHTML = "<p class='text-red-500'>Failed to load recruitment data.</p>";
       }
     }
 
-    loadRecruitment();
+    document.addEventListener("DOMContentLoaded", loadRecruitment);
   </script>
 </body>
 </html>
